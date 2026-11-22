@@ -1,0 +1,27 @@
+Installation
+============
+
+Requirements (Linux)
+--------------------
+* NVIDIA GPU with a CUDA driver
+* CUDA Toolkit 11 or newer (provides nvcc)
+* GNU make, bash, and wget or curl (only to download the dataset)
+No other libraries are needed: PGM/PNG reading and writing is built in.
+
+Steps
+-----
+1. Clone the repository:
+     git clone <this repository URL>
+     cd <repository folder>
+2. Download the dataset (about 10 MB):
+     bash data/download_data.sh
+   If the machine has no internet access, download
+   https://kdd.ics.uci.edu/databases/faces/faces.tar.gz yourself, copy it
+   into data/ and run the script again.
+3. Build:
+     make build
+4. Run:
+     ./run.sh
+
+Windows users: use WSL2 with the CUDA toolkit for WSL, then follow the
+Linux steps.
