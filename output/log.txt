@@ -1,0 +1,1887 @@
+=== GPU Batch Image Processor ===
+GPU: NVIDIA L4 (compute capability 8.9, 58 SMs)
+Input: data | Output: output | Streams: 4 | Block: 16x16
+Found 1872 PGM files, loaded 1872 images (0 unreadable), 12.58 megapixels in total
+[   1/1872] data/faces/an2i/an2i_left_angry_open.pgm      128x120 gpu 0.041 ms  verify OK
+[   2/1872] data/faces/an2i/an2i_left_angry_open_2.pgm     64x60  gpu 0.031 ms  verify OK
+[   3/1872] data/faces/an2i/an2i_left_angry_open_4.pgm     32x30  gpu 0.032 ms  verify OK
+[   4/1872] data/faces/an2i/an2i_left_angry_sunglasses.pgm 128x120 gpu 0.030 ms  verify OK
+[   5/1872] data/faces/an2i/an2i_left_angry_sunglasses_2.pgm  64x60  gpu 0.022 ms  verify OK
+[   6/1872] data/faces/an2i/an2i_left_angry_sunglasses_4.pgm  32x30  gpu 0.030 ms  verify OK
+[   7/1872] data/faces/an2i/an2i_left_happy_open.pgm      128x120 gpu 0.028 ms  verify OK
+[   8/1872] data/faces/an2i/an2i_left_happy_open_2.pgm     64x60  gpu 0.029 ms  verify OK
+[   9/1872] data/faces/an2i/an2i_left_happy_open_4.pgm     32x30  gpu 0.020 ms  verify OK
+[  10/1872] data/faces/an2i/an2i_left_happy_sunglasses.pgm 128x120 gpu 0.035 ms  verify OK
+[  11/1872] data/faces/an2i/an2i_left_happy_sunglasses_2.pgm  64x60  gpu 0.036 ms  verify OK
+[  12/1872] data/faces/an2i/an2i_left_happy_sunglasses_4.pgm  32x30  gpu 0.034 ms  verify OK
+[  13/1872] data/faces/an2i/an2i_left_neutral_open.pgm    128x120 gpu 0.027 ms  verify OK
+[  14/1872] data/faces/an2i/an2i_left_neutral_open_2.pgm   64x60  gpu 0.025 ms  verify OK
+[  15/1872] data/faces/an2i/an2i_left_neutral_open_4.pgm   32x30  gpu 0.026 ms  verify OK
+[  16/1872] data/faces/an2i/an2i_left_neutral_sunglasses.pgm 128x120 gpu 0.031 ms  verify OK
+[  17/1872] data/faces/an2i/an2i_left_neutral_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[  18/1872] data/faces/an2i/an2i_left_neutral_sunglasses_4.pgm  32x30  gpu 0.032 ms  verify OK
+[  19/1872] data/faces/an2i/an2i_left_sad_open.pgm        128x120 gpu 0.037 ms  verify OK
+[  20/1872] data/faces/an2i/an2i_left_sad_open_2.pgm       64x60  gpu 0.028 ms  verify OK
+[  21/1872] data/faces/an2i/an2i_left_sad_open_4.pgm       32x30  gpu 0.022 ms  verify OK
+[  22/1872] data/faces/an2i/an2i_left_sad_sunglasses.pgm  128x120 gpu 0.034 ms  verify OK
+[  23/1872] data/faces/an2i/an2i_left_sad_sunglasses_2.pgm  64x60  gpu 0.025 ms  verify OK
+[  24/1872] data/faces/an2i/an2i_left_sad_sunglasses_4.pgm  32x30  gpu 0.033 ms  verify OK
+[  25/1872] data/faces/an2i/an2i_right_angry_open.pgm     128x120 gpu 0.028 ms  verify OK
+[  26/1872] data/faces/an2i/an2i_right_angry_open_2.pgm    64x60  gpu 0.024 ms  verify OK
+[  27/1872] data/faces/an2i/an2i_right_angry_open_4.pgm    32x30  gpu 0.022 ms  verify OK
+[  28/1872] data/faces/an2i/an2i_right_angry_sunglasses.pgm 128x120 gpu 0.043 ms  verify OK
+[  29/1872] data/faces/an2i/an2i_right_angry_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[  30/1872] data/faces/an2i/an2i_right_angry_sunglasses_4.pgm  32x30  gpu 0.028 ms  verify OK
+[  31/1872] data/faces/an2i/an2i_right_happy_open.pgm     128x120 gpu 0.027 ms  verify OK
+[  32/1872] data/faces/an2i/an2i_right_happy_open_2.pgm    64x60  gpu 0.025 ms  verify OK
+[  33/1872] data/faces/an2i/an2i_right_happy_open_4.pgm    32x30  gpu 0.022 ms  verify OK
+[  34/1872] data/faces/an2i/an2i_right_happy_sunglasses.pgm 128x120 gpu 0.037 ms  verify OK
+[  35/1872] data/faces/an2i/an2i_right_happy_sunglasses_2.pgm  64x60  gpu 0.034 ms  verify OK
+[  36/1872] data/faces/an2i/an2i_right_happy_sunglasses_4.pgm  32x30  gpu 0.037 ms  verify OK
+[  37/1872] data/faces/an2i/an2i_right_neutral_open.pgm   128x120 gpu 0.028 ms  verify OK
+[  38/1872] data/faces/an2i/an2i_right_neutral_open_2.pgm  64x60  gpu 0.025 ms  verify OK
+[  39/1872] data/faces/an2i/an2i_right_neutral_open_4.pgm  32x30  gpu 0.022 ms  verify OK
+[  40/1872] data/faces/an2i/an2i_right_neutral_sunglasses.pgm 128x120 gpu 0.041 ms  verify OK
+[  41/1872] data/faces/an2i/an2i_right_neutral_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[  42/1872] data/faces/an2i/an2i_right_neutral_sunglasses_4.pgm  32x30  gpu 0.032 ms  verify OK
+[  43/1872] data/faces/an2i/an2i_right_sad_open.pgm       128x120 gpu 0.040 ms  verify OK
+[  44/1872] data/faces/an2i/an2i_right_sad_open_2.pgm      64x60  gpu 0.035 ms  verify OK
+[  45/1872] data/faces/an2i/an2i_right_sad_open_4.pgm      32x30  gpu 0.021 ms  verify OK
+[  46/1872] data/faces/an2i/an2i_right_sad_sunglasses.pgm 128x120 gpu 0.037 ms  verify OK
+[  47/1872] data/faces/an2i/an2i_right_sad_sunglasses_2.pgm  64x60  gpu 0.028 ms  verify OK
+[  48/1872] data/faces/an2i/an2i_right_sad_sunglasses_4.pgm  32x30  gpu 0.031 ms  verify OK
+[  49/1872] data/faces/an2i/an2i_straight_angry_open.pgm  128x120 gpu 0.027 ms  verify OK
+[  50/1872] data/faces/an2i/an2i_straight_angry_open_2.pgm  64x60  gpu 0.024 ms  verify OK
+[  51/1872] data/faces/an2i/an2i_straight_angry_open_4.pgm  32x30  gpu 0.036 ms  verify OK
+[  52/1872] data/faces/an2i/an2i_straight_angry_sunglasses.pgm 128x120 gpu 0.046 ms  verify OK
+[  53/1872] data/faces/an2i/an2i_straight_angry_sunglasses_2.pgm  64x60  gpu 0.022 ms  verify OK
+[  54/1872] data/faces/an2i/an2i_straight_angry_sunglasses_4.pgm  32x30  gpu 0.033 ms  verify OK
+[  55/1872] data/faces/an2i/an2i_straight_happy_open.pgm  128x120 gpu 0.027 ms  verify OK
+[  56/1872] data/faces/an2i/an2i_straight_happy_open_2.pgm  64x60  gpu 0.027 ms  verify OK
+[  57/1872] data/faces/an2i/an2i_straight_happy_open_4.pgm  32x30  gpu 0.022 ms  verify OK
+[  58/1872] data/faces/an2i/an2i_straight_happy_sunglasses.pgm 128x120 gpu 0.035 ms  verify OK
+[  59/1872] data/faces/an2i/an2i_straight_happy_sunglasses_2.pgm  64x60  gpu 0.028 ms  verify OK
+[  60/1872] data/faces/an2i/an2i_straight_happy_sunglasses_4.pgm  32x30  gpu 0.032 ms  verify OK
+[  61/1872] data/faces/an2i/an2i_straight_neutral_open.pgm 128x120 gpu 0.039 ms  verify OK
+[  62/1872] data/faces/an2i/an2i_straight_neutral_open_2.pgm  64x60  gpu 0.028 ms  verify OK
+[  63/1872] data/faces/an2i/an2i_straight_neutral_open_4.pgm  32x30  gpu 0.032 ms  verify OK
+[  64/1872] data/faces/an2i/an2i_straight_neutral_sunglasses.pgm 128x120 gpu 0.030 ms  verify OK
+[  65/1872] data/faces/an2i/an2i_straight_neutral_sunglasses_2.pgm  64x60  gpu 0.022 ms  verify OK
+[  66/1872] data/faces/an2i/an2i_straight_neutral_sunglasses_4.pgm  32x30  gpu 0.032 ms  verify OK
+[  67/1872] data/faces/an2i/an2i_straight_sad_open.pgm    128x120 gpu 0.039 ms  verify OK
+[  68/1872] data/faces/an2i/an2i_straight_sad_open_2.pgm   64x60  gpu 0.027 ms  verify OK
+[  69/1872] data/faces/an2i/an2i_straight_sad_open_4.pgm   32x30  gpu 0.022 ms  verify OK
+[  70/1872] data/faces/an2i/an2i_straight_sad_sunglasses.pgm 128x120 gpu 0.037 ms  verify OK
+[  71/1872] data/faces/an2i/an2i_straight_sad_sunglasses_2.pgm  64x60  gpu 0.029 ms  verify OK
+[  72/1872] data/faces/an2i/an2i_straight_sad_sunglasses_4.pgm  32x30  gpu 0.030 ms  verify OK
+[  73/1872] data/faces/an2i/an2i_up_angry_open.pgm        128x120 gpu 0.039 ms  verify OK
+[  74/1872] data/faces/an2i/an2i_up_angry_open_2.pgm       64x60  gpu 0.028 ms  verify OK
+[  75/1872] data/faces/an2i/an2i_up_angry_open_4.pgm       32x30  gpu 0.032 ms  verify OK
+[  76/1872] data/faces/an2i/an2i_up_angry_sunglasses.pgm  128x120 gpu 0.039 ms  verify OK
+[  77/1872] data/faces/an2i/an2i_up_angry_sunglasses_2.pgm  64x60  gpu 0.022 ms  verify OK
+[  78/1872] data/faces/an2i/an2i_up_angry_sunglasses_4.pgm  32x30  gpu 0.033 ms  verify OK
+[  79/1872] data/faces/an2i/an2i_up_happy_open.pgm        128x120 gpu 0.027 ms  verify OK
+[  80/1872] data/faces/an2i/an2i_up_happy_open_2.pgm       64x60  gpu 0.026 ms  verify OK
+[  81/1872] data/faces/an2i/an2i_up_happy_open_4.pgm       32x30  gpu 0.022 ms  verify OK
+[  82/1872] data/faces/an2i/an2i_up_happy_sunglasses.pgm  128x120 gpu 0.034 ms  verify OK
+[  83/1872] data/faces/an2i/an2i_up_happy_sunglasses_2.pgm  64x60  gpu 0.034 ms  verify OK
+[  84/1872] data/faces/an2i/an2i_up_happy_sunglasses_4.pgm  32x30  gpu 0.034 ms  verify OK
+[  85/1872] data/faces/an2i/an2i_up_neutral_open.pgm      128x120 gpu 0.028 ms  verify OK
+[  86/1872] data/faces/an2i/an2i_up_neutral_open_2.pgm     64x60  gpu 0.024 ms  verify OK
+[  87/1872] data/faces/an2i/an2i_up_neutral_open_4.pgm     32x30  gpu 0.022 ms  verify OK
+[  88/1872] data/faces/an2i/an2i_up_neutral_sunglasses.pgm 128x120 gpu 0.040 ms  verify OK
+[  89/1872] data/faces/an2i/an2i_up_neutral_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[  90/1872] data/faces/an2i/an2i_up_neutral_sunglasses_4.pgm  32x30  gpu 0.028 ms  verify OK
+[  91/1872] data/faces/an2i/an2i_up_sad_open.pgm          128x120 gpu 0.027 ms  verify OK
+[  92/1872] data/faces/an2i/an2i_up_sad_open_2.pgm         64x60  gpu 0.025 ms  verify OK
+[  93/1872] data/faces/an2i/an2i_up_sad_open_4.pgm         32x30  gpu 0.021 ms  verify OK
+[  94/1872] data/faces/an2i/an2i_up_sad_sunglasses.pgm    128x120 gpu 0.034 ms  verify OK
+[  95/1872] data/faces/an2i/an2i_up_sad_sunglasses_2.pgm   64x60  gpu 0.037 ms  verify OK
+[  96/1872] data/faces/an2i/an2i_up_sad_sunglasses_4.pgm   32x30  gpu 0.032 ms  verify OK
+[  97/1872] data/faces/at33/at33_left_angry_open.pgm      128x120 gpu 0.029 ms  verify OK
+[  98/1872] data/faces/at33/at33_left_angry_open_2.pgm     64x60  gpu 0.030 ms  verify OK
+[  99/1872] data/faces/at33/at33_left_angry_open_4.pgm     32x30  gpu 0.036 ms  verify OK
+[ 100/1872] data/faces/at33/at33_left_angry_sunglasses.pgm 128x120 gpu 0.031 ms  verify OK
+[ 101/1872] data/faces/at33/at33_left_angry_sunglasses_2.pgm  64x60  gpu 0.022 ms  verify OK
+[ 102/1872] data/faces/at33/at33_left_angry_sunglasses_4.pgm  32x30  gpu 0.028 ms  verify OK
+[ 103/1872] data/faces/at33/at33_left_happy_open.pgm      128x120 gpu 0.039 ms  verify OK
+[ 104/1872] data/faces/at33/at33_left_happy_open_2.pgm     64x60  gpu 0.027 ms  verify OK
+[ 105/1872] data/faces/at33/at33_left_happy_open_4.pgm     32x30  gpu 0.022 ms  verify OK
+[ 106/1872] data/faces/at33/at33_left_happy_sunglasses.pgm 128x120 gpu 0.033 ms  verify OK
+[ 107/1872] data/faces/at33/at33_left_happy_sunglasses_2.pgm  64x60  gpu 0.037 ms  verify OK
+[ 108/1872] data/faces/at33/at33_left_happy_sunglasses_4.pgm  32x30  gpu 0.034 ms  verify OK
+[ 109/1872] data/faces/at33/at33_left_neutral_open.pgm    128x120 gpu 0.028 ms  verify OK
+[ 110/1872] data/faces/at33/at33_left_neutral_open_2.pgm   64x60  gpu 0.025 ms  verify OK
+[ 111/1872] data/faces/at33/at33_left_neutral_open_4.pgm   32x30  gpu 0.022 ms  verify OK
+[ 112/1872] data/faces/at33/at33_left_neutral_sunglasses.pgm 128x120 gpu 0.041 ms  verify OK
+[ 113/1872] data/faces/at33/at33_left_neutral_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[ 114/1872] data/faces/at33/at33_left_neutral_sunglasses_4.pgm  32x30  gpu 0.033 ms  verify OK
+[ 115/1872] data/faces/at33/at33_left_sad_open.pgm        128x120 gpu 0.027 ms  verify OK
+[ 116/1872] data/faces/at33/at33_left_sad_open_2.pgm       64x60  gpu 0.026 ms  verify OK
+[ 117/1872] data/faces/at33/at33_left_sad_open_4.pgm       32x30  gpu 0.022 ms  verify OK
+[ 118/1872] data/faces/at33/at33_left_sad_sunglasses.pgm  128x120 gpu 0.035 ms  verify OK
+[ 119/1872] data/faces/at33/at33_left_sad_sunglasses_2.pgm  64x60  gpu 0.028 ms  verify OK
+[ 120/1872] data/faces/at33/at33_left_sad_sunglasses_4.pgm  32x30  gpu 0.038 ms  verify OK
+[ 121/1872] data/faces/at33/at33_right_angry_open.pgm     128x120 gpu 0.027 ms  verify OK
+[ 122/1872] data/faces/at33/at33_right_angry_open_2.pgm    64x60  gpu 0.024 ms  verify OK
+[ 123/1872] data/faces/at33/at33_right_angry_open_4.pgm    32x30  gpu 0.022 ms  verify OK
+[ 124/1872] data/faces/at33/at33_right_angry_sunglasses.pgm 128x120 gpu 0.040 ms  verify OK
+[ 125/1872] data/faces/at33/at33_right_angry_sunglasses_2.pgm  64x60  gpu 0.022 ms  verify OK
+[ 126/1872] data/faces/at33/at33_right_angry_sunglasses_4.pgm  32x30  gpu 0.031 ms  verify OK
+[ 127/1872] data/faces/at33/at33_right_happy_open.pgm     128x120 gpu 0.039 ms  verify OK
+[ 128/1872] data/faces/at33/at33_right_happy_open_2.pgm    64x60  gpu 0.027 ms  verify OK
+[ 129/1872] data/faces/at33/at33_right_happy_open_4.pgm    32x30  gpu 0.021 ms  verify OK
+[ 130/1872] data/faces/at33/at33_right_happy_sunglasses.pgm 128x120 gpu 0.036 ms  verify OK
+[ 131/1872] data/faces/at33/at33_right_happy_sunglasses_2.pgm  64x60  gpu 0.028 ms  verify OK
+[ 132/1872] data/faces/at33/at33_right_happy_sunglasses_4.pgm  32x30  gpu 0.032 ms  verify OK
+[ 133/1872] data/faces/at33/at33_right_neutral_open.pgm   128x120 gpu 0.027 ms  verify OK
+[ 134/1872] data/faces/at33/at33_right_neutral_open_2.pgm  64x60  gpu 0.025 ms  verify OK
+[ 135/1872] data/faces/at33/at33_right_neutral_open_4.pgm  32x30  gpu 0.032 ms  verify OK
+[ 136/1872] data/faces/at33/at33_right_neutral_sunglasses.pgm 128x120 gpu 0.029 ms  verify OK
+[ 137/1872] data/faces/at33/at33_right_neutral_sunglasses_2.pgm  64x60  gpu 0.022 ms  verify OK
+[ 138/1872] data/faces/at33/at33_right_neutral_sunglasses_4.pgm  32x30  gpu 0.026 ms  verify OK
+[ 139/1872] data/faces/at33/at33_right_sad_open.pgm       128x120 gpu 0.027 ms  verify OK
+[ 140/1872] data/faces/at33/at33_right_sad_open_2.pgm      64x60  gpu 0.028 ms  verify OK
+[ 141/1872] data/faces/at33/at33_right_sad_open_4.pgm      32x30  gpu 0.022 ms  verify OK
+[ 142/1872] data/faces/at33/at33_right_sad_sunglasses.pgm 128x120 gpu 0.027 ms  verify OK
+[ 143/1872] data/faces/at33/at33_right_sad_sunglasses_2.pgm  64x60  gpu 0.026 ms  verify OK
+[ 144/1872] data/faces/at33/at33_right_sad_sunglasses_4.pgm  32x30  gpu 0.022 ms  verify OK
+[ 145/1872] data/faces/at33/at33_straight_angry_open.pgm  128x120 gpu 0.027 ms  verify OK
+[ 146/1872] data/faces/at33/at33_straight_angry_open_2.pgm  64x60  gpu 0.031 ms  verify OK
+[ 147/1872] data/faces/at33/at33_straight_angry_open_4.pgm  32x30  gpu 0.035 ms  verify OK
+[ 148/1872] data/faces/at33/at33_straight_angry_sunglasses.pgm 128x120 gpu 0.034 ms  verify OK
+[ 149/1872] data/faces/at33/at33_straight_angry_sunglasses_2.pgm  64x60  gpu 0.037 ms  verify OK
+[ 150/1872] data/faces/at33/at33_straight_angry_sunglasses_4.pgm  32x30  gpu 0.021 ms  verify OK
+[ 151/1872] data/faces/at33/at33_straight_happy_open.pgm  128x120 gpu 0.038 ms  verify OK
+[ 152/1872] data/faces/at33/at33_straight_happy_open_2.pgm  64x60  gpu 0.027 ms  verify OK
+[ 153/1872] data/faces/at33/at33_straight_happy_open_4.pgm  32x30  gpu 0.021 ms  verify OK
+[ 154/1872] data/faces/at33/at33_straight_happy_sunglasses.pgm 128x120 gpu 0.037 ms  verify OK
+[ 155/1872] data/faces/at33/at33_straight_happy_sunglasses_2.pgm  64x60  gpu 0.026 ms  verify OK
+[ 156/1872] data/faces/at33/at33_straight_happy_sunglasses_4.pgm  32x30  gpu 0.033 ms  verify OK
+[ 157/1872] data/faces/at33/at33_straight_neutral_open.pgm 128x120 gpu 0.027 ms  verify OK
+[ 158/1872] data/faces/at33/at33_straight_neutral_open_2.pgm  64x60  gpu 0.024 ms  verify OK
+[ 159/1872] data/faces/at33/at33_straight_neutral_open_4.pgm  32x30  gpu 0.035 ms  verify OK
+[ 160/1872] data/faces/at33/at33_straight_neutral_sunglasses.pgm 128x120 gpu 0.031 ms  verify OK
+[ 161/1872] data/faces/at33/at33_straight_neutral_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[ 162/1872] data/faces/at33/at33_straight_neutral_sunglasses_4.pgm  32x30  gpu 0.033 ms  verify OK
+[ 163/1872] data/faces/at33/at33_straight_sad_open.pgm    128x120 gpu 0.040 ms  verify OK
+[ 164/1872] data/faces/at33/at33_straight_sad_open_2.pgm   64x60  gpu 0.044 ms  verify OK
+[ 165/1872] data/faces/at33/at33_straight_sad_open_4.pgm   32x30  gpu 0.021 ms  verify OK
+[ 166/1872] data/faces/at33/at33_straight_sad_sunglasses.pgm 128x120 gpu 0.034 ms  verify OK
+[ 167/1872] data/faces/at33/at33_straight_sad_sunglasses_2.pgm  64x60  gpu 0.024 ms  verify OK
+[ 168/1872] data/faces/at33/at33_straight_sad_sunglasses_4.pgm  32x30  gpu 0.029 ms  verify OK
+[ 169/1872] data/faces/at33/at33_up_angry_open.pgm        128x120 gpu 0.041 ms  verify OK
+[ 170/1872] data/faces/at33/at33_up_angry_open_2.pgm       64x60  gpu 0.034 ms  verify OK
+[ 171/1872] data/faces/at33/at33_up_angry_open_4.pgm       32x30  gpu 0.029 ms  verify OK
+[ 172/1872] data/faces/at33/at33_up_angry_sunglasses.pgm  128x120 gpu 0.046 ms  verify OK
+[ 173/1872] data/faces/at33/at33_up_angry_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[ 174/1872] data/faces/at33/at33_up_angry_sunglasses_4.pgm  32x30  gpu 0.032 ms  verify OK
+[ 175/1872] data/faces/at33/at33_up_happy_open.pgm        128x120 gpu 0.025 ms  verify OK
+[ 176/1872] data/faces/at33/at33_up_happy_open_2.pgm       64x60  gpu 0.031 ms  verify OK
+[ 177/1872] data/faces/at33/at33_up_happy_open_4.pgm       32x30  gpu 0.022 ms  verify OK
+[ 178/1872] data/faces/at33/at33_up_happy_sunglasses.pgm  128x120 gpu 0.039 ms  verify OK
+[ 179/1872] data/faces/at33/at33_up_happy_sunglasses_2.pgm  64x60  gpu 0.025 ms  verify OK
+[ 180/1872] data/faces/at33/at33_up_happy_sunglasses_4.pgm  32x30  gpu 0.028 ms  verify OK
+[ 181/1872] data/faces/at33/at33_up_neutral_open.pgm      128x120 gpu 0.026 ms  verify OK
+[ 182/1872] data/faces/at33/at33_up_neutral_open_2.pgm     64x60  gpu 0.025 ms  verify OK
+[ 183/1872] data/faces/at33/at33_up_neutral_open_4.pgm     32x30  gpu 0.032 ms  verify OK
+[ 184/1872] data/faces/at33/at33_up_neutral_sunglasses.pgm 128x120 gpu 0.029 ms  verify OK
+[ 185/1872] data/faces/at33/at33_up_neutral_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[ 186/1872] data/faces/at33/at33_up_neutral_sunglasses_4.pgm  32x30  gpu 0.032 ms  verify OK
+[ 187/1872] data/faces/at33/at33_up_sad_open.pgm          128x120 gpu 0.027 ms  verify OK
+[ 188/1872] data/faces/at33/at33_up_sad_open_2.pgm         64x60  gpu 0.029 ms  verify OK
+[ 189/1872] data/faces/at33/at33_up_sad_open_4.pgm         32x30  gpu 0.022 ms  verify OK
+[ 190/1872] data/faces/at33/at33_up_sad_sunglasses.pgm    128x120 gpu 0.038 ms  verify OK
+[ 191/1872] data/faces/at33/at33_up_sad_sunglasses_2.pgm   64x60  gpu 0.028 ms  verify OK
+[ 192/1872] data/faces/at33/at33_up_sad_sunglasses_4.pgm   32x30  gpu 0.029 ms  verify OK
+[ 193/1872] data/faces/boland/boland_left_angry_open.pgm  128x120 gpu 0.038 ms  verify OK
+[ 194/1872] data/faces/boland/boland_left_angry_open_2.pgm  64x60  gpu 0.025 ms  verify OK
+[ 195/1872] data/faces/boland/boland_left_angry_open_4.pgm  32x30  gpu 0.025 ms  verify OK
+[ 196/1872] data/faces/boland/boland_left_angry_sunglasses.pgm 128x120 gpu 0.031 ms  verify OK
+[ 197/1872] data/faces/boland/boland_left_angry_sunglasses_2.pgm  64x60  gpu 0.022 ms  verify OK
+[ 198/1872] data/faces/boland/boland_left_angry_sunglasses_4.pgm  32x30  gpu 0.031 ms  verify OK
+[ 199/1872] data/faces/boland/boland_left_happy_open.pgm  128x120 gpu 0.026 ms  verify OK
+[ 200/1872] data/faces/boland/boland_left_happy_open_2.pgm  64x60  gpu 0.031 ms  verify OK
+[ 201/1872] data/faces/boland/boland_left_happy_open_4.pgm  32x30  gpu 0.021 ms  verify OK
+[ 202/1872] data/faces/boland/boland_left_happy_sunglasses.pgm 128x120 gpu 0.038 ms  verify OK
+[ 203/1872] data/faces/boland/boland_left_happy_sunglasses_2.pgm  64x60  gpu 0.028 ms  verify OK
+[ 204/1872] data/faces/boland/boland_left_happy_sunglasses_4.pgm  32x30  gpu 0.033 ms  verify OK
+[ 205/1872] data/faces/boland/boland_left_neutral_open.pgm 128x120 gpu 0.037 ms  verify OK
+[ 206/1872] data/faces/boland/boland_left_neutral_open_2.pgm  64x60  gpu 0.036 ms  verify OK
+[ 207/1872] data/faces/boland/boland_left_neutral_open_4.pgm  32x30  gpu 0.030 ms  verify OK
+[ 208/1872] data/faces/boland/boland_left_neutral_sunglasses.pgm 128x120 gpu 0.029 ms  verify OK
+[ 209/1872] data/faces/boland/boland_left_neutral_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[ 210/1872] data/faces/boland/boland_left_neutral_sunglasses_4.pgm  32x30  gpu 0.030 ms  verify OK
+[ 211/1872] data/faces/boland/boland_left_sad_open.pgm    128x120 gpu 0.037 ms  verify OK
+[ 212/1872] data/faces/boland/boland_left_sad_open_2.pgm   64x60  gpu 0.029 ms  verify OK
+[ 213/1872] data/faces/boland/boland_left_sad_open_4.pgm   32x30  gpu 0.022 ms  verify OK
+[ 214/1872] data/faces/boland/boland_left_sad_sunglasses.pgm 128x120 gpu 0.034 ms  verify OK
+[ 215/1872] data/faces/boland/boland_left_sad_sunglasses_2.pgm  64x60  gpu 0.024 ms  verify OK
+[ 216/1872] data/faces/boland/boland_left_sad_sunglasses_4.pgm  32x30  gpu 0.033 ms  verify OK
+[ 217/1872] data/faces/boland/boland_right_angry_open.pgm 128x120 gpu 0.027 ms  verify OK
+[ 218/1872] data/faces/boland/boland_right_angry_open_2.pgm  64x60  gpu 0.024 ms  verify OK
+[ 219/1872] data/faces/boland/boland_right_angry_open_4.pgm  32x30  gpu 0.036 ms  verify OK
+[ 220/1872] data/faces/boland/boland_right_angry_sunglasses.pgm 128x120 gpu 0.029 ms  verify OK
+[ 221/1872] data/faces/boland/boland_right_angry_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[ 222/1872] data/faces/boland/boland_right_angry_sunglasses_4.pgm  32x30  gpu 0.031 ms  verify OK
+[ 223/1872] data/faces/boland/boland_right_happy_open.pgm 128x120 gpu 0.027 ms  verify OK
+[ 224/1872] data/faces/boland/boland_right_happy_open_2.pgm  64x60  gpu 0.026 ms  verify OK
+[ 225/1872] data/faces/boland/boland_right_happy_open_4.pgm  32x30  gpu 0.022 ms  verify OK
+[ 226/1872] data/faces/boland/boland_right_happy_sunglasses.pgm 128x120 gpu 0.035 ms  verify OK
+[ 227/1872] data/faces/boland/boland_right_happy_sunglasses_2.pgm  64x60  gpu 0.028 ms  verify OK
+[ 228/1872] data/faces/boland/boland_right_happy_sunglasses_4.pgm  32x30  gpu 0.029 ms  verify OK
+[ 229/1872] data/faces/boland/boland_right_neutral_open.pgm 128x120 gpu 0.028 ms  verify OK
+[ 230/1872] data/faces/boland/boland_right_neutral_open_2.pgm  64x60  gpu 0.036 ms  verify OK
+[ 231/1872] data/faces/boland/boland_right_neutral_open_4.pgm  32x30  gpu 0.023 ms  verify OK
+[ 232/1872] data/faces/boland/boland_right_neutral_sunglasses.pgm 128x120 gpu 0.032 ms  verify OK
+[ 233/1872] data/faces/boland/boland_right_neutral_sunglasses_2.pgm  64x60  gpu 0.022 ms  verify OK
+[ 234/1872] data/faces/boland/boland_right_neutral_sunglasses_4.pgm  32x30  gpu 0.029 ms  verify OK
+[ 235/1872] data/faces/boland/boland_right_sad_open.pgm   128x120 gpu 0.037 ms  verify OK
+[ 236/1872] data/faces/boland/boland_right_sad_open_2.pgm  64x60  gpu 0.042 ms  verify OK
+[ 237/1872] data/faces/boland/boland_right_sad_open_4.pgm  32x30  gpu 0.020 ms  verify OK
+[ 238/1872] data/faces/boland/boland_right_sad_sunglasses.pgm 128x120 gpu 0.038 ms  verify OK
+[ 239/1872] data/faces/boland/boland_right_sad_sunglasses_2.pgm  64x60  gpu 0.036 ms  verify OK
+[ 240/1872] data/faces/boland/boland_right_sad_sunglasses_4.pgm  32x30  gpu 0.040 ms  verify OK
+[ 241/1872] data/faces/boland/boland_straight_angry_open.pgm 128x120 gpu 0.038 ms  verify OK
+[ 242/1872] data/faces/boland/boland_straight_angry_open_2.pgm  64x60  gpu 0.027 ms  verify OK
+[ 243/1872] data/faces/boland/boland_straight_angry_open_4.pgm  32x30  gpu 0.031 ms  verify OK
+[ 244/1872] data/faces/boland/boland_straight_angry_sunglasses.pgm 128x120 gpu 0.031 ms  verify OK
+[ 245/1872] data/faces/boland/boland_straight_angry_sunglasses_2.pgm  64x60  gpu 0.022 ms  verify OK
+[ 246/1872] data/faces/boland/boland_straight_angry_sunglasses_4.pgm  32x30  gpu 0.027 ms  verify OK
+[ 247/1872] data/faces/boland/boland_straight_happy_open.pgm 128x120 gpu 0.028 ms  verify OK
+[ 248/1872] data/faces/boland/boland_straight_happy_open_2.pgm  64x60  gpu 0.036 ms  verify OK
+[ 249/1872] data/faces/boland/boland_straight_happy_open_4.pgm  32x30  gpu 0.020 ms  verify OK
+[ 250/1872] data/faces/boland/boland_straight_happy_sunglasses.pgm 128x120 gpu 0.034 ms  verify OK
+[ 251/1872] data/faces/boland/boland_straight_happy_sunglasses_2.pgm  64x60  gpu 0.025 ms  verify OK
+[ 252/1872] data/faces/boland/boland_straight_happy_sunglasses_4.pgm  32x30  gpu 0.025 ms  verify OK
+[ 253/1872] data/faces/boland/boland_straight_neutral_open.pgm 128x120 gpu 0.036 ms  verify OK
+[ 254/1872] data/faces/boland/boland_straight_neutral_open_2.pgm  64x60  gpu 0.036 ms  verify OK
+[ 255/1872] data/faces/boland/boland_straight_neutral_open_4.pgm  32x30  gpu 0.031 ms  verify OK
+[ 256/1872] data/faces/boland/boland_straight_neutral_sunglasses.pgm 128x120 gpu 0.029 ms  verify OK
+[ 257/1872] data/faces/boland/boland_straight_neutral_sunglasses_2.pgm  64x60  gpu 0.022 ms  verify OK
+[ 258/1872] data/faces/boland/boland_straight_neutral_sunglasses_4.pgm  32x30  gpu 0.030 ms  verify OK
+[ 259/1872] data/faces/boland/boland_straight_sad_open.pgm 128x120 gpu 0.026 ms  verify OK
+[ 260/1872] data/faces/boland/boland_straight_sad_open_2.pgm  64x60  gpu 0.039 ms  verify OK
+[ 261/1872] data/faces/boland/boland_straight_sad_open_4.pgm  32x30  gpu 0.022 ms  verify OK
+[ 262/1872] data/faces/boland/boland_straight_sad_sunglasses.pgm 128x120 gpu 0.034 ms  verify OK
+[ 263/1872] data/faces/boland/boland_straight_sad_sunglasses_2.pgm  64x60  gpu 0.037 ms  verify OK
+[ 264/1872] data/faces/boland/boland_straight_sad_sunglasses_4.pgm  32x30  gpu 0.033 ms  verify OK
+[ 265/1872] data/faces/boland/boland_up_angry_open.pgm    128x120 gpu 0.038 ms  verify OK
+[ 266/1872] data/faces/boland/boland_up_angry_open_2.pgm   64x60  gpu 0.027 ms  verify OK
+[ 267/1872] data/faces/boland/boland_up_angry_open_4.pgm   32x30  gpu 0.033 ms  verify OK
+[ 268/1872] data/faces/boland/boland_up_angry_sunglasses.pgm 128x120 gpu 0.030 ms  verify OK
+[ 269/1872] data/faces/boland/boland_up_angry_sunglasses_2.pgm  64x60  gpu 0.022 ms  verify OK
+[ 270/1872] data/faces/boland/boland_up_angry_sunglasses_4.pgm  32x30  gpu 0.032 ms  verify OK
+[ 271/1872] data/faces/boland/boland_up_happy_open.pgm    128x120 gpu 0.027 ms  verify OK
+[ 272/1872] data/faces/boland/boland_up_happy_open_2.pgm   64x60  gpu 0.028 ms  verify OK
+[ 273/1872] data/faces/boland/boland_up_happy_open_4.pgm   32x30  gpu 0.021 ms  verify OK
+[ 274/1872] data/faces/boland/boland_up_happy_sunglasses.pgm 128x120 gpu 0.035 ms  verify OK
+[ 275/1872] data/faces/boland/boland_up_happy_sunglasses_2.pgm  64x60  gpu 0.026 ms  verify OK
+[ 276/1872] data/faces/boland/boland_up_happy_sunglasses_4.pgm  32x30  gpu 0.040 ms  verify OK
+[ 277/1872] data/faces/boland/boland_up_neutral_open.pgm  128x120 gpu 0.028 ms  verify OK
+[ 278/1872] data/faces/boland/boland_up_neutral_open_2.pgm  64x60  gpu 0.036 ms  verify OK
+[ 279/1872] data/faces/boland/boland_up_neutral_open_4.pgm  32x30  gpu 0.023 ms  verify OK
+[ 280/1872] data/faces/boland/boland_up_neutral_sunglasses.pgm 128x120 gpu 0.038 ms  verify OK
+[ 281/1872] data/faces/boland/boland_up_neutral_sunglasses_2.pgm  64x60  gpu 0.022 ms  verify OK
+[ 282/1872] data/faces/boland/boland_up_neutral_sunglasses_4.pgm  32x30  gpu 0.031 ms  verify OK
+[ 283/1872] data/faces/boland/boland_up_sad_open.pgm      128x120 gpu 0.039 ms  verify OK
+[ 284/1872] data/faces/boland/boland_up_sad_open_2.pgm     64x60  gpu 0.027 ms  verify OK
+[ 285/1872] data/faces/boland/boland_up_sad_open_4.pgm     32x30  gpu 0.022 ms  verify OK
+[ 286/1872] data/faces/boland/boland_up_sad_sunglasses.pgm 128x120 gpu 0.033 ms  verify OK
+[ 287/1872] data/faces/boland/boland_up_sad_sunglasses_2.pgm  64x60  gpu 0.034 ms  verify OK
+[ 288/1872] data/faces/boland/boland_up_sad_sunglasses_4.pgm  32x30  gpu 0.041 ms  verify OK
+[ 289/1872] data/faces/bpm/bpm_left_angry_open.pgm        128x120 gpu 0.028 ms  verify OK
+[ 290/1872] data/faces/bpm/bpm_left_angry_open_2.pgm       64x60  gpu 0.024 ms  verify OK
+[ 291/1872] data/faces/bpm/bpm_left_angry_open_4.pgm       32x30  gpu 0.027 ms  verify OK
+[ 292/1872] data/faces/bpm/bpm_left_angry_sunglasses.pgm  128x120 gpu 0.037 ms  verify OK
+[ 293/1872] data/faces/bpm/bpm_left_angry_sunglasses_2.pgm  64x60  gpu 0.023 ms  verify OK
+[ 294/1872] data/faces/bpm/bpm_left_angry_sunglasses_4.pgm  32x30  gpu 0.032 ms  verify OK
+[ 295/1872] data/faces/bpm/bpm_left_happy_open.pgm        128x120 gpu 0.027 ms  verify OK
+[ 296/1872] data/faces/bpm/bpm_left_happy_open_2.pgm       64x60  gpu 0.030 ms  verify OK
+[ 297/1872] data/faces/bpm/bpm_left_happy_open_4.pgm       32x30  gpu 0.022 ms  verify OK
+[ 298/1872] data/faces/bpm/bpm_left_happy_sunglasses.pgm  128x120 gpu 0.041 ms  verify OK
+[ 299/1872] data/faces/bpm/bpm_left_happy_sunglasses_2.pgm  64x60  gpu 0.026 ms  verify OK
+[ 300/1872] data/faces/bpm/bpm_left_happy_sunglasses_4.pgm  32x30  gpu 0.028 ms  verify OK
+[ 301/1872] data/faces/bpm/bpm_left_neutral_open.pgm      128x120 gpu 0.037 ms  verify OK
+[ 302/1872] data/faces/bpm/bpm_left_neutral_open_2.pgm     64x60  gpu 0.030 ms  verify OK
+[ 303/1872] data/faces/bpm/bpm_left_neutral_open_4.pgm     32x30  gpu 0.022 ms  verify OK
+[ 304/1872] data/faces/bpm/bpm_left_neutral_sunglasses.pgm 128x120 gpu 0.041 ms  verify OK
+[ 305/1872] data/faces/bpm/bpm_left_neutral_sunglasses_2.pgm  64x60  gpu 0.022 ms  verify OK
+[ 306/1872] data/faces/bpm/bpm_left_neutral_sunglasses_4.pgm  32x30  gpu 0.032 ms  verify OK
+[ 307/1872] data/faces/bpm/bpm_left_sad_open.pgm          128x120 gpu 0.028 ms  verify OK
+[ 308/1872] data/faces/bpm/bpm_left_sad_open_2.pgm         64x60  gpu 0.029 ms  verify OK
+[ 309/1872] data/faces/bpm/bpm_left_sad_open_4.pgm         32x30  gpu 0.022 ms  verify OK
+[ 310/1872] data/faces/bpm/bpm_left_sad_sunglasses.pgm    128x120 gpu 0.035 ms  verify OK
+[ 311/1872] data/faces/bpm/bpm_left_sad_sunglasses_2.pgm   64x60  gpu 0.037 ms  verify OK
+[ 312/1872] data/faces/bpm/bpm_left_sad_sunglasses_4.pgm   32x30  gpu 0.032 ms  verify OK
+[ 313/1872] data/faces/bpm/bpm_right_angry_open.pgm       128x120 gpu 0.027 ms  verify OK
+[ 314/1872] data/faces/bpm/bpm_right_angry_open_2.pgm      64x60  gpu 0.024 ms  verify OK
+[ 315/1872] data/faces/bpm/bpm_right_angry_open_4.pgm      32x30  gpu 0.026 ms  verify OK
+[ 316/1872] data/faces/bpm/bpm_right_angry_sunglasses.pgm 128x120 gpu 0.031 ms  verify OK
+[ 317/1872] data/faces/bpm/bpm_right_angry_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[ 318/1872] data/faces/bpm/bpm_right_angry_sunglasses_4.pgm  32x30  gpu 0.035 ms  verify OK
+[ 319/1872] data/faces/bpm/bpm_right_happy_open.pgm       128x120 gpu 0.028 ms  verify OK
+[ 320/1872] data/faces/bpm/bpm_right_happy_open_2.pgm      64x60  gpu 0.027 ms  verify OK
+[ 321/1872] data/faces/bpm/bpm_right_happy_open_4.pgm      32x30  gpu 0.022 ms  verify OK
+[ 322/1872] data/faces/bpm/bpm_right_happy_sunglasses.pgm 128x120 gpu 0.035 ms  verify OK
+[ 323/1872] data/faces/bpm/bpm_right_happy_sunglasses_2.pgm  64x60  gpu 0.037 ms  verify OK
+[ 324/1872] data/faces/bpm/bpm_right_happy_sunglasses_4.pgm  32x30  gpu 0.032 ms  verify OK
+[ 325/1872] data/faces/bpm/bpm_right_neutral_open.pgm     128x120 gpu 0.028 ms  verify OK
+[ 326/1872] data/faces/bpm/bpm_right_neutral_open_2.pgm    64x60  gpu 0.025 ms  verify OK
+[ 327/1872] data/faces/bpm/bpm_right_neutral_open_4.pgm    32x30  gpu 0.021 ms  verify OK
+[ 328/1872] data/faces/bpm/bpm_right_neutral_sunglasses.pgm 128x120 gpu 0.042 ms  verify OK
+[ 329/1872] data/faces/bpm/bpm_right_neutral_sunglasses_2.pgm  64x60  gpu 0.022 ms  verify OK
+[ 330/1872] data/faces/bpm/bpm_right_neutral_sunglasses_4.pgm  32x30  gpu 0.033 ms  verify OK
+[ 331/1872] data/faces/bpm/bpm_right_sad_open.pgm         128x120 gpu 0.025 ms  verify OK
+[ 332/1872] data/faces/bpm/bpm_right_sad_open_2.pgm        64x60  gpu 0.031 ms  verify OK
+[ 333/1872] data/faces/bpm/bpm_right_sad_open_4.pgm        32x30  gpu 0.022 ms  verify OK
+[ 334/1872] data/faces/bpm/bpm_right_sad_sunglasses.pgm   128x120 gpu 0.040 ms  verify OK
+[ 335/1872] data/faces/bpm/bpm_right_sad_sunglasses_2.pgm  64x60  gpu 0.035 ms  verify OK
+[ 336/1872] data/faces/bpm/bpm_right_sad_sunglasses_4.pgm  32x30  gpu 0.029 ms  verify OK
+[ 337/1872] data/faces/bpm/bpm_straight_angry_open.pgm    128x120 gpu 0.028 ms  verify OK
+[ 338/1872] data/faces/bpm/bpm_straight_angry_open_2.pgm   64x60  gpu 0.037 ms  verify OK
+[ 339/1872] data/faces/bpm/bpm_straight_angry_open_4.pgm   32x30  gpu 0.024 ms  verify OK
+[ 340/1872] data/faces/bpm/bpm_straight_angry_sunglasses.pgm 128x120 gpu 0.041 ms  verify OK
+[ 341/1872] data/faces/bpm/bpm_straight_angry_sunglasses_2.pgm  64x60  gpu 0.022 ms  verify OK
+[ 342/1872] data/faces/bpm/bpm_straight_angry_sunglasses_4.pgm  32x30  gpu 0.032 ms  verify OK
+[ 343/1872] data/faces/bpm/bpm_straight_happy_open.pgm    128x120 gpu 0.040 ms  verify OK
+[ 344/1872] data/faces/bpm/bpm_straight_happy_open_2.pgm   64x60  gpu 0.045 ms  verify OK
+[ 345/1872] data/faces/bpm/bpm_straight_happy_open_4.pgm   32x30  gpu 0.021 ms  verify OK
+[ 346/1872] data/faces/bpm/bpm_straight_happy_sunglasses.pgm 128x120 gpu 0.040 ms  verify OK
+[ 347/1872] data/faces/bpm/bpm_straight_happy_sunglasses_2.pgm  64x60  gpu 0.030 ms  verify OK
+[ 348/1872] data/faces/bpm/bpm_straight_happy_sunglasses_4.pgm  32x30  gpu 0.030 ms  verify OK
+[ 349/1872] data/faces/bpm/bpm_straight_neutral_open.pgm  128x120 gpu 0.028 ms  verify OK
+[ 350/1872] data/faces/bpm/bpm_straight_neutral_open_2.pgm  64x60  gpu 0.024 ms  verify OK
+[ 351/1872] data/faces/bpm/bpm_straight_neutral_open_4.pgm  32x30  gpu 0.036 ms  verify OK
+[ 352/1872] data/faces/bpm/bpm_straight_neutral_sunglasses.pgm 128x120 gpu 0.029 ms  verify OK
+[ 353/1872] data/faces/bpm/bpm_straight_neutral_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[ 354/1872] data/faces/bpm/bpm_straight_neutral_sunglasses_4.pgm  32x30  gpu 0.033 ms  verify OK
+[ 355/1872] data/faces/bpm/bpm_straight_sad_open.pgm      128x120 gpu 0.037 ms  verify OK
+[ 356/1872] data/faces/bpm/bpm_straight_sad_open_2.pgm     64x60  gpu 0.029 ms  verify OK
+[ 357/1872] data/faces/bpm/bpm_straight_sad_open_4.pgm     32x30  gpu 0.022 ms  verify OK
+[ 358/1872] data/faces/bpm/bpm_straight_sad_sunglasses.pgm 128x120 gpu 0.034 ms  verify OK
+[ 359/1872] data/faces/bpm/bpm_straight_sad_sunglasses_2.pgm  64x60  gpu 0.034 ms  verify OK
+[ 360/1872] data/faces/bpm/bpm_straight_sad_sunglasses_4.pgm  32x30  gpu 0.040 ms  verify OK
+[ 361/1872] data/faces/bpm/bpm_up_angry_open.pgm          128x120 gpu 0.028 ms  verify OK
+[ 362/1872] data/faces/bpm/bpm_up_angry_open_2.pgm         64x60  gpu 0.024 ms  verify OK
+[ 363/1872] data/faces/bpm/bpm_up_angry_open_4.pgm         32x30  gpu 0.036 ms  verify OK
+[ 364/1872] data/faces/bpm/bpm_up_angry_sunglasses.pgm    128x120 gpu 0.030 ms  verify OK
+[ 365/1872] data/faces/bpm/bpm_up_angry_sunglasses_2.pgm   64x60  gpu 0.022 ms  verify OK
+[ 366/1872] data/faces/bpm/bpm_up_angry_sunglasses_4.pgm   32x30  gpu 0.032 ms  verify OK
+[ 367/1872] data/faces/bpm/bpm_up_happy_open.pgm          128x120 gpu 0.028 ms  verify OK
+[ 368/1872] data/faces/bpm/bpm_up_happy_open_2.pgm         64x60  gpu 0.028 ms  verify OK
+[ 369/1872] data/faces/bpm/bpm_up_happy_open_4.pgm         32x30  gpu 0.020 ms  verify OK
+[ 370/1872] data/faces/bpm/bpm_up_happy_sunglasses.pgm    128x120 gpu 0.038 ms  verify OK
+[ 371/1872] data/faces/bpm/bpm_up_happy_sunglasses_2.pgm   64x60  gpu 0.038 ms  verify OK
+[ 372/1872] data/faces/bpm/bpm_up_happy_sunglasses_4.pgm   32x30  gpu 0.032 ms  verify OK
+[ 373/1872] data/faces/bpm/bpm_up_neutral_open.pgm        128x120 gpu 0.027 ms  verify OK
+[ 374/1872] data/faces/bpm/bpm_up_neutral_open_2.pgm       64x60  gpu 0.024 ms  verify OK
+[ 375/1872] data/faces/bpm/bpm_up_neutral_open_4.pgm       32x30  gpu 0.037 ms  verify OK
+[ 376/1872] data/faces/bpm/bpm_up_neutral_sunglasses.pgm  128x120 gpu 0.039 ms  verify OK
+[ 377/1872] data/faces/bpm/bpm_up_neutral_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[ 378/1872] data/faces/bpm/bpm_up_neutral_sunglasses_4.pgm  32x30  gpu 0.034 ms  verify OK
+[ 379/1872] data/faces/bpm/bpm_up_sad_open.pgm            128x120 gpu 0.027 ms  verify OK
+[ 380/1872] data/faces/bpm/bpm_up_sad_open_2.pgm           64x60  gpu 0.026 ms  verify OK
+[ 381/1872] data/faces/bpm/bpm_up_sad_open_4.pgm           32x30  gpu 0.020 ms  verify OK
+[ 382/1872] data/faces/bpm/bpm_up_sad_sunglasses.pgm      128x120 gpu 0.037 ms  verify OK
+[ 383/1872] data/faces/bpm/bpm_up_sad_sunglasses_2.pgm     64x60  gpu 0.034 ms  verify OK
+[ 384/1872] data/faces/bpm/bpm_up_sad_sunglasses_4.pgm     32x30  gpu 0.035 ms  verify OK
+[ 385/1872] data/faces/ch4f/ch4f_left_angry_open.pgm      128x120 gpu 0.028 ms  verify OK
+[ 386/1872] data/faces/ch4f/ch4f_left_angry_open_2.pgm     64x60  gpu 0.024 ms  verify OK
+[ 387/1872] data/faces/ch4f/ch4f_left_angry_open_4.pgm     32x30  gpu 0.033 ms  verify OK
+[ 388/1872] data/faces/ch4f/ch4f_left_angry_sunglasses.pgm 128x120 gpu 0.029 ms  verify OK
+[ 389/1872] data/faces/ch4f/ch4f_left_angry_sunglasses_2.pgm  64x60  gpu 0.027 ms  verify OK
+[ 390/1872] data/faces/ch4f/ch4f_left_angry_sunglasses_4.pgm  32x30  gpu 0.033 ms  verify OK
+[ 391/1872] data/faces/ch4f/ch4f_left_happy_open.pgm      128x120 gpu 0.028 ms  verify OK
+[ 392/1872] data/faces/ch4f/ch4f_left_happy_open_2.pgm     64x60  gpu 0.029 ms  verify OK
+[ 393/1872] data/faces/ch4f/ch4f_left_happy_open_4.pgm     32x30  gpu 0.022 ms  verify OK
+[ 394/1872] data/faces/ch4f/ch4f_left_happy_sunglasses.pgm 128x120 gpu 0.036 ms  verify OK
+[ 395/1872] data/faces/ch4f/ch4f_left_happy_sunglasses_2.pgm  64x60  gpu 0.034 ms  verify OK
+[ 396/1872] data/faces/ch4f/ch4f_left_happy_sunglasses_4.pgm  32x30  gpu 0.040 ms  verify OK
+[ 397/1872] data/faces/ch4f/ch4f_left_neutral_open.pgm    128x120 gpu 0.027 ms  verify OK
+[ 398/1872] data/faces/ch4f/ch4f_left_neutral_open_2.pgm   64x60  gpu 0.024 ms  verify OK
+[ 399/1872] data/faces/ch4f/ch4f_left_neutral_open_4.pgm   32x30  gpu 0.021 ms  verify OK
+[ 400/1872] data/faces/ch4f/ch4f_left_neutral_sunglasses.pgm 128x120 gpu 0.040 ms  verify OK
+[ 401/1872] data/faces/ch4f/ch4f_left_neutral_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[ 402/1872] data/faces/ch4f/ch4f_left_neutral_sunglasses_4.pgm  32x30  gpu 0.029 ms  verify OK
+[ 403/1872] data/faces/ch4f/ch4f_left_sad_open.pgm        128x120 gpu 0.037 ms  verify OK
+[ 404/1872] data/faces/ch4f/ch4f_left_sad_open_2.pgm       64x60  gpu 0.034 ms  verify OK
+[ 405/1872] data/faces/ch4f/ch4f_left_sad_open_4.pgm       32x30  gpu 0.020 ms  verify OK
+[ 406/1872] data/faces/ch4f/ch4f_left_sad_sunglasses.pgm  128x120 gpu 0.036 ms  verify OK
+[ 407/1872] data/faces/ch4f/ch4f_left_sad_sunglasses_2.pgm  64x60  gpu 0.036 ms  verify OK
+[ 408/1872] data/faces/ch4f/ch4f_left_sad_sunglasses_4.pgm  32x30  gpu 0.042 ms  verify OK
+[ 409/1872] data/faces/ch4f/ch4f_right_angry_open.pgm     128x120 gpu 0.029 ms  verify OK
+[ 410/1872] data/faces/ch4f/ch4f_right_angry_open_2.pgm    64x60  gpu 0.025 ms  verify OK
+[ 411/1872] data/faces/ch4f/ch4f_right_angry_open_4.pgm    32x30  gpu 0.022 ms  verify OK
+[ 412/1872] data/faces/ch4f/ch4f_right_angry_sunglasses.pgm 128x120 gpu 0.035 ms  verify OK
+[ 413/1872] data/faces/ch4f/ch4f_right_angry_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[ 414/1872] data/faces/ch4f/ch4f_right_angry_sunglasses_4.pgm  32x30  gpu 0.030 ms  verify OK
+[ 415/1872] data/faces/ch4f/ch4f_right_happy_open.pgm     128x120 gpu 0.037 ms  verify OK
+[ 416/1872] data/faces/ch4f/ch4f_right_happy_open_2.pgm    64x60  gpu 0.042 ms  verify OK
+[ 417/1872] data/faces/ch4f/ch4f_right_happy_open_4.pgm    32x30  gpu 0.020 ms  verify OK
+[ 418/1872] data/faces/ch4f/ch4f_right_happy_sunglasses.pgm 128x120 gpu 0.038 ms  verify OK
+[ 419/1872] data/faces/ch4f/ch4f_right_happy_sunglasses_2.pgm  64x60  gpu 0.034 ms  verify OK
+[ 420/1872] data/faces/ch4f/ch4f_right_happy_sunglasses_4.pgm  32x30  gpu 0.036 ms  verify OK
+[ 421/1872] data/faces/ch4f/ch4f_right_neutral_open.pgm   128x120 gpu 0.028 ms  verify OK
+[ 422/1872] data/faces/ch4f/ch4f_right_neutral_open_2.pgm  64x60  gpu 0.024 ms  verify OK
+[ 423/1872] data/faces/ch4f/ch4f_right_neutral_open_4.pgm  32x30  gpu 0.036 ms  verify OK
+[ 424/1872] data/faces/ch4f/ch4f_right_neutral_sunglasses.pgm 128x120 gpu 0.031 ms  verify OK
+[ 425/1872] data/faces/ch4f/ch4f_right_neutral_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[ 426/1872] data/faces/ch4f/ch4f_right_neutral_sunglasses_4.pgm  32x30  gpu 0.033 ms  verify OK
+[ 427/1872] data/faces/ch4f/ch4f_right_sad_open.pgm       128x120 gpu 0.040 ms  verify OK
+[ 428/1872] data/faces/ch4f/ch4f_right_sad_open_2.pgm      64x60  gpu 0.028 ms  verify OK
+[ 429/1872] data/faces/ch4f/ch4f_right_sad_open_4.pgm      32x30  gpu 0.021 ms  verify OK
+[ 430/1872] data/faces/ch4f/ch4f_right_sad_sunglasses.pgm 128x120 gpu 0.036 ms  verify OK
+[ 431/1872] data/faces/ch4f/ch4f_right_sad_sunglasses_2.pgm  64x60  gpu 0.028 ms  verify OK
+[ 432/1872] data/faces/ch4f/ch4f_right_sad_sunglasses_4.pgm  32x30  gpu 0.030 ms  verify OK
+[ 433/1872] data/faces/ch4f/ch4f_straight_angry_open.pgm  128x120 gpu 0.037 ms  verify OK
+[ 434/1872] data/faces/ch4f/ch4f_straight_angry_open_2.pgm  64x60  gpu 0.024 ms  verify OK
+[ 435/1872] data/faces/ch4f/ch4f_straight_angry_open_4.pgm  32x30  gpu 0.034 ms  verify OK
+[ 436/1872] data/faces/ch4f/ch4f_straight_angry_sunglasses.pgm 128x120 gpu 0.029 ms  verify OK
+[ 437/1872] data/faces/ch4f/ch4f_straight_angry_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[ 438/1872] data/faces/ch4f/ch4f_straight_angry_sunglasses_4.pgm  32x30  gpu 0.030 ms  verify OK
+[ 439/1872] data/faces/ch4f/ch4f_straight_happy_open.pgm  128x120 gpu 0.038 ms  verify OK
+[ 440/1872] data/faces/ch4f/ch4f_straight_happy_open_2.pgm  64x60  gpu 0.026 ms  verify OK
+[ 441/1872] data/faces/ch4f/ch4f_straight_happy_open_4.pgm  32x30  gpu 0.022 ms  verify OK
+[ 442/1872] data/faces/ch4f/ch4f_straight_happy_sunglasses.pgm 128x120 gpu 0.035 ms  verify OK
+[ 443/1872] data/faces/ch4f/ch4f_straight_happy_sunglasses_2.pgm  64x60  gpu 0.038 ms  verify OK
+[ 444/1872] data/faces/ch4f/ch4f_straight_happy_sunglasses_4.pgm  32x30  gpu 0.032 ms  verify OK
+[ 445/1872] data/faces/ch4f/ch4f_straight_neutral_open.pgm 128x120 gpu 0.027 ms  verify OK
+[ 446/1872] data/faces/ch4f/ch4f_straight_neutral_open_2.pgm  64x60  gpu 0.025 ms  verify OK
+[ 447/1872] data/faces/ch4f/ch4f_straight_neutral_open_4.pgm  32x30  gpu 0.025 ms  verify OK
+[ 448/1872] data/faces/ch4f/ch4f_straight_neutral_sunglasses.pgm 128x120 gpu 0.027 ms  verify OK
+[ 449/1872] data/faces/ch4f/ch4f_straight_neutral_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[ 450/1872] data/faces/ch4f/ch4f_straight_neutral_sunglasses_4.pgm  32x30  gpu 0.030 ms  verify OK
+[ 451/1872] data/faces/ch4f/ch4f_straight_sad_open.pgm    128x120 gpu 0.039 ms  verify OK
+[ 452/1872] data/faces/ch4f/ch4f_straight_sad_open_2.pgm   64x60  gpu 0.027 ms  verify OK
+[ 453/1872] data/faces/ch4f/ch4f_straight_sad_open_4.pgm   32x30  gpu 0.021 ms  verify OK
+[ 454/1872] data/faces/ch4f/ch4f_straight_sad_sunglasses.pgm 128x120 gpu 0.035 ms  verify OK
+[ 455/1872] data/faces/ch4f/ch4f_straight_sad_sunglasses_2.pgm  64x60  gpu 0.028 ms  verify OK
+[ 456/1872] data/faces/ch4f/ch4f_straight_sad_sunglasses_4.pgm  32x30  gpu 0.039 ms  verify OK
+[ 457/1872] data/faces/ch4f/ch4f_up_angry_open.pgm        128x120 gpu 0.028 ms  verify OK
+[ 458/1872] data/faces/ch4f/ch4f_up_angry_open_2.pgm       64x60  gpu 0.024 ms  verify OK
+[ 459/1872] data/faces/ch4f/ch4f_up_angry_open_4.pgm       32x30  gpu 0.026 ms  verify OK
+[ 460/1872] data/faces/ch4f/ch4f_up_angry_sunglasses.pgm  128x120 gpu 0.029 ms  verify OK
+[ 461/1872] data/faces/ch4f/ch4f_up_angry_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[ 462/1872] data/faces/ch4f/ch4f_up_angry_sunglasses_4.pgm  32x30  gpu 0.032 ms  verify OK
+[ 463/1872] data/faces/ch4f/ch4f_up_happy_open.pgm        128x120 gpu 0.028 ms  verify OK
+[ 464/1872] data/faces/ch4f/ch4f_up_happy_open_2.pgm       64x60  gpu 0.026 ms  verify OK
+[ 465/1872] data/faces/ch4f/ch4f_up_happy_open_4.pgm       32x30  gpu 0.022 ms  verify OK
+[ 466/1872] data/faces/ch4f/ch4f_up_happy_sunglasses.pgm  128x120 gpu 0.036 ms  verify OK
+[ 467/1872] data/faces/ch4f/ch4f_up_happy_sunglasses_2.pgm  64x60  gpu 0.034 ms  verify OK
+[ 468/1872] data/faces/ch4f/ch4f_up_happy_sunglasses_4.pgm  32x30  gpu 0.037 ms  verify OK
+[ 469/1872] data/faces/ch4f/ch4f_up_neutral_open.pgm      128x120 gpu 0.036 ms  verify OK
+[ 470/1872] data/faces/ch4f/ch4f_up_neutral_open_2.pgm     64x60  gpu 0.036 ms  verify OK
+[ 471/1872] data/faces/ch4f/ch4f_up_neutral_open_4.pgm     32x30  gpu 0.030 ms  verify OK
+[ 472/1872] data/faces/ch4f/ch4f_up_neutral_sunglasses.pgm 128x120 gpu 0.030 ms  verify OK
+[ 473/1872] data/faces/ch4f/ch4f_up_neutral_sunglasses_2.pgm  64x60  gpu 0.036 ms  verify OK
+[ 474/1872] data/faces/ch4f/ch4f_up_neutral_sunglasses_4.pgm  32x30  gpu 0.025 ms  verify OK
+[ 475/1872] data/faces/ch4f/ch4f_up_sad_open.pgm          128x120 gpu 0.027 ms  verify OK
+[ 476/1872] data/faces/ch4f/ch4f_up_sad_open_2.pgm         64x60  gpu 0.028 ms  verify OK
+[ 477/1872] data/faces/ch4f/ch4f_up_sad_open_4.pgm         32x30  gpu 0.022 ms  verify OK
+[ 478/1872] data/faces/ch4f/ch4f_up_sad_sunglasses.pgm    128x120 gpu 0.035 ms  verify OK
+[ 479/1872] data/faces/ch4f/ch4f_up_sad_sunglasses_2.pgm   64x60  gpu 0.034 ms  verify OK
+[ 480/1872] data/faces/ch4f/ch4f_up_sad_sunglasses_4.pgm   32x30  gpu 0.029 ms  verify OK
+[ 481/1872] data/faces/cheyer/cheyer_left_angry_open.pgm  128x120 gpu 0.039 ms  verify OK
+[ 482/1872] data/faces/cheyer/cheyer_left_angry_open_2.pgm  64x60  gpu 0.028 ms  verify OK
+[ 483/1872] data/faces/cheyer/cheyer_left_angry_open_4.pgm  32x30  gpu 0.032 ms  verify OK
+[ 484/1872] data/faces/cheyer/cheyer_left_angry_sunglasses.pgm 128x120 gpu 0.028 ms  verify OK
+[ 485/1872] data/faces/cheyer/cheyer_left_angry_sunglasses_2.pgm  64x60  gpu 0.022 ms  verify OK
+[ 486/1872] data/faces/cheyer/cheyer_left_angry_sunglasses_4.pgm  32x30  gpu 0.030 ms  verify OK
+[ 487/1872] data/faces/cheyer/cheyer_left_happy_open.pgm  128x120 gpu 0.039 ms  verify OK
+[ 488/1872] data/faces/cheyer/cheyer_left_happy_open_2.pgm  64x60  gpu 0.029 ms  verify OK
+[ 489/1872] data/faces/cheyer/cheyer_left_happy_open_4.pgm  32x30  gpu 0.022 ms  verify OK
+[ 490/1872] data/faces/cheyer/cheyer_left_happy_sunglasses.pgm 128x120 gpu 0.034 ms  verify OK
+[ 491/1872] data/faces/cheyer/cheyer_left_happy_sunglasses_2.pgm  64x60  gpu 0.037 ms  verify OK
+[ 492/1872] data/faces/cheyer/cheyer_left_happy_sunglasses_4.pgm  32x30  gpu 0.032 ms  verify OK
+[ 493/1872] data/faces/cheyer/cheyer_left_neutral_open.pgm 128x120 gpu 0.039 ms  verify OK
+[ 494/1872] data/faces/cheyer/cheyer_left_neutral_open_2.pgm  64x60  gpu 0.026 ms  verify OK
+[ 495/1872] data/faces/cheyer/cheyer_left_neutral_open_4.pgm  32x30  gpu 0.030 ms  verify OK
+[ 496/1872] data/faces/cheyer/cheyer_left_neutral_sunglasses.pgm 128x120 gpu 0.031 ms  verify OK
+[ 497/1872] data/faces/cheyer/cheyer_left_neutral_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[ 498/1872] data/faces/cheyer/cheyer_left_neutral_sunglasses_4.pgm  32x30  gpu 0.030 ms  verify OK
+[ 499/1872] data/faces/cheyer/cheyer_left_sad_open.pgm    128x120 gpu 0.037 ms  verify OK
+[ 500/1872] data/faces/cheyer/cheyer_left_sad_open_2.pgm   64x60  gpu 0.034 ms  verify OK
+[ 501/1872] data/faces/cheyer/cheyer_left_sad_open_4.pgm   32x30  gpu 0.021 ms  verify OK
+[ 502/1872] data/faces/cheyer/cheyer_left_sad_sunglasses.pgm 128x120 gpu 0.036 ms  verify OK
+[ 503/1872] data/faces/cheyer/cheyer_left_sad_sunglasses_2.pgm  64x60  gpu 0.029 ms  verify OK
+[ 504/1872] data/faces/cheyer/cheyer_left_sad_sunglasses_4.pgm  32x30  gpu 0.032 ms  verify OK
+[ 505/1872] data/faces/cheyer/cheyer_right_angry_open.pgm 128x120 gpu 0.039 ms  verify OK
+[ 506/1872] data/faces/cheyer/cheyer_right_angry_open_2.pgm  64x60  gpu 0.028 ms  verify OK
+[ 507/1872] data/faces/cheyer/cheyer_right_angry_open_4.pgm  32x30  gpu 0.029 ms  verify OK
+[ 508/1872] data/faces/cheyer/cheyer_right_angry_sunglasses.pgm 128x120 gpu 0.029 ms  verify OK
+[ 509/1872] data/faces/cheyer/cheyer_right_angry_sunglasses_2.pgm  64x60  gpu 0.022 ms  verify OK
+[ 510/1872] data/faces/cheyer/cheyer_right_angry_sunglasses_4.pgm  32x30  gpu 0.032 ms  verify OK
+[ 511/1872] data/faces/cheyer/cheyer_right_happy_open.pgm 128x120 gpu 0.028 ms  verify OK
+[ 512/1872] data/faces/cheyer/cheyer_right_happy_open_2.pgm  64x60  gpu 0.025 ms  verify OK
+[ 513/1872] data/faces/cheyer/cheyer_right_happy_open_4.pgm  32x30  gpu 0.022 ms  verify OK
+[ 514/1872] data/faces/cheyer/cheyer_right_happy_sunglasses.pgm 128x120 gpu 0.036 ms  verify OK
+[ 515/1872] data/faces/cheyer/cheyer_right_happy_sunglasses_2.pgm  64x60  gpu 0.034 ms  verify OK
+[ 516/1872] data/faces/cheyer/cheyer_right_happy_sunglasses_4.pgm  32x30  gpu 0.036 ms  verify OK
+[ 517/1872] data/faces/cheyer/cheyer_right_neutral_open.pgm 128x120 gpu 0.028 ms  verify OK
+[ 518/1872] data/faces/cheyer/cheyer_right_neutral_open_2.pgm  64x60  gpu 0.025 ms  verify OK
+[ 519/1872] data/faces/cheyer/cheyer_right_neutral_open_4.pgm  32x30  gpu 0.026 ms  verify OK
+[ 520/1872] data/faces/cheyer/cheyer_right_neutral_sunglasses.pgm 128x120 gpu 0.031 ms  verify OK
+[ 521/1872] data/faces/cheyer/cheyer_right_neutral_sunglasses_2.pgm  64x60  gpu 0.022 ms  verify OK
+[ 522/1872] data/faces/cheyer/cheyer_right_neutral_sunglasses_4.pgm  32x30  gpu 0.032 ms  verify OK
+[ 523/1872] data/faces/cheyer/cheyer_right_sad_open.pgm   128x120 gpu 0.028 ms  verify OK
+[ 524/1872] data/faces/cheyer/cheyer_right_sad_open_2.pgm  64x60  gpu 0.026 ms  verify OK
+[ 525/1872] data/faces/cheyer/cheyer_right_sad_open_4.pgm  32x30  gpu 0.021 ms  verify OK
+[ 526/1872] data/faces/cheyer/cheyer_right_sad_sunglasses.pgm 128x120 gpu 0.035 ms  verify OK
+[ 527/1872] data/faces/cheyer/cheyer_right_sad_sunglasses_2.pgm  64x60  gpu 0.027 ms  verify OK
+[ 528/1872] data/faces/cheyer/cheyer_right_sad_sunglasses_4.pgm  32x30  gpu 0.037 ms  verify OK
+[ 529/1872] data/faces/cheyer/cheyer_straight_angry_open.pgm 128x120 gpu 0.027 ms  verify OK
+[ 530/1872] data/faces/cheyer/cheyer_straight_angry_open_2.pgm  64x60  gpu 0.024 ms  verify OK
+[ 531/1872] data/faces/cheyer/cheyer_straight_angry_open_4.pgm  32x30  gpu 0.021 ms  verify OK
+[ 532/1872] data/faces/cheyer/cheyer_straight_angry_sunglasses.pgm 128x120 gpu 0.042 ms  verify OK
+[ 533/1872] data/faces/cheyer/cheyer_straight_angry_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[ 534/1872] data/faces/cheyer/cheyer_straight_angry_sunglasses_4.pgm  32x30  gpu 0.029 ms  verify OK
+[ 535/1872] data/faces/cheyer/cheyer_straight_happy_open.pgm 128x120 gpu 0.028 ms  verify OK
+[ 536/1872] data/faces/cheyer/cheyer_straight_happy_open_2.pgm  64x60  gpu 0.026 ms  verify OK
+[ 537/1872] data/faces/cheyer/cheyer_straight_happy_open_4.pgm  32x30  gpu 0.027 ms  verify OK
+[ 538/1872] data/faces/cheyer/cheyer_straight_happy_sunglasses.pgm 128x120 gpu 0.036 ms  verify OK
+[ 539/1872] data/faces/cheyer/cheyer_straight_happy_sunglasses_2.pgm  64x60  gpu 0.034 ms  verify OK
+[ 540/1872] data/faces/cheyer/cheyer_straight_happy_sunglasses_4.pgm  32x30  gpu 0.033 ms  verify OK
+[ 541/1872] data/faces/cheyer/cheyer_straight_neutral_open.pgm 128x120 gpu 0.028 ms  verify OK
+[ 542/1872] data/faces/cheyer/cheyer_straight_neutral_open_2.pgm  64x60  gpu 0.024 ms  verify OK
+[ 543/1872] data/faces/cheyer/cheyer_straight_neutral_open_4.pgm  32x30  gpu 0.025 ms  verify OK
+[ 544/1872] data/faces/cheyer/cheyer_straight_neutral_sunglasses.pgm 128x120 gpu 0.029 ms  verify OK
+[ 545/1872] data/faces/cheyer/cheyer_straight_neutral_sunglasses_2.pgm  64x60  gpu 0.022 ms  verify OK
+[ 546/1872] data/faces/cheyer/cheyer_straight_neutral_sunglasses_4.pgm  32x30  gpu 0.031 ms  verify OK
+[ 547/1872] data/faces/cheyer/cheyer_straight_sad_open.pgm 128x120 gpu 0.028 ms  verify OK
+[ 548/1872] data/faces/cheyer/cheyer_straight_sad_open_2.pgm  64x60  gpu 0.026 ms  verify OK
+[ 549/1872] data/faces/cheyer/cheyer_straight_sad_open_4.pgm  32x30  gpu 0.021 ms  verify OK
+[ 550/1872] data/faces/cheyer/cheyer_straight_sad_sunglasses.pgm 128x120 gpu 0.035 ms  verify OK
+[ 551/1872] data/faces/cheyer/cheyer_straight_sad_sunglasses_2.pgm  64x60  gpu 0.026 ms  verify OK
+[ 552/1872] data/faces/cheyer/cheyer_straight_sad_sunglasses_4.pgm  32x30  gpu 0.027 ms  verify OK
+[ 553/1872] data/faces/cheyer/cheyer_up_angry_open.pgm    128x120 gpu 0.028 ms  verify OK
+[ 554/1872] data/faces/cheyer/cheyer_up_angry_open_2.pgm   64x60  gpu 0.024 ms  verify OK
+[ 555/1872] data/faces/cheyer/cheyer_up_angry_open_4.pgm   32x30  gpu 0.034 ms  verify OK
+[ 556/1872] data/faces/cheyer/cheyer_up_angry_sunglasses.pgm 128x120 gpu 0.045 ms  verify OK
+[ 557/1872] data/faces/cheyer/cheyer_up_angry_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[ 558/1872] data/faces/cheyer/cheyer_up_angry_sunglasses_4.pgm  32x30  gpu 0.034 ms  verify OK
+[ 559/1872] data/faces/cheyer/cheyer_up_happy_open.pgm    128x120 gpu 0.027 ms  verify OK
+[ 560/1872] data/faces/cheyer/cheyer_up_happy_open_2.pgm   64x60  gpu 0.026 ms  verify OK
+[ 561/1872] data/faces/cheyer/cheyer_up_happy_open_4.pgm   32x30  gpu 0.022 ms  verify OK
+[ 562/1872] data/faces/cheyer/cheyer_up_happy_sunglasses.pgm 128x120 gpu 0.036 ms  verify OK
+[ 563/1872] data/faces/cheyer/cheyer_up_happy_sunglasses_2.pgm  64x60  gpu 0.034 ms  verify OK
+[ 564/1872] data/faces/cheyer/cheyer_up_happy_sunglasses_4.pgm  32x30  gpu 0.037 ms  verify OK
+[ 565/1872] data/faces/cheyer/cheyer_up_neutral_open.pgm  128x120 gpu 0.027 ms  verify OK
+[ 566/1872] data/faces/cheyer/cheyer_up_neutral_open_2.pgm  64x60  gpu 0.034 ms  verify OK
+[ 567/1872] data/faces/cheyer/cheyer_up_neutral_open_4.pgm  32x30  gpu 0.022 ms  verify OK
+[ 568/1872] data/faces/cheyer/cheyer_up_neutral_sunglasses.pgm 128x120 gpu 0.041 ms  verify OK
+[ 569/1872] data/faces/cheyer/cheyer_up_neutral_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[ 570/1872] data/faces/cheyer/cheyer_up_neutral_sunglasses_4.pgm  32x30  gpu 0.031 ms  verify OK
+[ 571/1872] data/faces/cheyer/cheyer_up_sad_open.pgm      128x120 gpu 0.025 ms  verify OK
+[ 572/1872] data/faces/cheyer/cheyer_up_sad_open_2.pgm     64x60  gpu 0.035 ms  verify OK
+[ 573/1872] data/faces/cheyer/cheyer_up_sad_open_4.pgm     32x30  gpu 0.022 ms  verify OK
+[ 574/1872] data/faces/cheyer/cheyer_up_sad_sunglasses.pgm 128x120 gpu 0.035 ms  verify OK
+[ 575/1872] data/faces/cheyer/cheyer_up_sad_sunglasses_2.pgm  64x60  gpu 0.028 ms  verify OK
+[ 576/1872] data/faces/cheyer/cheyer_up_sad_sunglasses_4.pgm  32x30  gpu 0.037 ms  verify OK
+[ 577/1872] data/faces/choon/choon_left_angry_open.pgm    128x120 gpu 0.028 ms  verify OK
+[ 578/1872] data/faces/choon/choon_left_angry_open_2.pgm   64x60  gpu 0.031 ms  verify OK
+[ 579/1872] data/faces/choon/choon_left_angry_open_4.pgm   32x30  gpu 0.022 ms  verify OK
+[ 580/1872] data/faces/choon/choon_left_happy_open.pgm    128x120 gpu 0.040 ms  verify OK
+[ 581/1872] data/faces/choon/choon_left_happy_open_2.pgm   64x60  gpu 0.021 ms  verify OK
+[ 582/1872] data/faces/choon/choon_left_happy_open_4.pgm   32x30  gpu 0.035 ms  verify OK
+[ 583/1872] data/faces/choon/choon_left_happy_sunglasses.pgm 128x120 gpu 0.026 ms  verify OK
+[ 584/1872] data/faces/choon/choon_left_happy_sunglasses_2.pgm  64x60  gpu 0.029 ms  verify OK
+[ 585/1872] data/faces/choon/choon_left_happy_sunglasses_4.pgm  32x30  gpu 0.022 ms  verify OK
+[ 586/1872] data/faces/choon/choon_left_neutral_open.pgm  128x120 gpu 0.036 ms  verify OK
+[ 587/1872] data/faces/choon/choon_left_neutral_open_2.pgm  64x60  gpu 0.033 ms  verify OK
+[ 588/1872] data/faces/choon/choon_left_neutral_open_4.pgm  32x30  gpu 0.030 ms  verify OK
+[ 589/1872] data/faces/choon/choon_left_neutral_sunglasses.pgm 128x120 gpu 0.032 ms  verify OK
+[ 590/1872] data/faces/choon/choon_left_neutral_sunglasses_2.pgm  64x60  gpu 0.035 ms  verify OK
+[ 591/1872] data/faces/choon/choon_left_neutral_sunglasses_4.pgm  32x30  gpu 0.022 ms  verify OK
+[ 592/1872] data/faces/choon/choon_left_sad_open.pgm      128x120 gpu 0.041 ms  verify OK
+[ 593/1872] data/faces/choon/choon_left_sad_open_2.pgm     64x60  gpu 0.021 ms  verify OK
+[ 594/1872] data/faces/choon/choon_left_sad_open_4.pgm     32x30  gpu 0.031 ms  verify OK
+[ 595/1872] data/faces/choon/choon_left_sad_sunglasses.pgm 128x120 gpu 0.037 ms  verify OK
+[ 596/1872] data/faces/choon/choon_left_sad_sunglasses_2.pgm  64x60  gpu 0.037 ms  verify OK
+[ 597/1872] data/faces/choon/choon_left_sad_sunglasses_4.pgm  32x30  gpu 0.020 ms  verify OK
+[ 598/1872] data/faces/choon/choon_right_angry_open.pgm   128x120 gpu 0.036 ms  verify OK
+[ 599/1872] data/faces/choon/choon_right_angry_open_2.pgm  64x60  gpu 0.037 ms  verify OK
+[ 600/1872] data/faces/choon/choon_right_angry_open_4.pgm  32x30  gpu 0.032 ms  verify OK
+[ 601/1872] data/faces/choon/choon_right_angry_sunglasses.pgm 128x120 gpu 0.028 ms  verify OK
+[ 602/1872] data/faces/choon/choon_right_angry_sunglasses_2.pgm  64x60  gpu 0.024 ms  verify OK
+[ 603/1872] data/faces/choon/choon_right_angry_sunglasses_4.pgm  32x30  gpu 0.036 ms  verify OK
+[ 604/1872] data/faces/choon/choon_right_happy_open.pgm   128x120 gpu 0.029 ms  verify OK
+[ 605/1872] data/faces/choon/choon_right_happy_open_2.pgm  64x60  gpu 0.022 ms  verify OK
+[ 606/1872] data/faces/choon/choon_right_happy_open_4.pgm  32x30  gpu 0.031 ms  verify OK
+[ 607/1872] data/faces/choon/choon_right_happy_sunglasses.pgm 128x120 gpu 0.028 ms  verify OK
+[ 608/1872] data/faces/choon/choon_right_happy_sunglasses_2.pgm  64x60  gpu 0.026 ms  verify OK
+[ 609/1872] data/faces/choon/choon_right_happy_sunglasses_4.pgm  32x30  gpu 0.026 ms  verify OK
+[ 610/1872] data/faces/choon/choon_right_neutral_open.pgm 128x120 gpu 0.026 ms  verify OK
+[ 611/1872] data/faces/choon/choon_right_neutral_open_2.pgm  64x60  gpu 0.037 ms  verify OK
+[ 612/1872] data/faces/choon/choon_right_neutral_open_4.pgm  32x30  gpu 0.041 ms  verify OK
+[ 613/1872] data/faces/choon/choon_right_neutral_sunglasses.pgm 128x120 gpu 0.028 ms  verify OK
+[ 614/1872] data/faces/choon/choon_right_neutral_sunglasses_2.pgm  64x60  gpu 0.026 ms  verify OK
+[ 615/1872] data/faces/choon/choon_right_neutral_sunglasses_4.pgm  32x30  gpu 0.025 ms  verify OK
+[ 616/1872] data/faces/choon/choon_right_sad_open.pgm     128x120 gpu 0.031 ms  verify OK
+[ 617/1872] data/faces/choon/choon_right_sad_open_2.pgm    64x60  gpu 0.022 ms  verify OK
+[ 618/1872] data/faces/choon/choon_right_sad_open_4.pgm    32x30  gpu 0.032 ms  verify OK
+[ 619/1872] data/faces/choon/choon_right_sad_sunglasses.pgm 128x120 gpu 0.028 ms  verify OK
+[ 620/1872] data/faces/choon/choon_right_sad_sunglasses_2.pgm  64x60  gpu 0.026 ms  verify OK
+[ 621/1872] data/faces/choon/choon_right_sad_sunglasses_4.pgm  32x30  gpu 0.020 ms  verify OK
+[ 622/1872] data/faces/choon/choon_straight_angry_open.pgm 128x120 gpu 0.035 ms  verify OK
+[ 623/1872] data/faces/choon/choon_straight_angry_open_2.pgm  64x60  gpu 0.026 ms  verify OK
+[ 624/1872] data/faces/choon/choon_straight_angry_open_4.pgm  32x30  gpu 0.039 ms  verify OK
+[ 625/1872] data/faces/choon/choon_straight_angry_sunglasses.pgm 128x120 gpu 0.028 ms  verify OK
+[ 626/1872] data/faces/choon/choon_straight_angry_sunglasses_2.pgm  64x60  gpu 0.034 ms  verify OK
+[ 627/1872] data/faces/choon/choon_straight_angry_sunglasses_4.pgm  32x30  gpu 0.021 ms  verify OK
+[ 628/1872] data/faces/choon/choon_straight_happy_open.pgm 128x120 gpu 0.041 ms  verify OK
+[ 629/1872] data/faces/choon/choon_straight_happy_open_2.pgm  64x60  gpu 0.021 ms  verify OK
+[ 630/1872] data/faces/choon/choon_straight_happy_open_4.pgm  32x30  gpu 0.034 ms  verify OK
+[ 631/1872] data/faces/choon/choon_straight_happy_sunglasses.pgm 128x120 gpu 0.039 ms  verify OK
+[ 632/1872] data/faces/choon/choon_straight_happy_sunglasses_2.pgm  64x60  gpu 0.034 ms  verify OK
+[ 633/1872] data/faces/choon/choon_straight_happy_sunglasses_4.pgm  32x30  gpu 0.020 ms  verify OK
+[ 634/1872] data/faces/choon/choon_straight_neutral_open.pgm 128x120 gpu 0.035 ms  verify OK
+[ 635/1872] data/faces/choon/choon_straight_neutral_open_2.pgm  64x60  gpu 0.024 ms  verify OK
+[ 636/1872] data/faces/choon/choon_straight_neutral_open_4.pgm  32x30  gpu 0.026 ms  verify OK
+[ 637/1872] data/faces/choon/choon_straight_neutral_sunglasses.pgm 128x120 gpu 0.028 ms  verify OK
+[ 638/1872] data/faces/choon/choon_straight_neutral_sunglasses_2.pgm  64x60  gpu 0.024 ms  verify OK
+[ 639/1872] data/faces/choon/choon_straight_neutral_sunglasses_4.pgm  32x30  gpu 0.026 ms  verify OK
+[ 640/1872] data/faces/choon/choon_straight_sad_open.pgm  128x120 gpu 0.031 ms  verify OK
+[ 641/1872] data/faces/choon/choon_straight_sad_open_2.pgm  64x60  gpu 0.021 ms  verify OK
+[ 642/1872] data/faces/choon/choon_straight_sad_open_4.pgm  32x30  gpu 0.032 ms  verify OK
+[ 643/1872] data/faces/choon/choon_straight_sad_sunglasses.pgm 128x120 gpu 0.027 ms  verify OK
+[ 644/1872] data/faces/choon/choon_straight_sad_sunglasses_2.pgm  64x60  gpu 0.026 ms  verify OK
+[ 645/1872] data/faces/choon/choon_straight_sad_sunglasses_4.pgm  32x30  gpu 0.021 ms  verify OK
+[ 646/1872] data/faces/choon/choon_up_angry_open.pgm      128x120 gpu 0.035 ms  verify OK
+[ 647/1872] data/faces/choon/choon_up_angry_open_2.pgm     64x60  gpu 0.036 ms  verify OK
+[ 648/1872] data/faces/choon/choon_up_angry_open_4.pgm     32x30  gpu 0.034 ms  verify OK
+[ 649/1872] data/faces/choon/choon_up_angry_sunglasses.pgm 128x120 gpu 0.028 ms  verify OK
+[ 650/1872] data/faces/choon/choon_up_angry_sunglasses_2.pgm  64x60  gpu 0.037 ms  verify OK
+[ 651/1872] data/faces/choon/choon_up_angry_sunglasses_4.pgm  32x30  gpu 0.033 ms  verify OK
+[ 652/1872] data/faces/choon/choon_up_happy_open.pgm      128x120 gpu 0.045 ms  verify OK
+[ 653/1872] data/faces/choon/choon_up_happy_open_2.pgm     64x60  gpu 0.021 ms  verify OK
+[ 654/1872] data/faces/choon/choon_up_happy_open_4.pgm     32x30  gpu 0.035 ms  verify OK
+[ 655/1872] data/faces/choon/choon_up_happy_sunglasses.pgm 128x120 gpu 0.027 ms  verify OK
+[ 656/1872] data/faces/choon/choon_up_happy_sunglasses_2.pgm  64x60  gpu 0.028 ms  verify OK
+[ 657/1872] data/faces/choon/choon_up_happy_sunglasses_4.pgm  32x30  gpu 0.020 ms  verify OK
+[ 658/1872] data/faces/choon/choon_up_neutral_open.pgm    128x120 gpu 0.038 ms  verify OK
+[ 659/1872] data/faces/choon/choon_up_neutral_open_2.pgm   64x60  gpu 0.033 ms  verify OK
+[ 660/1872] data/faces/choon/choon_up_neutral_open_4.pgm   32x30  gpu 0.028 ms  verify OK
+[ 661/1872] data/faces/choon/choon_up_neutral_sunglasses.pgm 128x120 gpu 0.029 ms  verify OK
+[ 662/1872] data/faces/choon/choon_up_neutral_sunglasses_2.pgm  64x60  gpu 0.025 ms  verify OK
+[ 663/1872] data/faces/choon/choon_up_neutral_sunglasses_4.pgm  32x30  gpu 0.036 ms  verify OK
+[ 664/1872] data/faces/choon/choon_up_sad_open.pgm        128x120 gpu 0.045 ms  verify OK
+[ 665/1872] data/faces/choon/choon_up_sad_open_2.pgm       64x60  gpu 0.022 ms  verify OK
+[ 666/1872] data/faces/choon/choon_up_sad_open_4.pgm       32x30  gpu 0.032 ms  verify OK
+[ 667/1872] data/faces/choon/choon_up_sad_sunglasses.pgm  128x120 gpu 0.027 ms  verify OK
+[ 668/1872] data/faces/choon/choon_up_sad_sunglasses_2.pgm  64x60  gpu 0.029 ms  verify OK
+[ 669/1872] data/faces/choon/choon_up_sad_sunglasses_4.pgm  32x30  gpu 0.021 ms  verify OK
+[ 670/1872] data/faces/danieln/danieln_left_angry_open.pgm 128x120 gpu 0.038 ms  verify OK
+[ 671/1872] data/faces/danieln/danieln_left_angry_open_2.pgm  64x60  gpu 0.036 ms  verify OK
+[ 672/1872] data/faces/danieln/danieln_left_angry_open_4.pgm  32x30  gpu 0.035 ms  verify OK
+[ 673/1872] data/faces/danieln/danieln_left_angry_sunglasses.pgm 128x120 gpu 0.026 ms  verify OK
+[ 674/1872] data/faces/danieln/danieln_left_angry_sunglasses_2.pgm  64x60  gpu 0.032 ms  verify OK
+[ 675/1872] data/faces/danieln/danieln_left_angry_sunglasses_4.pgm  32x30  gpu 0.036 ms  verify OK
+[ 676/1872] data/faces/danieln/danieln_left_happy_open.pgm 128x120 gpu 0.030 ms  verify OK
+[ 677/1872] data/faces/danieln/danieln_left_happy_open_2.pgm  64x60  gpu 0.024 ms  verify OK
+[ 678/1872] data/faces/danieln/danieln_left_happy_open_4.pgm  32x30  gpu 0.032 ms  verify OK
+[ 679/1872] data/faces/danieln/danieln_left_happy_sunglasses.pgm 128x120 gpu 0.041 ms  verify OK
+[ 680/1872] data/faces/danieln/danieln_left_happy_sunglasses_2.pgm  64x60  gpu 0.027 ms  verify OK
+[ 681/1872] data/faces/danieln/danieln_left_happy_sunglasses_4.pgm  32x30  gpu 0.021 ms  verify OK
+[ 682/1872] data/faces/danieln/danieln_left_neutral_open.pgm 128x120 gpu 0.039 ms  verify OK
+[ 683/1872] data/faces/danieln/danieln_left_neutral_open_2.pgm  64x60  gpu 0.028 ms  verify OK
+[ 684/1872] data/faces/danieln/danieln_left_neutral_open_4.pgm  32x30  gpu 0.033 ms  verify OK
+[ 685/1872] data/faces/danieln/danieln_left_neutral_sunglasses.pgm 128x120 gpu 0.028 ms  verify OK
+[ 686/1872] data/faces/danieln/danieln_left_neutral_sunglasses_2.pgm  64x60  gpu 0.024 ms  verify OK
+[ 687/1872] data/faces/danieln/danieln_left_neutral_sunglasses_4.pgm  32x30  gpu 0.036 ms  verify OK
+[ 688/1872] data/faces/danieln/danieln_left_sad_open.pgm  128x120 gpu 0.030 ms  verify OK
+[ 689/1872] data/faces/danieln/danieln_left_sad_open_2.pgm  64x60  gpu 0.022 ms  verify OK
+[ 690/1872] data/faces/danieln/danieln_left_sad_open_4.pgm  32x30  gpu 0.032 ms  verify OK
+[ 691/1872] data/faces/danieln/danieln_left_sad_sunglasses.pgm 128x120 gpu 0.027 ms  verify OK
+[ 692/1872] data/faces/danieln/danieln_left_sad_sunglasses_2.pgm  64x60  gpu 0.035 ms  verify OK
+[ 693/1872] data/faces/danieln/danieln_left_sad_sunglasses_4.pgm  32x30  gpu 0.021 ms  verify OK
+[ 694/1872] data/faces/danieln/danieln_right_angry_open.pgm 128x120 gpu 0.038 ms  verify OK
+[ 695/1872] data/faces/danieln/danieln_right_angry_open_2.pgm  64x60  gpu 0.036 ms  verify OK
+[ 696/1872] data/faces/danieln/danieln_right_angry_open_4.pgm  32x30  gpu 0.040 ms  verify OK
+[ 697/1872] data/faces/danieln/danieln_right_angry_sunglasses.pgm 128x120 gpu 0.028 ms  verify OK
+[ 698/1872] data/faces/danieln/danieln_right_angry_sunglasses_2.pgm  64x60  gpu 0.025 ms  verify OK
+[ 699/1872] data/faces/danieln/danieln_right_angry_sunglasses_4.pgm  32x30  gpu 0.026 ms  verify OK
+[ 700/1872] data/faces/danieln/danieln_right_happy_open.pgm 128x120 gpu 0.029 ms  verify OK
+[ 701/1872] data/faces/danieln/danieln_right_happy_open_2.pgm  64x60  gpu 0.022 ms  verify OK
+[ 702/1872] data/faces/danieln/danieln_right_happy_open_4.pgm  32x30  gpu 0.033 ms  verify OK
+[ 703/1872] data/faces/danieln/danieln_right_happy_sunglasses.pgm 128x120 gpu 0.027 ms  verify OK
+[ 704/1872] data/faces/danieln/danieln_right_happy_sunglasses_2.pgm  64x60  gpu 0.029 ms  verify OK
+[ 705/1872] data/faces/danieln/danieln_right_happy_sunglasses_4.pgm  32x30  gpu 0.020 ms  verify OK
+[ 706/1872] data/faces/danieln/danieln_right_neutral_open.pgm 128x120 gpu 0.036 ms  verify OK
+[ 707/1872] data/faces/danieln/danieln_right_neutral_open_2.pgm  64x60  gpu 0.034 ms  verify OK
+[ 708/1872] data/faces/danieln/danieln_right_neutral_open_4.pgm  32x30  gpu 0.040 ms  verify OK
+[ 709/1872] data/faces/danieln/danieln_right_neutral_sunglasses.pgm 128x120 gpu 0.028 ms  verify OK
+[ 710/1872] data/faces/danieln/danieln_right_neutral_sunglasses_2.pgm  64x60  gpu 0.025 ms  verify OK
+[ 711/1872] data/faces/danieln/danieln_right_neutral_sunglasses_4.pgm  32x30  gpu 0.022 ms  verify OK
+[ 712/1872] data/faces/danieln/danieln_right_sad_open.pgm 128x120 gpu 0.039 ms  verify OK
+[ 713/1872] data/faces/danieln/danieln_right_sad_open_2.pgm  64x60  gpu 0.022 ms  verify OK
+[ 714/1872] data/faces/danieln/danieln_right_sad_open_4.pgm  32x30  gpu 0.033 ms  verify OK
+[ 715/1872] data/faces/danieln/danieln_right_sad_sunglasses.pgm 128x120 gpu 0.027 ms  verify OK
+[ 716/1872] data/faces/danieln/danieln_right_sad_sunglasses_2.pgm  64x60  gpu 0.033 ms  verify OK
+[ 717/1872] data/faces/danieln/danieln_right_sad_sunglasses_4.pgm  32x30  gpu 0.021 ms  verify OK
+[ 718/1872] data/faces/danieln/danieln_straight_angry_open.pgm 128x120 gpu 0.040 ms  verify OK
+[ 719/1872] data/faces/danieln/danieln_straight_angry_open_2.pgm  64x60  gpu 0.029 ms  verify OK
+[ 720/1872] data/faces/danieln/danieln_straight_angry_open_4.pgm  32x30  gpu 0.029 ms  verify OK
+[ 721/1872] data/faces/danieln/danieln_straight_angry_sunglasses.pgm 128x120 gpu 0.028 ms  verify OK
+[ 722/1872] data/faces/danieln/danieln_straight_angry_sunglasses_2.pgm  64x60  gpu 0.031 ms  verify OK
+[ 723/1872] data/faces/danieln/danieln_straight_angry_sunglasses_4.pgm  32x30  gpu 0.027 ms  verify OK
+[ 724/1872] data/faces/danieln/danieln_straight_happy_open.pgm 128x120 gpu 0.029 ms  verify OK
+[ 725/1872] data/faces/danieln/danieln_straight_happy_open_2.pgm  64x60  gpu 0.021 ms  verify OK
+[ 726/1872] data/faces/danieln/danieln_straight_happy_open_4.pgm  32x30  gpu 0.033 ms  verify OK
+[ 727/1872] data/faces/danieln/danieln_straight_neutral_open.pgm 128x120 gpu 0.025 ms  verify OK
+[ 728/1872] data/faces/danieln/danieln_straight_neutral_open_2.pgm  64x60  gpu 0.035 ms  verify OK
+[ 729/1872] data/faces/danieln/danieln_straight_neutral_open_4.pgm  32x30  gpu 0.021 ms  verify OK
+[ 730/1872] data/faces/danieln/danieln_straight_neutral_sunglasses.pgm 128x120 gpu 0.036 ms  verify OK
+[ 731/1872] data/faces/danieln/danieln_straight_neutral_sunglasses_2.pgm  64x60  gpu 0.024 ms  verify OK
+[ 732/1872] data/faces/danieln/danieln_straight_neutral_sunglasses_4.pgm  32x30  gpu 0.029 ms  verify OK
+[ 733/1872] data/faces/danieln/danieln_straight_sad_open.pgm 128x120 gpu 0.028 ms  verify OK
+[ 734/1872] data/faces/danieln/danieln_straight_sad_open_2.pgm  64x60  gpu 0.034 ms  verify OK
+[ 735/1872] data/faces/danieln/danieln_straight_sad_open_4.pgm  32x30  gpu 0.021 ms  verify OK
+[ 736/1872] data/faces/danieln/danieln_straight_sad_sunglasses.pgm 128x120 gpu 0.035 ms  verify OK
+[ 737/1872] data/faces/danieln/danieln_straight_sad_sunglasses_2.pgm  64x60  gpu 0.023 ms  verify OK
+[ 738/1872] data/faces/danieln/danieln_straight_sad_sunglasses_4.pgm  32x30  gpu 0.031 ms  verify OK
+[ 739/1872] data/faces/danieln/danieln_up_angry_open.pgm  128x120 gpu 0.028 ms  verify OK
+[ 740/1872] data/faces/danieln/danieln_up_angry_open_2.pgm  64x60  gpu 0.028 ms  verify OK
+[ 741/1872] data/faces/danieln/danieln_up_angry_open_4.pgm  32x30  gpu 0.021 ms  verify OK
+[ 742/1872] data/faces/danieln/danieln_up_angry_sunglasses.pgm 128x120 gpu 0.035 ms  verify OK
+[ 743/1872] data/faces/danieln/danieln_up_angry_sunglasses_2.pgm  64x60  gpu 0.036 ms  verify OK
+[ 744/1872] data/faces/danieln/danieln_up_angry_sunglasses_4.pgm  32x30  gpu 0.041 ms  verify OK
+[ 745/1872] data/faces/danieln/danieln_up_happy_open.pgm  128x120 gpu 0.026 ms  verify OK
+[ 746/1872] data/faces/danieln/danieln_up_happy_open_2.pgm  64x60  gpu 0.030 ms  verify OK
+[ 747/1872] data/faces/danieln/danieln_up_happy_open_4.pgm  32x30  gpu 0.034 ms  verify OK
+[ 748/1872] data/faces/danieln/danieln_up_happy_sunglasses.pgm 128x120 gpu 0.045 ms  verify OK
+[ 749/1872] data/faces/danieln/danieln_up_happy_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[ 750/1872] data/faces/danieln/danieln_up_happy_sunglasses_4.pgm  32x30  gpu 0.033 ms  verify OK
+[ 751/1872] data/faces/danieln/danieln_up_neutral_open.pgm 128x120 gpu 0.028 ms  verify OK
+[ 752/1872] data/faces/danieln/danieln_up_neutral_open_2.pgm  64x60  gpu 0.026 ms  verify OK
+[ 753/1872] data/faces/danieln/danieln_up_neutral_open_4.pgm  32x30  gpu 0.020 ms  verify OK
+[ 754/1872] data/faces/danieln/danieln_up_neutral_sunglasses.pgm 128x120 gpu 0.036 ms  verify OK
+[ 755/1872] data/faces/danieln/danieln_up_neutral_sunglasses_2.pgm  64x60  gpu 0.035 ms  verify OK
+[ 756/1872] data/faces/danieln/danieln_up_neutral_sunglasses_4.pgm  32x30  gpu 0.034 ms  verify OK
+[ 757/1872] data/faces/danieln/danieln_up_sad_open.pgm    128x120 gpu 0.028 ms  verify OK
+[ 758/1872] data/faces/danieln/danieln_up_sad_open_2.pgm   64x60  gpu 0.024 ms  verify OK
+[ 759/1872] data/faces/danieln/danieln_up_sad_open_4.pgm   32x30  gpu 0.036 ms  verify OK
+[ 760/1872] data/faces/danieln/danieln_up_sad_sunglasses.pgm 128x120 gpu 0.029 ms  verify OK
+[ 761/1872] data/faces/danieln/danieln_up_sad_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[ 762/1872] data/faces/danieln/danieln_up_sad_sunglasses_4.pgm  32x30  gpu 0.031 ms  verify OK
+[ 763/1872] data/faces/glickman/glickman_left_angry_open.pgm 128x120 gpu 0.028 ms  verify OK
+[ 764/1872] data/faces/glickman/glickman_left_angry_open_2.pgm  64x60  gpu 0.026 ms  verify OK
+[ 765/1872] data/faces/glickman/glickman_left_angry_open_4.pgm  32x30  gpu 0.020 ms  verify OK
+[ 766/1872] data/faces/glickman/glickman_left_angry_sunglasses.pgm 128x120 gpu 0.037 ms  verify OK
+[ 767/1872] data/faces/glickman/glickman_left_angry_sunglasses_2.pgm  64x60  gpu 0.028 ms  verify OK
+[ 768/1872] data/faces/glickman/glickman_left_angry_sunglasses_4.pgm  32x30  gpu 0.030 ms  verify OK
+[ 769/1872] data/faces/glickman/glickman_left_happy_open.pgm 128x120 gpu 0.028 ms  verify OK
+[ 770/1872] data/faces/glickman/glickman_left_happy_open_2.pgm  64x60  gpu 0.036 ms  verify OK
+[ 771/1872] data/faces/glickman/glickman_left_happy_open_4.pgm  32x30  gpu 0.026 ms  verify OK
+[ 772/1872] data/faces/glickman/glickman_left_happy_sunglasses.pgm 128x120 gpu 0.031 ms  verify OK
+[ 773/1872] data/faces/glickman/glickman_left_happy_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[ 774/1872] data/faces/glickman/glickman_left_happy_sunglasses_4.pgm  32x30  gpu 0.028 ms  verify OK
+[ 775/1872] data/faces/glickman/glickman_left_neutral_open.pgm 128x120 gpu 0.027 ms  verify OK
+[ 776/1872] data/faces/glickman/glickman_left_neutral_open_2.pgm  64x60  gpu 0.026 ms  verify OK
+[ 777/1872] data/faces/glickman/glickman_left_neutral_open_4.pgm  32x30  gpu 0.020 ms  verify OK
+[ 778/1872] data/faces/glickman/glickman_left_neutral_sunglasses.pgm 128x120 gpu 0.038 ms  verify OK
+[ 779/1872] data/faces/glickman/glickman_left_neutral_sunglasses_2.pgm  64x60  gpu 0.029 ms  verify OK
+[ 780/1872] data/faces/glickman/glickman_left_neutral_sunglasses_4.pgm  32x30  gpu 0.040 ms  verify OK
+[ 781/1872] data/faces/glickman/glickman_left_sad_open.pgm 128x120 gpu 0.028 ms  verify OK
+[ 782/1872] data/faces/glickman/glickman_left_sad_open_2.pgm  64x60  gpu 0.024 ms  verify OK
+[ 783/1872] data/faces/glickman/glickman_left_sad_open_4.pgm  32x30  gpu 0.021 ms  verify OK
+[ 784/1872] data/faces/glickman/glickman_left_sad_sunglasses.pgm 128x120 gpu 0.035 ms  verify OK
+[ 785/1872] data/faces/glickman/glickman_left_sad_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[ 786/1872] data/faces/glickman/glickman_left_sad_sunglasses_4.pgm  32x30  gpu 0.034 ms  verify OK
+[ 787/1872] data/faces/glickman/glickman_right_angry_open.pgm 128x120 gpu 0.027 ms  verify OK
+[ 788/1872] data/faces/glickman/glickman_right_angry_open_2.pgm  64x60  gpu 0.026 ms  verify OK
+[ 789/1872] data/faces/glickman/glickman_right_angry_open_4.pgm  32x30  gpu 0.021 ms  verify OK
+[ 790/1872] data/faces/glickman/glickman_right_angry_sunglasses.pgm 128x120 gpu 0.032 ms  verify OK
+[ 791/1872] data/faces/glickman/glickman_right_angry_sunglasses_2.pgm  64x60  gpu 0.034 ms  verify OK
+[ 792/1872] data/faces/glickman/glickman_right_angry_sunglasses_4.pgm  32x30  gpu 0.042 ms  verify OK
+[ 793/1872] data/faces/glickman/glickman_right_happy_open.pgm 128x120 gpu 0.028 ms  verify OK
+[ 794/1872] data/faces/glickman/glickman_right_happy_open_2.pgm  64x60  gpu 0.025 ms  verify OK
+[ 795/1872] data/faces/glickman/glickman_right_happy_open_4.pgm  32x30  gpu 0.030 ms  verify OK
+[ 796/1872] data/faces/glickman/glickman_right_happy_sunglasses.pgm 128x120 gpu 0.031 ms  verify OK
+[ 797/1872] data/faces/glickman/glickman_right_happy_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[ 798/1872] data/faces/glickman/glickman_right_happy_sunglasses_4.pgm  32x30  gpu 0.033 ms  verify OK
+[ 799/1872] data/faces/glickman/glickman_right_neutral_open.pgm 128x120 gpu 0.027 ms  verify OK
+[ 800/1872] data/faces/glickman/glickman_right_neutral_open_2.pgm  64x60  gpu 0.034 ms  verify OK
+[ 801/1872] data/faces/glickman/glickman_right_neutral_open_4.pgm  32x30  gpu 0.021 ms  verify OK
+[ 802/1872] data/faces/glickman/glickman_right_neutral_sunglasses.pgm 128x120 gpu 0.037 ms  verify OK
+[ 803/1872] data/faces/glickman/glickman_right_neutral_sunglasses_2.pgm  64x60  gpu 0.037 ms  verify OK
+[ 804/1872] data/faces/glickman/glickman_right_neutral_sunglasses_4.pgm  32x30  gpu 0.032 ms  verify OK
+[ 805/1872] data/faces/glickman/glickman_right_sad_sunglasses.pgm 128x120 gpu 0.028 ms  verify OK
+[ 806/1872] data/faces/glickman/glickman_right_sad_sunglasses_2.pgm  64x60  gpu 0.024 ms  verify OK
+[ 807/1872] data/faces/glickman/glickman_right_sad_sunglasses_4.pgm  32x30  gpu 0.021 ms  verify OK
+[ 808/1872] data/faces/glickman/glickman_straight_angry_sunglasses.pgm 128x120 gpu 0.041 ms  verify OK
+[ 809/1872] data/faces/glickman/glickman_straight_angry_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[ 810/1872] data/faces/glickman/glickman_straight_angry_sunglasses_4.pgm  32x30  gpu 0.032 ms  verify OK
+[ 811/1872] data/faces/glickman/glickman_straight_happy_open.pgm 128x120 gpu 0.039 ms  verify OK
+[ 812/1872] data/faces/glickman/glickman_straight_happy_open_2.pgm  64x60  gpu 0.027 ms  verify OK
+[ 813/1872] data/faces/glickman/glickman_straight_happy_open_4.pgm  32x30  gpu 0.021 ms  verify OK
+[ 814/1872] data/faces/glickman/glickman_straight_happy_sunglasses.pgm 128x120 gpu 0.037 ms  verify OK
+[ 815/1872] data/faces/glickman/glickman_straight_happy_sunglasses_2.pgm  64x60  gpu 0.028 ms  verify OK
+[ 816/1872] data/faces/glickman/glickman_straight_happy_sunglasses_4.pgm  32x30  gpu 0.030 ms  verify OK
+[ 817/1872] data/faces/glickman/glickman_straight_neutral_open.pgm 128x120 gpu 0.027 ms  verify OK
+[ 818/1872] data/faces/glickman/glickman_straight_neutral_open_2.pgm  64x60  gpu 0.026 ms  verify OK
+[ 819/1872] data/faces/glickman/glickman_straight_neutral_open_4.pgm  32x30  gpu 0.034 ms  verify OK
+[ 820/1872] data/faces/glickman/glickman_straight_neutral_sunglasses.pgm 128x120 gpu 0.030 ms  verify OK
+[ 821/1872] data/faces/glickman/glickman_straight_neutral_sunglasses_2.pgm  64x60  gpu 0.022 ms  verify OK
+[ 822/1872] data/faces/glickman/glickman_straight_neutral_sunglasses_4.pgm  32x30  gpu 0.033 ms  verify OK
+[ 823/1872] data/faces/glickman/glickman_straight_sad_open.pgm 128x120 gpu 0.027 ms  verify OK
+[ 824/1872] data/faces/glickman/glickman_straight_sad_open_2.pgm  64x60  gpu 0.028 ms  verify OK
+[ 825/1872] data/faces/glickman/glickman_straight_sad_open_4.pgm  32x30  gpu 0.020 ms  verify OK
+[ 826/1872] data/faces/glickman/glickman_straight_sad_sunglasses.pgm 128x120 gpu 0.039 ms  verify OK
+[ 827/1872] data/faces/glickman/glickman_straight_sad_sunglasses_2.pgm  64x60  gpu 0.030 ms  verify OK
+[ 828/1872] data/faces/glickman/glickman_straight_sad_sunglasses_4.pgm  32x30  gpu 0.035 ms  verify OK
+[ 829/1872] data/faces/glickman/glickman_up_angry_open.pgm 128x120 gpu 0.028 ms  verify OK
+[ 830/1872] data/faces/glickman/glickman_up_angry_open_2.pgm  64x60  gpu 0.024 ms  verify OK
+[ 831/1872] data/faces/glickman/glickman_up_angry_open_4.pgm  32x30  gpu 0.022 ms  verify OK
+[ 832/1872] data/faces/glickman/glickman_up_angry_sunglasses.pgm 128x120 gpu 0.039 ms  verify OK
+[ 833/1872] data/faces/glickman/glickman_up_angry_sunglasses_2.pgm  64x60  gpu 0.022 ms  verify OK
+[ 834/1872] data/faces/glickman/glickman_up_angry_sunglasses_4.pgm  32x30  gpu 0.031 ms  verify OK
+[ 835/1872] data/faces/glickman/glickman_up_happy_open.pgm 128x120 gpu 0.032 ms  verify OK
+[ 836/1872] data/faces/glickman/glickman_up_happy_open_2.pgm  64x60  gpu 0.040 ms  verify OK
+[ 837/1872] data/faces/glickman/glickman_up_happy_open_4.pgm  32x30  gpu 0.020 ms  verify OK
+[ 838/1872] data/faces/glickman/glickman_up_happy_sunglasses.pgm 128x120 gpu 0.033 ms  verify OK
+[ 839/1872] data/faces/glickman/glickman_up_happy_sunglasses_2.pgm  64x60  gpu 0.035 ms  verify OK
+[ 840/1872] data/faces/glickman/glickman_up_happy_sunglasses_4.pgm  32x30  gpu 0.028 ms  verify OK
+[ 841/1872] data/faces/glickman/glickman_up_neutral_open.pgm 128x120 gpu 0.028 ms  verify OK
+[ 842/1872] data/faces/glickman/glickman_up_neutral_open_2.pgm  64x60  gpu 0.024 ms  verify OK
+[ 843/1872] data/faces/glickman/glickman_up_neutral_open_4.pgm  32x30  gpu 0.021 ms  verify OK
+[ 844/1872] data/faces/glickman/glickman_up_neutral_sunglasses.pgm 128x120 gpu 0.035 ms  verify OK
+[ 845/1872] data/faces/glickman/glickman_up_neutral_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[ 846/1872] data/faces/glickman/glickman_up_neutral_sunglasses_4.pgm  32x30  gpu 0.029 ms  verify OK
+[ 847/1872] data/faces/glickman/glickman_up_sad_open.pgm  128x120 gpu 0.028 ms  verify OK
+[ 848/1872] data/faces/glickman/glickman_up_sad_open_2.pgm  64x60  gpu 0.025 ms  verify OK
+[ 849/1872] data/faces/glickman/glickman_up_sad_open_4.pgm  32x30  gpu 0.021 ms  verify OK
+[ 850/1872] data/faces/glickman/glickman_up_sad_sunglasses.pgm 128x120 gpu 0.037 ms  verify OK
+[ 851/1872] data/faces/glickman/glickman_up_sad_sunglasses_2.pgm  64x60  gpu 0.026 ms  verify OK
+[ 852/1872] data/faces/glickman/glickman_up_sad_sunglasses_4.pgm  32x30  gpu 0.040 ms  verify OK
+[ 853/1872] data/faces/karyadi/karyadi_left_angry_open.pgm 128x120 gpu 0.028 ms  verify OK
+[ 854/1872] data/faces/karyadi/karyadi_left_angry_open_2.pgm  64x60  gpu 0.024 ms  verify OK
+[ 855/1872] data/faces/karyadi/karyadi_left_angry_open_4.pgm  32x30  gpu 0.034 ms  verify OK
+[ 856/1872] data/faces/karyadi/karyadi_left_angry_sunglasses.pgm 128x120 gpu 0.039 ms  verify OK
+[ 857/1872] data/faces/karyadi/karyadi_left_angry_sunglasses_2.pgm  64x60  gpu 0.023 ms  verify OK
+[ 858/1872] data/faces/karyadi/karyadi_left_angry_sunglasses_4.pgm  32x30  gpu 0.034 ms  verify OK
+[ 859/1872] data/faces/karyadi/karyadi_left_happy_open.pgm 128x120 gpu 0.027 ms  verify OK
+[ 860/1872] data/faces/karyadi/karyadi_left_happy_open_2.pgm  64x60  gpu 0.038 ms  verify OK
+[ 861/1872] data/faces/karyadi/karyadi_left_happy_open_4.pgm  32x30  gpu 0.023 ms  verify OK
+[ 862/1872] data/faces/karyadi/karyadi_left_happy_sunglasses.pgm 128x120 gpu 0.037 ms  verify OK
+[ 863/1872] data/faces/karyadi/karyadi_left_happy_sunglasses_2.pgm  64x60  gpu 0.037 ms  verify OK
+[ 864/1872] data/faces/karyadi/karyadi_left_happy_sunglasses_4.pgm  32x30  gpu 0.034 ms  verify OK
+[ 865/1872] data/faces/karyadi/karyadi_left_neutral_open.pgm 128x120 gpu 0.028 ms  verify OK
+[ 866/1872] data/faces/karyadi/karyadi_left_neutral_open_2.pgm  64x60  gpu 0.025 ms  verify OK
+[ 867/1872] data/faces/karyadi/karyadi_left_neutral_open_4.pgm  32x30  gpu 0.022 ms  verify OK
+[ 868/1872] data/faces/karyadi/karyadi_left_neutral_sunglasses.pgm 128x120 gpu 0.041 ms  verify OK
+[ 869/1872] data/faces/karyadi/karyadi_left_neutral_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[ 870/1872] data/faces/karyadi/karyadi_left_neutral_sunglasses_4.pgm  32x30  gpu 0.034 ms  verify OK
+[ 871/1872] data/faces/karyadi/karyadi_left_sad_open.pgm  128x120 gpu 0.027 ms  verify OK
+[ 872/1872] data/faces/karyadi/karyadi_left_sad_open_2.pgm  64x60  gpu 0.026 ms  verify OK
+[ 873/1872] data/faces/karyadi/karyadi_left_sad_open_4.pgm  32x30  gpu 0.021 ms  verify OK
+[ 874/1872] data/faces/karyadi/karyadi_left_sad_sunglasses.pgm 128x120 gpu 0.037 ms  verify OK
+[ 875/1872] data/faces/karyadi/karyadi_left_sad_sunglasses_2.pgm  64x60  gpu 0.038 ms  verify OK
+[ 876/1872] data/faces/karyadi/karyadi_left_sad_sunglasses_4.pgm  32x30  gpu 0.032 ms  verify OK
+[ 877/1872] data/faces/karyadi/karyadi_right_angry_open.pgm 128x120 gpu 0.028 ms  verify OK
+[ 878/1872] data/faces/karyadi/karyadi_right_angry_open_2.pgm  64x60  gpu 0.024 ms  verify OK
+[ 879/1872] data/faces/karyadi/karyadi_right_angry_open_4.pgm  32x30  gpu 0.025 ms  verify OK
+[ 880/1872] data/faces/karyadi/karyadi_right_angry_sunglasses.pgm 128x120 gpu 0.029 ms  verify OK
+[ 881/1872] data/faces/karyadi/karyadi_right_angry_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[ 882/1872] data/faces/karyadi/karyadi_right_angry_sunglasses_4.pgm  32x30  gpu 0.030 ms  verify OK
+[ 883/1872] data/faces/karyadi/karyadi_right_happy_open.pgm 128x120 gpu 0.037 ms  verify OK
+[ 884/1872] data/faces/karyadi/karyadi_right_happy_open_2.pgm  64x60  gpu 0.034 ms  verify OK
+[ 885/1872] data/faces/karyadi/karyadi_right_happy_open_4.pgm  32x30  gpu 0.022 ms  verify OK
+[ 886/1872] data/faces/karyadi/karyadi_right_neutral_open.pgm 128x120 gpu 0.030 ms  verify OK
+[ 887/1872] data/faces/karyadi/karyadi_right_neutral_open_2.pgm  64x60  gpu 0.023 ms  verify OK
+[ 888/1872] data/faces/karyadi/karyadi_right_neutral_open_4.pgm  32x30  gpu 0.035 ms  verify OK
+[ 889/1872] data/faces/karyadi/karyadi_right_neutral_sunglasses.pgm 128x120 gpu 0.029 ms  verify OK
+[ 890/1872] data/faces/karyadi/karyadi_right_neutral_sunglasses_2.pgm  64x60  gpu 0.025 ms  verify OK
+[ 891/1872] data/faces/karyadi/karyadi_right_neutral_sunglasses_4.pgm  32x30  gpu 0.035 ms  verify OK
+[ 892/1872] data/faces/karyadi/karyadi_right_sad_open.pgm 128x120 gpu 0.029 ms  verify OK
+[ 893/1872] data/faces/karyadi/karyadi_right_sad_open_2.pgm  64x60  gpu 0.022 ms  verify OK
+[ 894/1872] data/faces/karyadi/karyadi_right_sad_open_4.pgm  32x30  gpu 0.029 ms  verify OK
+[ 895/1872] data/faces/karyadi/karyadi_right_sad_sunglasses.pgm 128x120 gpu 0.028 ms  verify OK
+[ 896/1872] data/faces/karyadi/karyadi_right_sad_sunglasses_2.pgm  64x60  gpu 0.025 ms  verify OK
+[ 897/1872] data/faces/karyadi/karyadi_right_sad_sunglasses_4.pgm  32x30  gpu 0.021 ms  verify OK
+[ 898/1872] data/faces/karyadi/karyadi_straight_angry_open.pgm 128x120 gpu 0.037 ms  verify OK
+[ 899/1872] data/faces/karyadi/karyadi_straight_angry_open_2.pgm  64x60  gpu 0.026 ms  verify OK
+[ 900/1872] data/faces/karyadi/karyadi_straight_angry_open_4.pgm  32x30  gpu 0.035 ms  verify OK
+[ 901/1872] data/faces/karyadi/karyadi_straight_angry_sunglasses.pgm 128x120 gpu 0.028 ms  verify OK
+[ 902/1872] data/faces/karyadi/karyadi_straight_angry_sunglasses_2.pgm  64x60  gpu 0.024 ms  verify OK
+[ 903/1872] data/faces/karyadi/karyadi_straight_angry_sunglasses_4.pgm  32x30  gpu 0.026 ms  verify OK
+[ 904/1872] data/faces/karyadi/karyadi_straight_happy_open.pgm 128x120 gpu 0.031 ms  verify OK
+[ 905/1872] data/faces/karyadi/karyadi_straight_happy_open_2.pgm  64x60  gpu 0.021 ms  verify OK
+[ 906/1872] data/faces/karyadi/karyadi_straight_happy_open_4.pgm  32x30  gpu 0.031 ms  verify OK
+[ 907/1872] data/faces/karyadi/karyadi_straight_happy_sunglasses.pgm 128x120 gpu 0.037 ms  verify OK
+[ 908/1872] data/faces/karyadi/karyadi_straight_happy_sunglasses_2.pgm  64x60  gpu 0.024 ms  verify OK
+[ 909/1872] data/faces/karyadi/karyadi_straight_happy_sunglasses_4.pgm  32x30  gpu 0.021 ms  verify OK
+[ 910/1872] data/faces/karyadi/karyadi_straight_neutral_open.pgm 128x120 gpu 0.041 ms  verify OK
+[ 911/1872] data/faces/karyadi/karyadi_straight_neutral_open_2.pgm  64x60  gpu 0.036 ms  verify OK
+[ 912/1872] data/faces/karyadi/karyadi_straight_neutral_open_4.pgm  32x30  gpu 0.025 ms  verify OK
+[ 913/1872] data/faces/karyadi/karyadi_straight_neutral_sunglasses.pgm 128x120 gpu 0.028 ms  verify OK
+[ 914/1872] data/faces/karyadi/karyadi_straight_neutral_sunglasses_2.pgm  64x60  gpu 0.024 ms  verify OK
+[ 915/1872] data/faces/karyadi/karyadi_straight_neutral_sunglasses_4.pgm  32x30  gpu 0.022 ms  verify OK
+[ 916/1872] data/faces/karyadi/karyadi_straight_sad_open.pgm 128x120 gpu 0.035 ms  verify OK
+[ 917/1872] data/faces/karyadi/karyadi_straight_sad_open_2.pgm  64x60  gpu 0.021 ms  verify OK
+[ 918/1872] data/faces/karyadi/karyadi_straight_sad_open_4.pgm  32x30  gpu 0.030 ms  verify OK
+[ 919/1872] data/faces/karyadi/karyadi_straight_sad_sunglasses.pgm 128x120 gpu 0.038 ms  verify OK
+[ 920/1872] data/faces/karyadi/karyadi_straight_sad_sunglasses_2.pgm  64x60  gpu 0.029 ms  verify OK
+[ 921/1872] data/faces/karyadi/karyadi_straight_sad_sunglasses_4.pgm  32x30  gpu 0.021 ms  verify OK
+[ 922/1872] data/faces/karyadi/karyadi_up_angry_open.pgm  128x120 gpu 0.038 ms  verify OK
+[ 923/1872] data/faces/karyadi/karyadi_up_angry_open_2.pgm  64x60  gpu 0.028 ms  verify OK
+[ 924/1872] data/faces/karyadi/karyadi_up_angry_open_4.pgm  32x30  gpu 0.038 ms  verify OK
+[ 925/1872] data/faces/karyadi/karyadi_up_angry_sunglasses.pgm 128x120 gpu 0.028 ms  verify OK
+[ 926/1872] data/faces/karyadi/karyadi_up_angry_sunglasses_2.pgm  64x60  gpu 0.024 ms  verify OK
+[ 927/1872] data/faces/karyadi/karyadi_up_angry_sunglasses_4.pgm  32x30  gpu 0.036 ms  verify OK
+[ 928/1872] data/faces/karyadi/karyadi_up_happy_open.pgm  128x120 gpu 0.031 ms  verify OK
+[ 929/1872] data/faces/karyadi/karyadi_up_happy_open_2.pgm  64x60  gpu 0.021 ms  verify OK
+[ 930/1872] data/faces/karyadi/karyadi_up_happy_open_4.pgm  32x30  gpu 0.036 ms  verify OK
+[ 931/1872] data/faces/karyadi/karyadi_up_happy_sunglasses.pgm 128x120 gpu 0.027 ms  verify OK
+[ 932/1872] data/faces/karyadi/karyadi_up_happy_sunglasses_2.pgm  64x60  gpu 0.035 ms  verify OK
+[ 933/1872] data/faces/karyadi/karyadi_up_happy_sunglasses_4.pgm  32x30  gpu 0.021 ms  verify OK
+[ 934/1872] data/faces/karyadi/karyadi_up_neutral_open.pgm 128x120 gpu 0.038 ms  verify OK
+[ 935/1872] data/faces/karyadi/karyadi_up_neutral_open_2.pgm  64x60  gpu 0.029 ms  verify OK
+[ 936/1872] data/faces/karyadi/karyadi_up_neutral_open_4.pgm  32x30  gpu 0.032 ms  verify OK
+[ 937/1872] data/faces/karyadi/karyadi_up_neutral_sunglasses.pgm 128x120 gpu 0.028 ms  verify OK
+[ 938/1872] data/faces/karyadi/karyadi_up_neutral_sunglasses_2.pgm  64x60  gpu 0.024 ms  verify OK
+[ 939/1872] data/faces/karyadi/karyadi_up_neutral_sunglasses_4.pgm  32x30  gpu 0.024 ms  verify OK
+[ 940/1872] data/faces/karyadi/karyadi_up_sad_open.pgm    128x120 gpu 0.044 ms  verify OK
+[ 941/1872] data/faces/karyadi/karyadi_up_sad_open_2.pgm   64x60  gpu 0.021 ms  verify OK
+[ 942/1872] data/faces/karyadi/karyadi_up_sad_open_4.pgm   32x30  gpu 0.032 ms  verify OK
+[ 943/1872] data/faces/karyadi/karyadi_up_sad_sunglasses.pgm 128x120 gpu 0.039 ms  verify OK
+[ 944/1872] data/faces/karyadi/karyadi_up_sad_sunglasses_2.pgm  64x60  gpu 0.027 ms  verify OK
+[ 945/1872] data/faces/karyadi/karyadi_up_sad_sunglasses_4.pgm  32x30  gpu 0.021 ms  verify OK
+[ 946/1872] data/faces/kawamura/kawamura_left_angry_open.pgm 128x120 gpu 0.035 ms  verify OK
+[ 947/1872] data/faces/kawamura/kawamura_left_angry_open_2.pgm  64x60  gpu 0.036 ms  verify OK
+[ 948/1872] data/faces/kawamura/kawamura_left_angry_open_4.pgm  32x30  gpu 0.033 ms  verify OK
+[ 949/1872] data/faces/kawamura/kawamura_left_angry_sunglasses.pgm 128x120 gpu 0.028 ms  verify OK
+[ 950/1872] data/faces/kawamura/kawamura_left_angry_sunglasses_2.pgm  64x60  gpu 0.024 ms  verify OK
+[ 951/1872] data/faces/kawamura/kawamura_left_angry_sunglasses_4.pgm  32x30  gpu 0.025 ms  verify OK
+[ 952/1872] data/faces/kawamura/kawamura_left_happy_open.pgm 128x120 gpu 0.045 ms  verify OK
+[ 953/1872] data/faces/kawamura/kawamura_left_happy_open_2.pgm  64x60  gpu 0.022 ms  verify OK
+[ 954/1872] data/faces/kawamura/kawamura_left_happy_open_4.pgm  32x30  gpu 0.033 ms  verify OK
+[ 955/1872] data/faces/kawamura/kawamura_left_happy_sunglasses.pgm 128x120 gpu 0.026 ms  verify OK
+[ 956/1872] data/faces/kawamura/kawamura_left_happy_sunglasses_2.pgm  64x60  gpu 0.035 ms  verify OK
+[ 957/1872] data/faces/kawamura/kawamura_left_happy_sunglasses_4.pgm  32x30  gpu 0.021 ms  verify OK
+[ 958/1872] data/faces/kawamura/kawamura_left_neutral_open.pgm 128x120 gpu 0.036 ms  verify OK
+[ 959/1872] data/faces/kawamura/kawamura_left_neutral_open_2.pgm  64x60  gpu 0.034 ms  verify OK
+[ 960/1872] data/faces/kawamura/kawamura_left_neutral_open_4.pgm  32x30  gpu 0.040 ms  verify OK
+[ 961/1872] data/faces/kawamura/kawamura_left_neutral_sunglasses.pgm 128x120 gpu 0.028 ms  verify OK
+[ 962/1872] data/faces/kawamura/kawamura_left_neutral_sunglasses_2.pgm  64x60  gpu 0.035 ms  verify OK
+[ 963/1872] data/faces/kawamura/kawamura_left_neutral_sunglasses_4.pgm  32x30  gpu 0.036 ms  verify OK
+[ 964/1872] data/faces/kawamura/kawamura_left_sad_open.pgm 128x120 gpu 0.030 ms  verify OK
+[ 965/1872] data/faces/kawamura/kawamura_left_sad_open_2.pgm  64x60  gpu 0.021 ms  verify OK
+[ 966/1872] data/faces/kawamura/kawamura_left_sad_open_4.pgm  32x30  gpu 0.032 ms  verify OK
+[ 967/1872] data/faces/kawamura/kawamura_left_sad_sunglasses.pgm 128x120 gpu 0.025 ms  verify OK
+[ 968/1872] data/faces/kawamura/kawamura_left_sad_sunglasses_2.pgm  64x60  gpu 0.034 ms  verify OK
+[ 969/1872] data/faces/kawamura/kawamura_left_sad_sunglasses_4.pgm  32x30  gpu 0.021 ms  verify OK
+[ 970/1872] data/faces/kawamura/kawamura_right_angry_open.pgm 128x120 gpu 0.036 ms  verify OK
+[ 971/1872] data/faces/kawamura/kawamura_right_angry_open_2.pgm  64x60  gpu 0.037 ms  verify OK
+[ 972/1872] data/faces/kawamura/kawamura_right_angry_open_4.pgm  32x30  gpu 0.033 ms  verify OK
+[ 973/1872] data/faces/kawamura/kawamura_right_angry_sunglasses.pgm 128x120 gpu 0.028 ms  verify OK
+[ 974/1872] data/faces/kawamura/kawamura_right_angry_sunglasses_2.pgm  64x60  gpu 0.025 ms  verify OK
+[ 975/1872] data/faces/kawamura/kawamura_right_angry_sunglasses_4.pgm  32x30  gpu 0.022 ms  verify OK
+[ 976/1872] data/faces/kawamura/kawamura_right_happy_open.pgm 128x120 gpu 0.035 ms  verify OK
+[ 977/1872] data/faces/kawamura/kawamura_right_happy_open_2.pgm  64x60  gpu 0.021 ms  verify OK
+[ 978/1872] data/faces/kawamura/kawamura_right_happy_open_4.pgm  32x30  gpu 0.034 ms  verify OK
+[ 979/1872] data/faces/kawamura/kawamura_right_happy_sunglasses.pgm 128x120 gpu 0.028 ms  verify OK
+[ 980/1872] data/faces/kawamura/kawamura_right_happy_sunglasses_2.pgm  64x60  gpu 0.025 ms  verify OK
+[ 981/1872] data/faces/kawamura/kawamura_right_happy_sunglasses_4.pgm  32x30  gpu 0.021 ms  verify OK
+[ 982/1872] data/faces/kawamura/kawamura_right_neutral_open.pgm 128x120 gpu 0.039 ms  verify OK
+[ 983/1872] data/faces/kawamura/kawamura_right_neutral_open_2.pgm  64x60  gpu 0.034 ms  verify OK
+[ 984/1872] data/faces/kawamura/kawamura_right_neutral_open_4.pgm  32x30  gpu 0.036 ms  verify OK
+[ 985/1872] data/faces/kawamura/kawamura_right_neutral_sunglasses.pgm 128x120 gpu 0.027 ms  verify OK
+[ 986/1872] data/faces/kawamura/kawamura_right_neutral_sunglasses_2.pgm  64x60  gpu 0.024 ms  verify OK
+[ 987/1872] data/faces/kawamura/kawamura_right_neutral_sunglasses_4.pgm  32x30  gpu 0.034 ms  verify OK
+[ 988/1872] data/faces/kawamura/kawamura_right_sad_open.pgm 128x120 gpu 0.045 ms  verify OK
+[ 989/1872] data/faces/kawamura/kawamura_right_sad_open_2.pgm  64x60  gpu 0.021 ms  verify OK
+[ 990/1872] data/faces/kawamura/kawamura_right_sad_open_4.pgm  32x30  gpu 0.032 ms  verify OK
+[ 991/1872] data/faces/kawamura/kawamura_right_sad_sunglasses.pgm 128x120 gpu 0.027 ms  verify OK
+[ 992/1872] data/faces/kawamura/kawamura_right_sad_sunglasses_2.pgm  64x60  gpu 0.027 ms  verify OK
+[ 993/1872] data/faces/kawamura/kawamura_right_sad_sunglasses_4.pgm  32x30  gpu 0.022 ms  verify OK
+[ 994/1872] data/faces/kawamura/kawamura_straight_angry_open.pgm 128x120 gpu 0.035 ms  verify OK
+[ 995/1872] data/faces/kawamura/kawamura_straight_angry_open_2.pgm  64x60  gpu 0.026 ms  verify OK
+[ 996/1872] data/faces/kawamura/kawamura_straight_angry_open_4.pgm  32x30  gpu 0.041 ms  verify OK
+[ 997/1872] data/faces/kawamura/kawamura_straight_angry_sunglasses.pgm 128x120 gpu 0.028 ms  verify OK
+[ 998/1872] data/faces/kawamura/kawamura_straight_angry_sunglasses_2.pgm  64x60  gpu 0.024 ms  verify OK
+[ 999/1872] data/faces/kawamura/kawamura_straight_angry_sunglasses_4.pgm  32x30  gpu 0.032 ms  verify OK
+[1000/1872] data/faces/kawamura/kawamura_straight_happy_open.pgm 128x120 gpu 0.032 ms  verify OK
+[1001/1872] data/faces/kawamura/kawamura_straight_happy_open_2.pgm  64x60  gpu 0.021 ms  verify OK
+[1002/1872] data/faces/kawamura/kawamura_straight_happy_open_4.pgm  32x30  gpu 0.032 ms  verify OK
+[1003/1872] data/faces/kawamura/kawamura_straight_happy_sunglasses.pgm 128x120 gpu 0.027 ms  verify OK
+[1004/1872] data/faces/kawamura/kawamura_straight_happy_sunglasses_2.pgm  64x60  gpu 0.026 ms  verify OK
+[1005/1872] data/faces/kawamura/kawamura_straight_happy_sunglasses_4.pgm  32x30  gpu 0.020 ms  verify OK
+[1006/1872] data/faces/kawamura/kawamura_straight_neutral_open.pgm 128x120 gpu 0.037 ms  verify OK
+[1007/1872] data/faces/kawamura/kawamura_straight_neutral_open_2.pgm  64x60  gpu 0.028 ms  verify OK
+[1008/1872] data/faces/kawamura/kawamura_straight_neutral_open_4.pgm  32x30  gpu 0.030 ms  verify OK
+[1009/1872] data/faces/kawamura/kawamura_straight_neutral_sunglasses.pgm 128x120 gpu 0.025 ms  verify OK
+[1010/1872] data/faces/kawamura/kawamura_straight_neutral_sunglasses_2.pgm  64x60  gpu 0.027 ms  verify OK
+[1011/1872] data/faces/kawamura/kawamura_straight_neutral_sunglasses_4.pgm  32x30  gpu 0.035 ms  verify OK
+[1012/1872] data/faces/kawamura/kawamura_straight_sad_open.pgm 128x120 gpu 0.046 ms  verify OK
+[1013/1872] data/faces/kawamura/kawamura_straight_sad_open_2.pgm  64x60  gpu 0.021 ms  verify OK
+[1014/1872] data/faces/kawamura/kawamura_straight_sad_open_4.pgm  32x30  gpu 0.034 ms  verify OK
+[1015/1872] data/faces/kawamura/kawamura_straight_sad_sunglasses.pgm 128x120 gpu 0.027 ms  verify OK
+[1016/1872] data/faces/kawamura/kawamura_straight_sad_sunglasses_2.pgm  64x60  gpu 0.026 ms  verify OK
+[1017/1872] data/faces/kawamura/kawamura_straight_sad_sunglasses_4.pgm  32x30  gpu 0.021 ms  verify OK
+[1018/1872] data/faces/kawamura/kawamura_up_angry_open.pgm 128x120 gpu 0.035 ms  verify OK
+[1019/1872] data/faces/kawamura/kawamura_up_angry_open_2.pgm  64x60  gpu 0.035 ms  verify OK
+[1020/1872] data/faces/kawamura/kawamura_up_angry_open_4.pgm  32x30  gpu 0.041 ms  verify OK
+[1021/1872] data/faces/kawamura/kawamura_up_angry_sunglasses.pgm 128x120 gpu 0.028 ms  verify OK
+[1022/1872] data/faces/kawamura/kawamura_up_angry_sunglasses_2.pgm  64x60  gpu 0.024 ms  verify OK
+[1023/1872] data/faces/kawamura/kawamura_up_angry_sunglasses_4.pgm  32x30  gpu 0.022 ms  verify OK
+[1024/1872] data/faces/kawamura/kawamura_up_happy_sunglasses.pgm 128x120 gpu 0.035 ms  verify OK
+[1025/1872] data/faces/kawamura/kawamura_up_happy_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[1026/1872] data/faces/kawamura/kawamura_up_happy_sunglasses_4.pgm  32x30  gpu 0.031 ms  verify OK
+[1027/1872] data/faces/kawamura/kawamura_up_neutral_open.pgm 128x120 gpu 0.039 ms  verify OK
+[1028/1872] data/faces/kawamura/kawamura_up_neutral_open_2.pgm  64x60  gpu 0.026 ms  verify OK
+[1029/1872] data/faces/kawamura/kawamura_up_neutral_open_4.pgm  32x30  gpu 0.021 ms  verify OK
+[1030/1872] data/faces/kawamura/kawamura_up_neutral_sunglasses.pgm 128x120 gpu 0.038 ms  verify OK
+[1031/1872] data/faces/kawamura/kawamura_up_neutral_sunglasses_2.pgm  64x60  gpu 0.028 ms  verify OK
+[1032/1872] data/faces/kawamura/kawamura_up_neutral_sunglasses_4.pgm  32x30  gpu 0.025 ms  verify OK
+[1033/1872] data/faces/kawamura/kawamura_up_sad_open.pgm  128x120 gpu 0.027 ms  verify OK
+[1034/1872] data/faces/kawamura/kawamura_up_sad_open_2.pgm  64x60  gpu 0.024 ms  verify OK
+[1035/1872] data/faces/kawamura/kawamura_up_sad_open_4.pgm  32x30  gpu 0.034 ms  verify OK
+[1036/1872] data/faces/kawamura/kawamura_up_sad_sunglasses.pgm 128x120 gpu 0.045 ms  verify OK
+[1037/1872] data/faces/kawamura/kawamura_up_sad_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[1038/1872] data/faces/kawamura/kawamura_up_sad_sunglasses_4.pgm  32x30  gpu 0.034 ms  verify OK
+[1039/1872] data/faces/kk49/kk49_left_angry_open.pgm      128x120 gpu 0.028 ms  verify OK
+[1040/1872] data/faces/kk49/kk49_left_angry_open_2.pgm     64x60  gpu 0.026 ms  verify OK
+[1041/1872] data/faces/kk49/kk49_left_angry_open_4.pgm     32x30  gpu 0.023 ms  verify OK
+[1042/1872] data/faces/kk49/kk49_left_angry_sunglasses.pgm 128x120 gpu 0.035 ms  verify OK
+[1043/1872] data/faces/kk49/kk49_left_angry_sunglasses_2.pgm  64x60  gpu 0.034 ms  verify OK
+[1044/1872] data/faces/kk49/kk49_left_angry_sunglasses_4.pgm  32x30  gpu 0.038 ms  verify OK
+[1045/1872] data/faces/kk49/kk49_left_happy_open.pgm      128x120 gpu 0.028 ms  verify OK
+[1046/1872] data/faces/kk49/kk49_left_happy_open_2.pgm     64x60  gpu 0.035 ms  verify OK
+[1047/1872] data/faces/kk49/kk49_left_happy_open_4.pgm     32x30  gpu 0.037 ms  verify OK
+[1048/1872] data/faces/kk49/kk49_left_happy_sunglasses.pgm 128x120 gpu 0.030 ms  verify OK
+[1049/1872] data/faces/kk49/kk49_left_happy_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[1050/1872] data/faces/kk49/kk49_left_happy_sunglasses_4.pgm  32x30  gpu 0.032 ms  verify OK
+[1051/1872] data/faces/kk49/kk49_left_neutral_open.pgm    128x120 gpu 0.039 ms  verify OK
+[1052/1872] data/faces/kk49/kk49_left_neutral_open_2.pgm   64x60  gpu 0.028 ms  verify OK
+[1053/1872] data/faces/kk49/kk49_left_neutral_open_4.pgm   32x30  gpu 0.021 ms  verify OK
+[1054/1872] data/faces/kk49/kk49_left_neutral_sunglasses.pgm 128x120 gpu 0.039 ms  verify OK
+[1055/1872] data/faces/kk49/kk49_left_neutral_sunglasses_2.pgm  64x60  gpu 0.034 ms  verify OK
+[1056/1872] data/faces/kk49/kk49_left_neutral_sunglasses_4.pgm  32x30  gpu 0.028 ms  verify OK
+[1057/1872] data/faces/kk49/kk49_left_sad_open.pgm        128x120 gpu 0.028 ms  verify OK
+[1058/1872] data/faces/kk49/kk49_left_sad_open_2.pgm       64x60  gpu 0.024 ms  verify OK
+[1059/1872] data/faces/kk49/kk49_left_sad_open_4.pgm       32x30  gpu 0.036 ms  verify OK
+[1060/1872] data/faces/kk49/kk49_left_sad_sunglasses.pgm  128x120 gpu 0.030 ms  verify OK
+[1061/1872] data/faces/kk49/kk49_left_sad_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[1062/1872] data/faces/kk49/kk49_left_sad_sunglasses_4.pgm  32x30  gpu 0.029 ms  verify OK
+[1063/1872] data/faces/kk49/kk49_right_angry_open.pgm     128x120 gpu 0.027 ms  verify OK
+[1064/1872] data/faces/kk49/kk49_right_angry_open_2.pgm    64x60  gpu 0.026 ms  verify OK
+[1065/1872] data/faces/kk49/kk49_right_angry_open_4.pgm    32x30  gpu 0.021 ms  verify OK
+[1066/1872] data/faces/kk49/kk49_right_angry_sunglasses.pgm 128x120 gpu 0.035 ms  verify OK
+[1067/1872] data/faces/kk49/kk49_right_angry_sunglasses_2.pgm  64x60  gpu 0.034 ms  verify OK
+[1068/1872] data/faces/kk49/kk49_right_angry_sunglasses_4.pgm  32x30  gpu 0.040 ms  verify OK
+[1069/1872] data/faces/kk49/kk49_right_happy_open.pgm     128x120 gpu 0.028 ms  verify OK
+[1070/1872] data/faces/kk49/kk49_right_happy_open_2.pgm    64x60  gpu 0.033 ms  verify OK
+[1071/1872] data/faces/kk49/kk49_right_happy_open_4.pgm    32x30  gpu 0.029 ms  verify OK
+[1072/1872] data/faces/kk49/kk49_right_happy_sunglasses.pgm 128x120 gpu 0.030 ms  verify OK
+[1073/1872] data/faces/kk49/kk49_right_happy_sunglasses_2.pgm  64x60  gpu 0.023 ms  verify OK
+[1074/1872] data/faces/kk49/kk49_right_happy_sunglasses_4.pgm  32x30  gpu 0.034 ms  verify OK
+[1075/1872] data/faces/kk49/kk49_right_neutral_open.pgm   128x120 gpu 0.027 ms  verify OK
+[1076/1872] data/faces/kk49/kk49_right_neutral_open_2.pgm  64x60  gpu 0.026 ms  verify OK
+[1077/1872] data/faces/kk49/kk49_right_neutral_open_4.pgm  32x30  gpu 0.021 ms  verify OK
+[1078/1872] data/faces/kk49/kk49_right_neutral_sunglasses.pgm 128x120 gpu 0.035 ms  verify OK
+[1079/1872] data/faces/kk49/kk49_right_neutral_sunglasses_2.pgm  64x60  gpu 0.036 ms  verify OK
+[1080/1872] data/faces/kk49/kk49_right_neutral_sunglasses_4.pgm  32x30  gpu 0.034 ms  verify OK
+[1081/1872] data/faces/kk49/kk49_right_sad_open.pgm       128x120 gpu 0.028 ms  verify OK
+[1082/1872] data/faces/kk49/kk49_right_sad_open_2.pgm      64x60  gpu 0.024 ms  verify OK
+[1083/1872] data/faces/kk49/kk49_right_sad_open_4.pgm      32x30  gpu 0.026 ms  verify OK
+[1084/1872] data/faces/kk49/kk49_right_sad_sunglasses.pgm 128x120 gpu 0.029 ms  verify OK
+[1085/1872] data/faces/kk49/kk49_right_sad_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[1086/1872] data/faces/kk49/kk49_right_sad_sunglasses_4.pgm  32x30  gpu 0.031 ms  verify OK
+[1087/1872] data/faces/kk49/kk49_straight_angry_open.pgm  128x120 gpu 0.037 ms  verify OK
+[1088/1872] data/faces/kk49/kk49_straight_angry_open_2.pgm  64x60  gpu 0.027 ms  verify OK
+[1089/1872] data/faces/kk49/kk49_straight_angry_open_4.pgm  32x30  gpu 0.020 ms  verify OK
+[1090/1872] data/faces/kk49/kk49_straight_angry_sunglasses.pgm 128x120 gpu 0.035 ms  verify OK
+[1091/1872] data/faces/kk49/kk49_straight_angry_sunglasses_2.pgm  64x60  gpu 0.034 ms  verify OK
+[1092/1872] data/faces/kk49/kk49_straight_angry_sunglasses_4.pgm  32x30  gpu 0.041 ms  verify OK
+[1093/1872] data/faces/kk49/kk49_straight_happy_open.pgm  128x120 gpu 0.028 ms  verify OK
+[1094/1872] data/faces/kk49/kk49_straight_happy_open_2.pgm  64x60  gpu 0.024 ms  verify OK
+[1095/1872] data/faces/kk49/kk49_straight_happy_open_4.pgm  32x30  gpu 0.031 ms  verify OK
+[1096/1872] data/faces/kk49/kk49_straight_happy_sunglasses.pgm 128x120 gpu 0.028 ms  verify OK
+[1097/1872] data/faces/kk49/kk49_straight_happy_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[1098/1872] data/faces/kk49/kk49_straight_happy_sunglasses_4.pgm  32x30  gpu 0.031 ms  verify OK
+[1099/1872] data/faces/kk49/kk49_straight_neutral_open.pgm 128x120 gpu 0.039 ms  verify OK
+[1100/1872] data/faces/kk49/kk49_straight_neutral_open_2.pgm  64x60  gpu 0.026 ms  verify OK
+[1101/1872] data/faces/kk49/kk49_straight_neutral_open_4.pgm  32x30  gpu 0.022 ms  verify OK
+[1102/1872] data/faces/kk49/kk49_straight_neutral_sunglasses.pgm 128x120 gpu 0.035 ms  verify OK
+[1103/1872] data/faces/kk49/kk49_straight_neutral_sunglasses_2.pgm  64x60  gpu 0.028 ms  verify OK
+[1104/1872] data/faces/kk49/kk49_straight_neutral_sunglasses_4.pgm  32x30  gpu 0.032 ms  verify OK
+[1105/1872] data/faces/kk49/kk49_straight_sad_open.pgm    128x120 gpu 0.025 ms  verify OK
+[1106/1872] data/faces/kk49/kk49_straight_sad_open_2.pgm   64x60  gpu 0.027 ms  verify OK
+[1107/1872] data/faces/kk49/kk49_straight_sad_open_4.pgm   32x30  gpu 0.021 ms  verify OK
+[1108/1872] data/faces/kk49/kk49_straight_sad_sunglasses.pgm 128x120 gpu 0.043 ms  verify OK
+[1109/1872] data/faces/kk49/kk49_straight_sad_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[1110/1872] data/faces/kk49/kk49_straight_sad_sunglasses_4.pgm  32x30  gpu 0.031 ms  verify OK
+[1111/1872] data/faces/kk49/kk49_up_angry_open.pgm        128x120 gpu 0.039 ms  verify OK
+[1112/1872] data/faces/kk49/kk49_up_angry_open_2.pgm       64x60  gpu 0.027 ms  verify OK
+[1113/1872] data/faces/kk49/kk49_up_angry_open_4.pgm       32x30  gpu 0.021 ms  verify OK
+[1114/1872] data/faces/kk49/kk49_up_angry_sunglasses.pgm  128x120 gpu 0.038 ms  verify OK
+[1115/1872] data/faces/kk49/kk49_up_angry_sunglasses_2.pgm  64x60  gpu 0.034 ms  verify OK
+[1116/1872] data/faces/kk49/kk49_up_angry_sunglasses_4.pgm  32x30  gpu 0.037 ms  verify OK
+[1117/1872] data/faces/kk49/kk49_up_happy_open.pgm        128x120 gpu 0.028 ms  verify OK
+[1118/1872] data/faces/kk49/kk49_up_happy_open_2.pgm       64x60  gpu 0.024 ms  verify OK
+[1119/1872] data/faces/kk49/kk49_up_happy_open_4.pgm       32x30  gpu 0.022 ms  verify OK
+[1120/1872] data/faces/kk49/kk49_up_happy_sunglasses.pgm  128x120 gpu 0.032 ms  verify OK
+[1121/1872] data/faces/kk49/kk49_up_happy_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[1122/1872] data/faces/kk49/kk49_up_happy_sunglasses_4.pgm  32x30  gpu 0.033 ms  verify OK
+[1123/1872] data/faces/kk49/kk49_up_neutral_open.pgm      128x120 gpu 0.027 ms  verify OK
+[1124/1872] data/faces/kk49/kk49_up_neutral_open_2.pgm     64x60  gpu 0.029 ms  verify OK
+[1125/1872] data/faces/kk49/kk49_up_neutral_open_4.pgm     32x30  gpu 0.021 ms  verify OK
+[1126/1872] data/faces/kk49/kk49_up_neutral_sunglasses.pgm 128x120 gpu 0.038 ms  verify OK
+[1127/1872] data/faces/kk49/kk49_up_neutral_sunglasses_2.pgm  64x60  gpu 0.034 ms  verify OK
+[1128/1872] data/faces/kk49/kk49_up_neutral_sunglasses_4.pgm  32x30  gpu 0.031 ms  verify OK
+[1129/1872] data/faces/kk49/kk49_up_sad_open.pgm          128x120 gpu 0.028 ms  verify OK
+[1130/1872] data/faces/kk49/kk49_up_sad_open_2.pgm         64x60  gpu 0.036 ms  verify OK
+[1131/1872] data/faces/kk49/kk49_up_sad_open_4.pgm         32x30  gpu 0.026 ms  verify OK
+[1132/1872] data/faces/kk49/kk49_up_sad_sunglasses.pgm    128x120 gpu 0.027 ms  verify OK
+[1133/1872] data/faces/kk49/kk49_up_sad_sunglasses_2.pgm   64x60  gpu 0.021 ms  verify OK
+[1134/1872] data/faces/kk49/kk49_up_sad_sunglasses_4.pgm   32x30  gpu 0.032 ms  verify OK
+[1135/1872] data/faces/megak/megak_left_angry_open.pgm    128x120 gpu 0.027 ms  verify OK
+[1136/1872] data/faces/megak/megak_left_angry_open_2.pgm   64x60  gpu 0.029 ms  verify OK
+[1137/1872] data/faces/megak/megak_left_angry_open_4.pgm   32x30  gpu 0.021 ms  verify OK
+[1138/1872] data/faces/megak/megak_left_angry_sunglasses.pgm 128x120 gpu 0.040 ms  verify OK
+[1139/1872] data/faces/megak/megak_left_angry_sunglasses_2.pgm  64x60  gpu 0.030 ms  verify OK
+[1140/1872] data/faces/megak/megak_left_angry_sunglasses_4.pgm  32x30  gpu 0.030 ms  verify OK
+[1141/1872] data/faces/megak/megak_left_happy_open.pgm    128x120 gpu 0.026 ms  verify OK
+[1142/1872] data/faces/megak/megak_left_happy_open_2.pgm   64x60  gpu 0.030 ms  verify OK
+[1143/1872] data/faces/megak/megak_left_happy_open_4.pgm   32x30  gpu 0.023 ms  verify OK
+[1144/1872] data/faces/megak/megak_left_happy_sunglasses.pgm 128x120 gpu 0.032 ms  verify OK
+[1145/1872] data/faces/megak/megak_left_happy_sunglasses_2.pgm  64x60  gpu 0.022 ms  verify OK
+[1146/1872] data/faces/megak/megak_left_happy_sunglasses_4.pgm  32x30  gpu 0.035 ms  verify OK
+[1147/1872] data/faces/megak/megak_left_neutral_open.pgm  128x120 gpu 0.028 ms  verify OK
+[1148/1872] data/faces/megak/megak_left_neutral_open_2.pgm  64x60  gpu 0.037 ms  verify OK
+[1149/1872] data/faces/megak/megak_left_neutral_open_4.pgm  32x30  gpu 0.021 ms  verify OK
+[1150/1872] data/faces/megak/megak_left_neutral_sunglasses.pgm 128x120 gpu 0.037 ms  verify OK
+[1151/1872] data/faces/megak/megak_left_neutral_sunglasses_2.pgm  64x60  gpu 0.034 ms  verify OK
+[1152/1872] data/faces/megak/megak_left_neutral_sunglasses_4.pgm  32x30  gpu 0.031 ms  verify OK
+[1153/1872] data/faces/megak/megak_left_sad_open.pgm      128x120 gpu 0.028 ms  verify OK
+[1154/1872] data/faces/megak/megak_left_sad_open_2.pgm     64x60  gpu 0.025 ms  verify OK
+[1155/1872] data/faces/megak/megak_left_sad_open_4.pgm     32x30  gpu 0.022 ms  verify OK
+[1156/1872] data/faces/megak/megak_left_sad_sunglasses.pgm 128x120 gpu 0.041 ms  verify OK
+[1157/1872] data/faces/megak/megak_left_sad_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[1158/1872] data/faces/megak/megak_left_sad_sunglasses_4.pgm  32x30  gpu 0.031 ms  verify OK
+[1159/1872] data/faces/megak/megak_right_angry_open.pgm   128x120 gpu 0.039 ms  verify OK
+[1160/1872] data/faces/megak/megak_right_angry_open_2.pgm  64x60  gpu 0.028 ms  verify OK
+[1161/1872] data/faces/megak/megak_right_angry_open_4.pgm  32x30  gpu 0.020 ms  verify OK
+[1162/1872] data/faces/megak/megak_right_angry_sunglasses.pgm 128x120 gpu 0.035 ms  verify OK
+[1163/1872] data/faces/megak/megak_right_angry_sunglasses_2.pgm  64x60  gpu 0.035 ms  verify OK
+[1164/1872] data/faces/megak/megak_right_angry_sunglasses_4.pgm  32x30  gpu 0.041 ms  verify OK
+[1165/1872] data/faces/megak/megak_right_happy_open.pgm   128x120 gpu 0.028 ms  verify OK
+[1166/1872] data/faces/megak/megak_right_happy_open_2.pgm  64x60  gpu 0.025 ms  verify OK
+[1167/1872] data/faces/megak/megak_right_happy_open_4.pgm  32x30  gpu 0.033 ms  verify OK
+[1168/1872] data/faces/megak/megak_right_happy_sunglasses.pgm 128x120 gpu 0.028 ms  verify OK
+[1169/1872] data/faces/megak/megak_right_happy_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[1170/1872] data/faces/megak/megak_right_happy_sunglasses_4.pgm  32x30  gpu 0.032 ms  verify OK
+[1171/1872] data/faces/megak/megak_right_neutral_open.pgm 128x120 gpu 0.028 ms  verify OK
+[1172/1872] data/faces/megak/megak_right_neutral_open_2.pgm  64x60  gpu 0.026 ms  verify OK
+[1173/1872] data/faces/megak/megak_right_neutral_open_4.pgm  32x30  gpu 0.022 ms  verify OK
+[1174/1872] data/faces/megak/megak_right_neutral_sunglasses.pgm 128x120 gpu 0.032 ms  verify OK
+[1175/1872] data/faces/megak/megak_right_neutral_sunglasses_2.pgm  64x60  gpu 0.025 ms  verify OK
+[1176/1872] data/faces/megak/megak_right_neutral_sunglasses_4.pgm  32x30  gpu 0.025 ms  verify OK
+[1177/1872] data/faces/megak/megak_right_sad_open.pgm     128x120 gpu 0.028 ms  verify OK
+[1178/1872] data/faces/megak/megak_right_sad_open_2.pgm    64x60  gpu 0.031 ms  verify OK
+[1179/1872] data/faces/megak/megak_right_sad_open_4.pgm    32x30  gpu 0.022 ms  verify OK
+[1180/1872] data/faces/megak/megak_right_sad_sunglasses.pgm 128x120 gpu 0.041 ms  verify OK
+[1181/1872] data/faces/megak/megak_right_sad_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[1182/1872] data/faces/megak/megak_right_sad_sunglasses_4.pgm  32x30  gpu 0.032 ms  verify OK
+[1183/1872] data/faces/megak/megak_straight_angry_open.pgm 128x120 gpu 0.028 ms  verify OK
+[1184/1872] data/faces/megak/megak_straight_angry_open_2.pgm  64x60  gpu 0.026 ms  verify OK
+[1185/1872] data/faces/megak/megak_straight_angry_open_4.pgm  32x30  gpu 0.021 ms  verify OK
+[1186/1872] data/faces/megak/megak_straight_angry_sunglasses.pgm 128x120 gpu 0.037 ms  verify OK
+[1187/1872] data/faces/megak/megak_straight_angry_sunglasses_2.pgm  64x60  gpu 0.028 ms  verify OK
+[1188/1872] data/faces/megak/megak_straight_angry_sunglasses_4.pgm  32x30  gpu 0.030 ms  verify OK
+[1189/1872] data/faces/megak/megak_straight_happy_open.pgm 128x120 gpu 0.026 ms  verify OK
+[1190/1872] data/faces/megak/megak_straight_happy_open_2.pgm  64x60  gpu 0.029 ms  verify OK
+[1191/1872] data/faces/megak/megak_straight_happy_open_4.pgm  32x30  gpu 0.023 ms  verify OK
+[1192/1872] data/faces/megak/megak_straight_happy_sunglasses.pgm 128x120 gpu 0.042 ms  verify OK
+[1193/1872] data/faces/megak/megak_straight_happy_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[1194/1872] data/faces/megak/megak_straight_happy_sunglasses_4.pgm  32x30  gpu 0.029 ms  verify OK
+[1195/1872] data/faces/megak/megak_straight_neutral_open.pgm 128x120 gpu 0.034 ms  verify OK
+[1196/1872] data/faces/megak/megak_straight_neutral_open_2.pgm  64x60  gpu 0.029 ms  verify OK
+[1197/1872] data/faces/megak/megak_straight_neutral_open_4.pgm  32x30  gpu 0.020 ms  verify OK
+[1198/1872] data/faces/megak/megak_straight_neutral_sunglasses.pgm 128x120 gpu 0.037 ms  verify OK
+[1199/1872] data/faces/megak/megak_straight_neutral_sunglasses_2.pgm  64x60  gpu 0.024 ms  verify OK
+[1200/1872] data/faces/megak/megak_straight_neutral_sunglasses_4.pgm  32x30  gpu 0.029 ms  verify OK
+[1201/1872] data/faces/megak/megak_straight_sad_open.pgm  128x120 gpu 0.026 ms  verify OK
+[1202/1872] data/faces/megak/megak_straight_sad_open_2.pgm  64x60  gpu 0.030 ms  verify OK
+[1203/1872] data/faces/megak/megak_straight_sad_open_4.pgm  32x30  gpu 0.033 ms  verify OK
+[1204/1872] data/faces/megak/megak_up_angry_open.pgm      128x120 gpu 0.043 ms  verify OK
+[1205/1872] data/faces/megak/megak_up_angry_open_2.pgm     64x60  gpu 0.022 ms  verify OK
+[1206/1872] data/faces/megak/megak_up_angry_open_4.pgm     32x30  gpu 0.029 ms  verify OK
+[1207/1872] data/faces/megak/megak_up_angry_sunglasses.pgm 128x120 gpu 0.028 ms  verify OK
+[1208/1872] data/faces/megak/megak_up_angry_sunglasses_2.pgm  64x60  gpu 0.028 ms  verify OK
+[1209/1872] data/faces/megak/megak_up_angry_sunglasses_4.pgm  32x30  gpu 0.021 ms  verify OK
+[1210/1872] data/faces/megak/megak_up_happy_open.pgm      128x120 gpu 0.038 ms  verify OK
+[1211/1872] data/faces/megak/megak_up_happy_open_2.pgm     64x60  gpu 0.029 ms  verify OK
+[1212/1872] data/faces/megak/megak_up_happy_open_4.pgm     32x30  gpu 0.036 ms  verify OK
+[1213/1872] data/faces/megak/megak_up_happy_sunglasses.pgm 128x120 gpu 0.028 ms  verify OK
+[1214/1872] data/faces/megak/megak_up_happy_sunglasses_2.pgm  64x60  gpu 0.030 ms  verify OK
+[1215/1872] data/faces/megak/megak_up_happy_sunglasses_4.pgm  32x30  gpu 0.022 ms  verify OK
+[1216/1872] data/faces/megak/megak_up_neutral_open.pgm    128x120 gpu 0.035 ms  verify OK
+[1217/1872] data/faces/megak/megak_up_neutral_open_2.pgm   64x60  gpu 0.022 ms  verify OK
+[1218/1872] data/faces/megak/megak_up_neutral_open_4.pgm   32x30  gpu 0.033 ms  verify OK
+[1219/1872] data/faces/megak/megak_up_neutral_sunglasses.pgm 128x120 gpu 0.027 ms  verify OK
+[1220/1872] data/faces/megak/megak_up_neutral_sunglasses_2.pgm  64x60  gpu 0.042 ms  verify OK
+[1221/1872] data/faces/megak/megak_up_neutral_sunglasses_4.pgm  32x30  gpu 0.021 ms  verify OK
+[1222/1872] data/faces/megak/megak_up_sad_open.pgm        128x120 gpu 0.038 ms  verify OK
+[1223/1872] data/faces/megak/megak_up_sad_open_2.pgm       64x60  gpu 0.026 ms  verify OK
+[1224/1872] data/faces/megak/megak_up_sad_open_4.pgm       32x30  gpu 0.029 ms  verify OK
+[1225/1872] data/faces/mitchell/mitchell_left_angry_open.pgm 128x120 gpu 0.028 ms  verify OK
+[1226/1872] data/faces/mitchell/mitchell_left_angry_open_2.pgm  64x60  gpu 0.025 ms  verify OK
+[1227/1872] data/faces/mitchell/mitchell_left_angry_open_4.pgm  32x30  gpu 0.026 ms  verify OK
+[1228/1872] data/faces/mitchell/mitchell_left_angry_sunglasses.pgm 128x120 gpu 0.029 ms  verify OK
+[1229/1872] data/faces/mitchell/mitchell_left_angry_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[1230/1872] data/faces/mitchell/mitchell_left_angry_sunglasses_4.pgm  32x30  gpu 0.032 ms  verify OK
+[1231/1872] data/faces/mitchell/mitchell_left_happy_open.pgm 128x120 gpu 0.027 ms  verify OK
+[1232/1872] data/faces/mitchell/mitchell_left_happy_open_2.pgm  64x60  gpu 0.026 ms  verify OK
+[1233/1872] data/faces/mitchell/mitchell_left_happy_open_4.pgm  32x30  gpu 0.022 ms  verify OK
+[1234/1872] data/faces/mitchell/mitchell_left_happy_sunglasses.pgm 128x120 gpu 0.035 ms  verify OK
+[1235/1872] data/faces/mitchell/mitchell_left_happy_sunglasses_2.pgm  64x60  gpu 0.028 ms  verify OK
+[1236/1872] data/faces/mitchell/mitchell_left_happy_sunglasses_4.pgm  32x30  gpu 0.037 ms  verify OK
+[1237/1872] data/faces/mitchell/mitchell_left_neutral_open.pgm 128x120 gpu 0.028 ms  verify OK
+[1238/1872] data/faces/mitchell/mitchell_left_neutral_open_2.pgm  64x60  gpu 0.025 ms  verify OK
+[1239/1872] data/faces/mitchell/mitchell_left_neutral_open_4.pgm  32x30  gpu 0.026 ms  verify OK
+[1240/1872] data/faces/mitchell/mitchell_left_neutral_sunglasses.pgm 128x120 gpu 0.029 ms  verify OK
+[1241/1872] data/faces/mitchell/mitchell_left_neutral_sunglasses_2.pgm  64x60  gpu 0.022 ms  verify OK
+[1242/1872] data/faces/mitchell/mitchell_left_neutral_sunglasses_4.pgm  32x30  gpu 0.033 ms  verify OK
+[1243/1872] data/faces/mitchell/mitchell_left_sad_open.pgm 128x120 gpu 0.040 ms  verify OK
+[1244/1872] data/faces/mitchell/mitchell_left_sad_open_2.pgm  64x60  gpu 0.029 ms  verify OK
+[1245/1872] data/faces/mitchell/mitchell_left_sad_open_4.pgm  32x30  gpu 0.021 ms  verify OK
+[1246/1872] data/faces/mitchell/mitchell_left_sad_sunglasses.pgm 128x120 gpu 0.038 ms  verify OK
+[1247/1872] data/faces/mitchell/mitchell_left_sad_sunglasses_2.pgm  64x60  gpu 0.028 ms  verify OK
+[1248/1872] data/faces/mitchell/mitchell_left_sad_sunglasses_4.pgm  32x30  gpu 0.032 ms  verify OK
+[1249/1872] data/faces/mitchell/mitchell_right_angry_open.pgm 128x120 gpu 0.028 ms  verify OK
+[1250/1872] data/faces/mitchell/mitchell_right_angry_open_2.pgm  64x60  gpu 0.033 ms  verify OK
+[1251/1872] data/faces/mitchell/mitchell_right_angry_open_4.pgm  32x30  gpu 0.037 ms  verify OK
+[1252/1872] data/faces/mitchell/mitchell_right_happy_open.pgm 128x120 gpu 0.030 ms  verify OK
+[1253/1872] data/faces/mitchell/mitchell_right_happy_open_2.pgm  64x60  gpu 0.021 ms  verify OK
+[1254/1872] data/faces/mitchell/mitchell_right_happy_open_4.pgm  32x30  gpu 0.031 ms  verify OK
+[1255/1872] data/faces/mitchell/mitchell_right_happy_sunglasses.pgm 128x120 gpu 0.027 ms  verify OK
+[1256/1872] data/faces/mitchell/mitchell_right_happy_sunglasses_2.pgm  64x60  gpu 0.026 ms  verify OK
+[1257/1872] data/faces/mitchell/mitchell_right_happy_sunglasses_4.pgm  32x30  gpu 0.021 ms  verify OK
+[1258/1872] data/faces/mitchell/mitchell_right_neutral_open.pgm 128x120 gpu 0.037 ms  verify OK
+[1259/1872] data/faces/mitchell/mitchell_right_neutral_open_2.pgm  64x60  gpu 0.038 ms  verify OK
+[1260/1872] data/faces/mitchell/mitchell_right_neutral_open_4.pgm  32x30  gpu 0.032 ms  verify OK
+[1261/1872] data/faces/mitchell/mitchell_right_neutral_sunglasses.pgm 128x120 gpu 0.028 ms  verify OK
+[1262/1872] data/faces/mitchell/mitchell_right_neutral_sunglasses_2.pgm  64x60  gpu 0.024 ms  verify OK
+[1263/1872] data/faces/mitchell/mitchell_right_neutral_sunglasses_4.pgm  32x30  gpu 0.021 ms  verify OK
+[1264/1872] data/faces/mitchell/mitchell_right_sad_open.pgm 128x120 gpu 0.035 ms  verify OK
+[1265/1872] data/faces/mitchell/mitchell_right_sad_open_2.pgm  64x60  gpu 0.022 ms  verify OK
+[1266/1872] data/faces/mitchell/mitchell_right_sad_open_4.pgm  32x30  gpu 0.029 ms  verify OK
+[1267/1872] data/faces/mitchell/mitchell_right_sad_sunglasses.pgm 128x120 gpu 0.025 ms  verify OK
+[1268/1872] data/faces/mitchell/mitchell_right_sad_sunglasses_2.pgm  64x60  gpu 0.029 ms  verify OK
+[1269/1872] data/faces/mitchell/mitchell_right_sad_sunglasses_4.pgm  32x30  gpu 0.022 ms  verify OK
+[1270/1872] data/faces/mitchell/mitchell_straight_angry_sunglasses.pgm 128x120 gpu 0.035 ms  verify OK
+[1271/1872] data/faces/mitchell/mitchell_straight_angry_sunglasses_2.pgm  64x60  gpu 0.027 ms  verify OK
+[1272/1872] data/faces/mitchell/mitchell_straight_angry_sunglasses_4.pgm  32x30  gpu 0.038 ms  verify OK
+[1273/1872] data/faces/mitchell/mitchell_straight_happy_open.pgm 128x120 gpu 0.028 ms  verify OK
+[1274/1872] data/faces/mitchell/mitchell_straight_happy_open_2.pgm  64x60  gpu 0.024 ms  verify OK
+[1275/1872] data/faces/mitchell/mitchell_straight_happy_open_4.pgm  32x30  gpu 0.035 ms  verify OK
+[1276/1872] data/faces/mitchell/mitchell_straight_happy_sunglasses.pgm 128x120 gpu 0.029 ms  verify OK
+[1277/1872] data/faces/mitchell/mitchell_straight_happy_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[1278/1872] data/faces/mitchell/mitchell_straight_happy_sunglasses_4.pgm  32x30  gpu 0.032 ms  verify OK
+[1279/1872] data/faces/mitchell/mitchell_straight_neutral_open.pgm 128x120 gpu 0.037 ms  verify OK
+[1280/1872] data/faces/mitchell/mitchell_straight_neutral_open_2.pgm  64x60  gpu 0.034 ms  verify OK
+[1281/1872] data/faces/mitchell/mitchell_straight_neutral_open_4.pgm  32x30  gpu 0.021 ms  verify OK
+[1282/1872] data/faces/mitchell/mitchell_straight_neutral_sunglasses.pgm 128x120 gpu 0.035 ms  verify OK
+[1283/1872] data/faces/mitchell/mitchell_straight_neutral_sunglasses_2.pgm  64x60  gpu 0.035 ms  verify OK
+[1284/1872] data/faces/mitchell/mitchell_straight_neutral_sunglasses_4.pgm  32x30  gpu 0.040 ms  verify OK
+[1285/1872] data/faces/mitchell/mitchell_straight_sad_open.pgm 128x120 gpu 0.028 ms  verify OK
+[1286/1872] data/faces/mitchell/mitchell_straight_sad_open_2.pgm  64x60  gpu 0.031 ms  verify OK
+[1287/1872] data/faces/mitchell/mitchell_straight_sad_open_4.pgm  32x30  gpu 0.036 ms  verify OK
+[1288/1872] data/faces/mitchell/mitchell_straight_sad_sunglasses.pgm 128x120 gpu 0.030 ms  verify OK
+[1289/1872] data/faces/mitchell/mitchell_straight_sad_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[1290/1872] data/faces/mitchell/mitchell_straight_sad_sunglasses_4.pgm  32x30  gpu 0.034 ms  verify OK
+[1291/1872] data/faces/mitchell/mitchell_up_angry_open.pgm 128x120 gpu 0.027 ms  verify OK
+[1292/1872] data/faces/mitchell/mitchell_up_angry_open_2.pgm  64x60  gpu 0.042 ms  verify OK
+[1293/1872] data/faces/mitchell/mitchell_up_angry_open_4.pgm  32x30  gpu 0.021 ms  verify OK
+[1294/1872] data/faces/mitchell/mitchell_up_angry_sunglasses.pgm 128x120 gpu 0.038 ms  verify OK
+[1295/1872] data/faces/mitchell/mitchell_up_angry_sunglasses_2.pgm  64x60  gpu 0.028 ms  verify OK
+[1296/1872] data/faces/mitchell/mitchell_up_angry_sunglasses_4.pgm  32x30  gpu 0.037 ms  verify OK
+[1297/1872] data/faces/mitchell/mitchell_up_happy_open.pgm 128x120 gpu 0.028 ms  verify OK
+[1298/1872] data/faces/mitchell/mitchell_up_happy_open_2.pgm  64x60  gpu 0.024 ms  verify OK
+[1299/1872] data/faces/mitchell/mitchell_up_happy_open_4.pgm  32x30  gpu 0.034 ms  verify OK
+[1300/1872] data/faces/mitchell/mitchell_up_neutral_open.pgm 128x120 gpu 0.029 ms  verify OK
+[1301/1872] data/faces/mitchell/mitchell_up_neutral_open_2.pgm  64x60  gpu 0.021 ms  verify OK
+[1302/1872] data/faces/mitchell/mitchell_up_neutral_open_4.pgm  32x30  gpu 0.031 ms  verify OK
+[1303/1872] data/faces/mitchell/mitchell_up_sad_open.pgm  128x120 gpu 0.037 ms  verify OK
+[1304/1872] data/faces/mitchell/mitchell_up_sad_open_2.pgm  64x60  gpu 0.026 ms  verify OK
+[1305/1872] data/faces/mitchell/mitchell_up_sad_open_4.pgm  32x30  gpu 0.024 ms  verify OK
+[1306/1872] data/faces/mitchell/mitchell_up_sad_sunglasses.pgm 128x120 gpu 0.039 ms  verify OK
+[1307/1872] data/faces/mitchell/mitchell_up_sad_sunglasses_2.pgm  64x60  gpu 0.035 ms  verify OK
+[1308/1872] data/faces/mitchell/mitchell_up_sad_sunglasses_4.pgm  32x30  gpu 0.038 ms  verify OK
+[1309/1872] data/faces/night/night_left_angry_open.pgm    128x120 gpu 0.029 ms  verify OK
+[1310/1872] data/faces/night/night_left_angry_open_2.pgm   64x60  gpu 0.025 ms  verify OK
+[1311/1872] data/faces/night/night_left_angry_open_4.pgm   32x30  gpu 0.025 ms  verify OK
+[1312/1872] data/faces/night/night_left_angry_sunglasses.pgm 128x120 gpu 0.031 ms  verify OK
+[1313/1872] data/faces/night/night_left_angry_sunglasses_2.pgm  64x60  gpu 0.022 ms  verify OK
+[1314/1872] data/faces/night/night_left_angry_sunglasses_4.pgm  32x30  gpu 0.032 ms  verify OK
+[1315/1872] data/faces/night/night_left_happy_open.pgm    128x120 gpu 0.037 ms  verify OK
+[1316/1872] data/faces/night/night_left_happy_open_2.pgm   64x60  gpu 0.034 ms  verify OK
+[1317/1872] data/faces/night/night_left_happy_open_4.pgm   32x30  gpu 0.021 ms  verify OK
+[1318/1872] data/faces/night/night_left_happy_sunglasses.pgm 128x120 gpu 0.036 ms  verify OK
+[1319/1872] data/faces/night/night_left_happy_sunglasses_2.pgm  64x60  gpu 0.027 ms  verify OK
+[1320/1872] data/faces/night/night_left_happy_sunglasses_4.pgm  32x30  gpu 0.031 ms  verify OK
+[1321/1872] data/faces/night/night_left_neutral_open.pgm  128x120 gpu 0.028 ms  verify OK
+[1322/1872] data/faces/night/night_left_neutral_open_2.pgm  64x60  gpu 0.024 ms  verify OK
+[1323/1872] data/faces/night/night_left_neutral_open_4.pgm  32x30  gpu 0.025 ms  verify OK
+[1324/1872] data/faces/night/night_left_neutral_sunglasses.pgm 128x120 gpu 0.044 ms  verify OK
+[1325/1872] data/faces/night/night_left_neutral_sunglasses_2.pgm  64x60  gpu 0.022 ms  verify OK
+[1326/1872] data/faces/night/night_left_neutral_sunglasses_4.pgm  32x30  gpu 0.031 ms  verify OK
+[1327/1872] data/faces/night/night_left_sad_open.pgm      128x120 gpu 0.027 ms  verify OK
+[1328/1872] data/faces/night/night_left_sad_open_2.pgm     64x60  gpu 0.026 ms  verify OK
+[1329/1872] data/faces/night/night_left_sad_open_4.pgm     32x30  gpu 0.021 ms  verify OK
+[1330/1872] data/faces/night/night_left_sad_sunglasses.pgm 128x120 gpu 0.036 ms  verify OK
+[1331/1872] data/faces/night/night_left_sad_sunglasses_2.pgm  64x60  gpu 0.026 ms  verify OK
+[1332/1872] data/faces/night/night_left_sad_sunglasses_4.pgm  32x30  gpu 0.035 ms  verify OK
+[1333/1872] data/faces/night/night_right_angry_open.pgm   128x120 gpu 0.028 ms  verify OK
+[1334/1872] data/faces/night/night_right_angry_open_2.pgm  64x60  gpu 0.024 ms  verify OK
+[1335/1872] data/faces/night/night_right_angry_open_4.pgm  32x30  gpu 0.032 ms  verify OK
+[1336/1872] data/faces/night/night_right_angry_sunglasses.pgm 128x120 gpu 0.028 ms  verify OK
+[1337/1872] data/faces/night/night_right_angry_sunglasses_2.pgm  64x60  gpu 0.024 ms  verify OK
+[1338/1872] data/faces/night/night_right_angry_sunglasses_4.pgm  32x30  gpu 0.030 ms  verify OK
+[1339/1872] data/faces/night/night_right_happy_open.pgm   128x120 gpu 0.039 ms  verify OK
+[1340/1872] data/faces/night/night_right_happy_open_2.pgm  64x60  gpu 0.027 ms  verify OK
+[1341/1872] data/faces/night/night_right_happy_open_4.pgm  32x30  gpu 0.021 ms  verify OK
+[1342/1872] data/faces/night/night_right_happy_sunglasses.pgm 128x120 gpu 0.038 ms  verify OK
+[1343/1872] data/faces/night/night_right_happy_sunglasses_2.pgm  64x60  gpu 0.029 ms  verify OK
+[1344/1872] data/faces/night/night_right_happy_sunglasses_4.pgm  32x30  gpu 0.037 ms  verify OK
+[1345/1872] data/faces/night/night_right_neutral_open.pgm 128x120 gpu 0.028 ms  verify OK
+[1346/1872] data/faces/night/night_right_neutral_open_2.pgm  64x60  gpu 0.024 ms  verify OK
+[1347/1872] data/faces/night/night_right_neutral_open_4.pgm  32x30  gpu 0.037 ms  verify OK
+[1348/1872] data/faces/night/night_right_neutral_sunglasses.pgm 128x120 gpu 0.030 ms  verify OK
+[1349/1872] data/faces/night/night_right_neutral_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[1350/1872] data/faces/night/night_right_neutral_sunglasses_4.pgm  32x30  gpu 0.032 ms  verify OK
+[1351/1872] data/faces/night/night_right_sad_open.pgm     128x120 gpu 0.028 ms  verify OK
+[1352/1872] data/faces/night/night_right_sad_open_2.pgm    64x60  gpu 0.026 ms  verify OK
+[1353/1872] data/faces/night/night_right_sad_open_4.pgm    32x30  gpu 0.021 ms  verify OK
+[1354/1872] data/faces/night/night_right_sad_sunglasses.pgm 128x120 gpu 0.038 ms  verify OK
+[1355/1872] data/faces/night/night_right_sad_sunglasses_2.pgm  64x60  gpu 0.034 ms  verify OK
+[1356/1872] data/faces/night/night_right_sad_sunglasses_4.pgm  32x30  gpu 0.029 ms  verify OK
+[1357/1872] data/faces/night/night_straight_angry_open.pgm 128x120 gpu 0.026 ms  verify OK
+[1358/1872] data/faces/night/night_straight_angry_open_2.pgm  64x60  gpu 0.026 ms  verify OK
+[1359/1872] data/faces/night/night_straight_angry_open_4.pgm  32x30  gpu 0.039 ms  verify OK
+[1360/1872] data/faces/night/night_straight_angry_sunglasses.pgm 128x120 gpu 0.032 ms  verify OK
+[1361/1872] data/faces/night/night_straight_angry_sunglasses_2.pgm  64x60  gpu 0.023 ms  verify OK
+[1362/1872] data/faces/night/night_straight_angry_sunglasses_4.pgm  32x30  gpu 0.033 ms  verify OK
+[1363/1872] data/faces/night/night_straight_happy_open.pgm 128x120 gpu 0.038 ms  verify OK
+[1364/1872] data/faces/night/night_straight_happy_open_2.pgm  64x60  gpu 0.037 ms  verify OK
+[1365/1872] data/faces/night/night_straight_happy_open_4.pgm  32x30  gpu 0.021 ms  verify OK
+[1366/1872] data/faces/night/night_straight_happy_sunglasses.pgm 128x120 gpu 0.036 ms  verify OK
+[1367/1872] data/faces/night/night_straight_happy_sunglasses_2.pgm  64x60  gpu 0.025 ms  verify OK
+[1368/1872] data/faces/night/night_straight_happy_sunglasses_4.pgm  32x30  gpu 0.029 ms  verify OK
+[1369/1872] data/faces/night/night_straight_neutral_open.pgm 128x120 gpu 0.028 ms  verify OK
+[1370/1872] data/faces/night/night_straight_neutral_open_2.pgm  64x60  gpu 0.024 ms  verify OK
+[1371/1872] data/faces/night/night_straight_neutral_open_4.pgm  32x30  gpu 0.022 ms  verify OK
+[1372/1872] data/faces/night/night_straight_neutral_sunglasses.pgm 128x120 gpu 0.035 ms  verify OK
+[1373/1872] data/faces/night/night_straight_neutral_sunglasses_2.pgm  64x60  gpu 0.022 ms  verify OK
+[1374/1872] data/faces/night/night_straight_neutral_sunglasses_4.pgm  32x30  gpu 0.030 ms  verify OK
+[1375/1872] data/faces/night/night_straight_sad_open.pgm  128x120 gpu 0.038 ms  verify OK
+[1376/1872] data/faces/night/night_straight_sad_open_2.pgm  64x60  gpu 0.037 ms  verify OK
+[1377/1872] data/faces/night/night_straight_sad_open_4.pgm  32x30  gpu 0.021 ms  verify OK
+[1378/1872] data/faces/night/night_straight_sad_sunglasses.pgm 128x120 gpu 0.035 ms  verify OK
+[1379/1872] data/faces/night/night_straight_sad_sunglasses_2.pgm  64x60  gpu 0.024 ms  verify OK
+[1380/1872] data/faces/night/night_straight_sad_sunglasses_4.pgm  32x30  gpu 0.027 ms  verify OK
+[1381/1872] data/faces/night/night_up_angry_open.pgm      128x120 gpu 0.028 ms  verify OK
+[1382/1872] data/faces/night/night_up_angry_open_2.pgm     64x60  gpu 0.024 ms  verify OK
+[1383/1872] data/faces/night/night_up_angry_open_4.pgm     32x30  gpu 0.032 ms  verify OK
+[1384/1872] data/faces/night/night_up_angry_sunglasses.pgm 128x120 gpu 0.027 ms  verify OK
+[1385/1872] data/faces/night/night_up_angry_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[1386/1872] data/faces/night/night_up_angry_sunglasses_4.pgm  32x30  gpu 0.032 ms  verify OK
+[1387/1872] data/faces/night/night_up_happy_open.pgm      128x120 gpu 0.028 ms  verify OK
+[1388/1872] data/faces/night/night_up_happy_open_2.pgm     64x60  gpu 0.029 ms  verify OK
+[1389/1872] data/faces/night/night_up_happy_open_4.pgm     32x30  gpu 0.021 ms  verify OK
+[1390/1872] data/faces/night/night_up_happy_sunglasses.pgm 128x120 gpu 0.039 ms  verify OK
+[1391/1872] data/faces/night/night_up_happy_sunglasses_2.pgm  64x60  gpu 0.029 ms  verify OK
+[1392/1872] data/faces/night/night_up_happy_sunglasses_4.pgm  32x30  gpu 0.033 ms  verify OK
+[1393/1872] data/faces/night/night_up_neutral_open.pgm    128x120 gpu 0.027 ms  verify OK
+[1394/1872] data/faces/night/night_up_neutral_open_2.pgm   64x60  gpu 0.024 ms  verify OK
+[1395/1872] data/faces/night/night_up_neutral_open_4.pgm   32x30  gpu 0.035 ms  verify OK
+[1396/1872] data/faces/night/night_up_neutral_sunglasses.pgm 128x120 gpu 0.039 ms  verify OK
+[1397/1872] data/faces/night/night_up_neutral_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[1398/1872] data/faces/night/night_up_neutral_sunglasses_4.pgm  32x30  gpu 0.033 ms  verify OK
+[1399/1872] data/faces/night/night_up_sad_open.pgm        128x120 gpu 0.039 ms  verify OK
+[1400/1872] data/faces/night/night_up_sad_open_2.pgm       64x60  gpu 0.028 ms  verify OK
+[1401/1872] data/faces/night/night_up_sad_open_4.pgm       32x30  gpu 0.021 ms  verify OK
+[1402/1872] data/faces/night/night_up_sad_sunglasses.pgm  128x120 gpu 0.038 ms  verify OK
+[1403/1872] data/faces/night/night_up_sad_sunglasses_2.pgm  64x60  gpu 0.026 ms  verify OK
+[1404/1872] data/faces/night/night_up_sad_sunglasses_4.pgm  32x30  gpu 0.040 ms  verify OK
+[1405/1872] data/faces/phoebe/phoebe_left_angry_sunglasses.pgm 128x120 gpu 0.028 ms  verify OK
+[1406/1872] data/faces/phoebe/phoebe_left_angry_sunglasses_2.pgm  64x60  gpu 0.024 ms  verify OK
+[1407/1872] data/faces/phoebe/phoebe_left_angry_sunglasses_4.pgm  32x30  gpu 0.031 ms  verify OK
+[1408/1872] data/faces/phoebe/phoebe_left_happy_open.pgm  128x120 gpu 0.031 ms  verify OK
+[1409/1872] data/faces/phoebe/phoebe_left_happy_open_2.pgm  64x60  gpu 0.021 ms  verify OK
+[1410/1872] data/faces/phoebe/phoebe_left_happy_open_4.pgm  32x30  gpu 0.034 ms  verify OK
+[1411/1872] data/faces/phoebe/phoebe_left_happy_sunglasses.pgm 128x120 gpu 0.027 ms  verify OK
+[1412/1872] data/faces/phoebe/phoebe_left_happy_sunglasses_2.pgm  64x60  gpu 0.026 ms  verify OK
+[1413/1872] data/faces/phoebe/phoebe_left_happy_sunglasses_4.pgm  32x30  gpu 0.020 ms  verify OK
+[1414/1872] data/faces/phoebe/phoebe_left_neutral_open.pgm 128x120 gpu 0.038 ms  verify OK
+[1415/1872] data/faces/phoebe/phoebe_left_neutral_open_2.pgm  64x60  gpu 0.029 ms  verify OK
+[1416/1872] data/faces/phoebe/phoebe_left_neutral_open_4.pgm  32x30  gpu 0.037 ms  verify OK
+[1417/1872] data/faces/phoebe/phoebe_left_neutral_sunglasses.pgm 128x120 gpu 0.028 ms  verify OK
+[1418/1872] data/faces/phoebe/phoebe_left_neutral_sunglasses_2.pgm  64x60  gpu 0.024 ms  verify OK
+[1419/1872] data/faces/phoebe/phoebe_left_neutral_sunglasses_4.pgm  32x30  gpu 0.036 ms  verify OK
+[1420/1872] data/faces/phoebe/phoebe_left_sad_open.pgm    128x120 gpu 0.030 ms  verify OK
+[1421/1872] data/faces/phoebe/phoebe_left_sad_open_2.pgm   64x60  gpu 0.021 ms  verify OK
+[1422/1872] data/faces/phoebe/phoebe_left_sad_open_4.pgm   32x30  gpu 0.033 ms  verify OK
+[1423/1872] data/faces/phoebe/phoebe_left_sad_sunglasses.pgm 128x120 gpu 0.027 ms  verify OK
+[1424/1872] data/faces/phoebe/phoebe_left_sad_sunglasses_2.pgm  64x60  gpu 0.026 ms  verify OK
+[1425/1872] data/faces/phoebe/phoebe_left_sad_sunglasses_4.pgm  32x30  gpu 0.022 ms  verify OK
+[1426/1872] data/faces/phoebe/phoebe_right_angry_open.pgm 128x120 gpu 0.037 ms  verify OK
+[1427/1872] data/faces/phoebe/phoebe_right_angry_open_2.pgm  64x60  gpu 0.028 ms  verify OK
+[1428/1872] data/faces/phoebe/phoebe_right_angry_open_4.pgm  32x30  gpu 0.030 ms  verify OK
+[1429/1872] data/faces/phoebe/phoebe_right_angry_sunglasses.pgm 128x120 gpu 0.026 ms  verify OK
+[1430/1872] data/faces/phoebe/phoebe_right_angry_sunglasses_2.pgm  64x60  gpu 0.029 ms  verify OK
+[1431/1872] data/faces/phoebe/phoebe_right_angry_sunglasses_4.pgm  32x30  gpu 0.026 ms  verify OK
+[1432/1872] data/faces/phoebe/phoebe_right_happy_open.pgm 128x120 gpu 0.031 ms  verify OK
+[1433/1872] data/faces/phoebe/phoebe_right_happy_open_2.pgm  64x60  gpu 0.021 ms  verify OK
+[1434/1872] data/faces/phoebe/phoebe_right_happy_open_4.pgm  32x30  gpu 0.033 ms  verify OK
+[1435/1872] data/faces/phoebe/phoebe_right_happy_sunglasses.pgm 128x120 gpu 0.027 ms  verify OK
+[1436/1872] data/faces/phoebe/phoebe_right_happy_sunglasses_2.pgm  64x60  gpu 0.036 ms  verify OK
+[1437/1872] data/faces/phoebe/phoebe_right_happy_sunglasses_4.pgm  32x30  gpu 0.022 ms  verify OK
+[1438/1872] data/faces/phoebe/phoebe_right_neutral_open.pgm 128x120 gpu 0.037 ms  verify OK
+[1439/1872] data/faces/phoebe/phoebe_right_neutral_open_2.pgm  64x60  gpu 0.034 ms  verify OK
+[1440/1872] data/faces/phoebe/phoebe_right_neutral_open_4.pgm  32x30  gpu 0.036 ms  verify OK
+[1441/1872] data/faces/phoebe/phoebe_right_neutral_sunglasses.pgm 128x120 gpu 0.028 ms  verify OK
+[1442/1872] data/faces/phoebe/phoebe_right_neutral_sunglasses_2.pgm  64x60  gpu 0.024 ms  verify OK
+[1443/1872] data/faces/phoebe/phoebe_right_neutral_sunglasses_4.pgm  32x30  gpu 0.035 ms  verify OK
+[1444/1872] data/faces/phoebe/phoebe_right_sad_open.pgm   128x120 gpu 0.044 ms  verify OK
+[1445/1872] data/faces/phoebe/phoebe_right_sad_open_2.pgm  64x60  gpu 0.022 ms  verify OK
+[1446/1872] data/faces/phoebe/phoebe_right_sad_open_4.pgm  32x30  gpu 0.028 ms  verify OK
+[1447/1872] data/faces/phoebe/phoebe_right_sad_sunglasses.pgm 128x120 gpu 0.028 ms  verify OK
+[1448/1872] data/faces/phoebe/phoebe_right_sad_sunglasses_2.pgm  64x60  gpu 0.037 ms  verify OK
+[1449/1872] data/faces/phoebe/phoebe_right_sad_sunglasses_4.pgm  32x30  gpu 0.021 ms  verify OK
+[1450/1872] data/faces/phoebe/phoebe_straight_angry_open.pgm 128x120 gpu 0.035 ms  verify OK
+[1451/1872] data/faces/phoebe/phoebe_straight_angry_open_2.pgm  64x60  gpu 0.036 ms  verify OK
+[1452/1872] data/faces/phoebe/phoebe_straight_angry_open_4.pgm  32x30  gpu 0.034 ms  verify OK
+[1453/1872] data/faces/phoebe/phoebe_straight_angry_sunglasses.pgm 128x120 gpu 0.027 ms  verify OK
+[1454/1872] data/faces/phoebe/phoebe_straight_angry_sunglasses_2.pgm  64x60  gpu 0.024 ms  verify OK
+[1455/1872] data/faces/phoebe/phoebe_straight_angry_sunglasses_4.pgm  32x30  gpu 0.022 ms  verify OK
+[1456/1872] data/faces/phoebe/phoebe_straight_happy_open.pgm 128x120 gpu 0.041 ms  verify OK
+[1457/1872] data/faces/phoebe/phoebe_straight_happy_open_2.pgm  64x60  gpu 0.021 ms  verify OK
+[1458/1872] data/faces/phoebe/phoebe_straight_happy_open_4.pgm  32x30  gpu 0.032 ms  verify OK
+[1459/1872] data/faces/phoebe/phoebe_straight_happy_sunglasses.pgm 128x120 gpu 0.028 ms  verify OK
+[1460/1872] data/faces/phoebe/phoebe_straight_happy_sunglasses_2.pgm  64x60  gpu 0.028 ms  verify OK
+[1461/1872] data/faces/phoebe/phoebe_straight_happy_sunglasses_4.pgm  32x30  gpu 0.021 ms  verify OK
+[1462/1872] data/faces/phoebe/phoebe_straight_neutral_open.pgm 128x120 gpu 0.037 ms  verify OK
+[1463/1872] data/faces/phoebe/phoebe_straight_neutral_open_2.pgm  64x60  gpu 0.028 ms  verify OK
+[1464/1872] data/faces/phoebe/phoebe_straight_neutral_open_4.pgm  32x30  gpu 0.033 ms  verify OK
+[1465/1872] data/faces/phoebe/phoebe_straight_neutral_sunglasses.pgm 128x120 gpu 0.027 ms  verify OK
+[1466/1872] data/faces/phoebe/phoebe_straight_neutral_sunglasses_2.pgm  64x60  gpu 0.024 ms  verify OK
+[1467/1872] data/faces/phoebe/phoebe_straight_neutral_sunglasses_4.pgm  32x30  gpu 0.026 ms  verify OK
+[1468/1872] data/faces/phoebe/phoebe_straight_sad_open.pgm 128x120 gpu 0.031 ms  verify OK
+[1469/1872] data/faces/phoebe/phoebe_straight_sad_open_2.pgm  64x60  gpu 0.021 ms  verify OK
+[1470/1872] data/faces/phoebe/phoebe_straight_sad_open_4.pgm  32x30  gpu 0.032 ms  verify OK
+[1471/1872] data/faces/phoebe/phoebe_straight_sad_sunglasses.pgm 128x120 gpu 0.028 ms  verify OK
+[1472/1872] data/faces/phoebe/phoebe_straight_sad_sunglasses_2.pgm  64x60  gpu 0.027 ms  verify OK
+[1473/1872] data/faces/phoebe/phoebe_straight_sad_sunglasses_4.pgm  32x30  gpu 0.021 ms  verify OK
+[1474/1872] data/faces/phoebe/phoebe_up_angry_open.pgm    128x120 gpu 0.039 ms  verify OK
+[1475/1872] data/faces/phoebe/phoebe_up_angry_open_2.pgm   64x60  gpu 0.035 ms  verify OK
+[1476/1872] data/faces/phoebe/phoebe_up_angry_open_4.pgm   32x30  gpu 0.038 ms  verify OK
+[1477/1872] data/faces/phoebe/phoebe_up_angry_sunglasses.pgm 128x120 gpu 0.028 ms  verify OK
+[1478/1872] data/faces/phoebe/phoebe_up_angry_sunglasses_2.pgm  64x60  gpu 0.024 ms  verify OK
+[1479/1872] data/faces/phoebe/phoebe_up_angry_sunglasses_4.pgm  32x30  gpu 0.022 ms  verify OK
+[1480/1872] data/faces/phoebe/phoebe_up_happy_open.pgm    128x120 gpu 0.041 ms  verify OK
+[1481/1872] data/faces/phoebe/phoebe_up_happy_open_2.pgm   64x60  gpu 0.021 ms  verify OK
+[1482/1872] data/faces/phoebe/phoebe_up_happy_open_4.pgm   32x30  gpu 0.032 ms  verify OK
+[1483/1872] data/faces/phoebe/phoebe_up_happy_sunglasses.pgm 128x120 gpu 0.039 ms  verify OK
+[1484/1872] data/faces/phoebe/phoebe_up_happy_sunglasses_2.pgm  64x60  gpu 0.027 ms  verify OK
+[1485/1872] data/faces/phoebe/phoebe_up_happy_sunglasses_4.pgm  32x30  gpu 0.021 ms  verify OK
+[1486/1872] data/faces/phoebe/phoebe_up_neutral_open.pgm  128x120 gpu 0.036 ms  verify OK
+[1487/1872] data/faces/phoebe/phoebe_up_neutral_open_2.pgm  64x60  gpu 0.034 ms  verify OK
+[1488/1872] data/faces/phoebe/phoebe_up_neutral_open_4.pgm  32x30  gpu 0.040 ms  verify OK
+[1489/1872] data/faces/phoebe/phoebe_up_neutral_sunglasses.pgm 128x120 gpu 0.029 ms  verify OK
+[1490/1872] data/faces/phoebe/phoebe_up_neutral_sunglasses_2.pgm  64x60  gpu 0.022 ms  verify OK
+[1491/1872] data/faces/phoebe/phoebe_up_neutral_sunglasses_4.pgm  32x30  gpu 0.031 ms  verify OK
+[1492/1872] data/faces/phoebe/phoebe_up_sad_open.pgm      128x120 gpu 0.039 ms  verify OK
+[1493/1872] data/faces/phoebe/phoebe_up_sad_open_2.pgm     64x60  gpu 0.022 ms  verify OK
+[1494/1872] data/faces/phoebe/phoebe_up_sad_open_4.pgm     32x30  gpu 0.031 ms  verify OK
+[1495/1872] data/faces/phoebe/phoebe_up_sad_sunglasses.pgm 128x120 gpu 0.028 ms  verify OK
+[1496/1872] data/faces/phoebe/phoebe_up_sad_sunglasses_2.pgm  64x60  gpu 0.026 ms  verify OK
+[1497/1872] data/faces/phoebe/phoebe_up_sad_sunglasses_4.pgm  32x30  gpu 0.021 ms  verify OK
+[1498/1872] data/faces/saavik/saavik_left_angry_open.pgm  128x120 gpu 0.037 ms  verify OK
+[1499/1872] data/faces/saavik/saavik_left_angry_open_2.pgm  64x60  gpu 0.034 ms  verify OK
+[1500/1872] data/faces/saavik/saavik_left_angry_open_4.pgm  32x30  gpu 0.032 ms  verify OK
+[1501/1872] data/faces/saavik/saavik_left_angry_sunglasses.pgm 128x120 gpu 0.028 ms  verify OK
+[1502/1872] data/faces/saavik/saavik_left_angry_sunglasses_2.pgm  64x60  gpu 0.023 ms  verify OK
+[1503/1872] data/faces/saavik/saavik_left_angry_sunglasses_4.pgm  32x30  gpu 0.032 ms  verify OK
+[1504/1872] data/faces/saavik/saavik_left_happy_open.pgm  128x120 gpu 0.032 ms  verify OK
+[1505/1872] data/faces/saavik/saavik_left_happy_open_2.pgm  64x60  gpu 0.021 ms  verify OK
+[1506/1872] data/faces/saavik/saavik_left_happy_open_4.pgm  32x30  gpu 0.031 ms  verify OK
+[1507/1872] data/faces/saavik/saavik_left_happy_sunglasses.pgm 128x120 gpu 0.037 ms  verify OK
+[1508/1872] data/faces/saavik/saavik_left_happy_sunglasses_2.pgm  64x60  gpu 0.029 ms  verify OK
+[1509/1872] data/faces/saavik/saavik_left_happy_sunglasses_4.pgm  32x30  gpu 0.021 ms  verify OK
+[1510/1872] data/faces/saavik/saavik_left_neutral_open.pgm 128x120 gpu 0.036 ms  verify OK
+[1511/1872] data/faces/saavik/saavik_left_neutral_open_2.pgm  64x60  gpu 0.028 ms  verify OK
+[1512/1872] data/faces/saavik/saavik_left_neutral_open_4.pgm  32x30  gpu 0.031 ms  verify OK
+[1513/1872] data/faces/saavik/saavik_left_neutral_sunglasses.pgm 128x120 gpu 0.028 ms  verify OK
+[1514/1872] data/faces/saavik/saavik_left_neutral_sunglasses_2.pgm  64x60  gpu 0.024 ms  verify OK
+[1515/1872] data/faces/saavik/saavik_left_neutral_sunglasses_4.pgm  32x30  gpu 0.024 ms  verify OK
+[1516/1872] data/faces/saavik/saavik_left_sad_open.pgm    128x120 gpu 0.035 ms  verify OK
+[1517/1872] data/faces/saavik/saavik_left_sad_open_2.pgm   64x60  gpu 0.022 ms  verify OK
+[1518/1872] data/faces/saavik/saavik_left_sad_open_4.pgm   32x30  gpu 0.029 ms  verify OK
+[1519/1872] data/faces/saavik/saavik_left_sad_sunglasses.pgm 128x120 gpu 0.028 ms  verify OK
+[1520/1872] data/faces/saavik/saavik_left_sad_sunglasses_2.pgm  64x60  gpu 0.028 ms  verify OK
+[1521/1872] data/faces/saavik/saavik_left_sad_sunglasses_4.pgm  32x30  gpu 0.021 ms  verify OK
+[1522/1872] data/faces/saavik/saavik_right_angry_open.pgm 128x120 gpu 0.036 ms  verify OK
+[1523/1872] data/faces/saavik/saavik_right_angry_open_2.pgm  64x60  gpu 0.025 ms  verify OK
+[1524/1872] data/faces/saavik/saavik_right_angry_open_4.pgm  32x30  gpu 0.040 ms  verify OK
+[1525/1872] data/faces/saavik/saavik_right_angry_sunglasses.pgm 128x120 gpu 0.028 ms  verify OK
+[1526/1872] data/faces/saavik/saavik_right_angry_sunglasses_2.pgm  64x60  gpu 0.024 ms  verify OK
+[1527/1872] data/faces/saavik/saavik_right_angry_sunglasses_4.pgm  32x30  gpu 0.022 ms  verify OK
+[1528/1872] data/faces/saavik/saavik_right_happy_open.pgm 128x120 gpu 0.035 ms  verify OK
+[1529/1872] data/faces/saavik/saavik_right_happy_open_2.pgm  64x60  gpu 0.021 ms  verify OK
+[1530/1872] data/faces/saavik/saavik_right_happy_open_4.pgm  32x30  gpu 0.028 ms  verify OK
+[1531/1872] data/faces/saavik/saavik_right_happy_sunglasses.pgm 128x120 gpu 0.027 ms  verify OK
+[1532/1872] data/faces/saavik/saavik_right_happy_sunglasses_2.pgm  64x60  gpu 0.026 ms  verify OK
+[1533/1872] data/faces/saavik/saavik_right_happy_sunglasses_4.pgm  32x30  gpu 0.021 ms  verify OK
+[1534/1872] data/faces/saavik/saavik_right_neutral_open.pgm 128x120 gpu 0.034 ms  verify OK
+[1535/1872] data/faces/saavik/saavik_right_neutral_open_2.pgm  64x60  gpu 0.024 ms  verify OK
+[1536/1872] data/faces/saavik/saavik_right_neutral_open_4.pgm  32x30  gpu 0.028 ms  verify OK
+[1537/1872] data/faces/saavik/saavik_right_neutral_sunglasses.pgm 128x120 gpu 0.025 ms  verify OK
+[1538/1872] data/faces/saavik/saavik_right_neutral_sunglasses_2.pgm  64x60  gpu 0.030 ms  verify OK
+[1539/1872] data/faces/saavik/saavik_right_neutral_sunglasses_4.pgm  32x30  gpu 0.024 ms  verify OK
+[1540/1872] data/faces/saavik/saavik_right_sad_open.pgm   128x120 gpu 0.038 ms  verify OK
+[1541/1872] data/faces/saavik/saavik_right_sad_open_2.pgm  64x60  gpu 0.022 ms  verify OK
+[1542/1872] data/faces/saavik/saavik_right_sad_open_4.pgm  32x30  gpu 0.033 ms  verify OK
+[1543/1872] data/faces/saavik/saavik_right_sad_sunglasses.pgm 128x120 gpu 0.041 ms  verify OK
+[1544/1872] data/faces/saavik/saavik_right_sad_sunglasses_2.pgm  64x60  gpu 0.028 ms  verify OK
+[1545/1872] data/faces/saavik/saavik_right_sad_sunglasses_4.pgm  32x30  gpu 0.021 ms  verify OK
+[1546/1872] data/faces/saavik/saavik_straight_angry_open.pgm 128x120 gpu 0.038 ms  verify OK
+[1547/1872] data/faces/saavik/saavik_straight_angry_open_2.pgm  64x60  gpu 0.034 ms  verify OK
+[1548/1872] data/faces/saavik/saavik_straight_angry_open_4.pgm  32x30  gpu 0.030 ms  verify OK
+[1549/1872] data/faces/saavik/saavik_straight_angry_sunglasses.pgm 128x120 gpu 0.026 ms  verify OK
+[1550/1872] data/faces/saavik/saavik_straight_angry_sunglasses_2.pgm  64x60  gpu 0.028 ms  verify OK
+[1551/1872] data/faces/saavik/saavik_straight_angry_sunglasses_4.pgm  32x30  gpu 0.035 ms  verify OK
+[1552/1872] data/faces/saavik/saavik_straight_happy_open.pgm 128x120 gpu 0.039 ms  verify OK
+[1553/1872] data/faces/saavik/saavik_straight_happy_open_2.pgm  64x60  gpu 0.021 ms  verify OK
+[1554/1872] data/faces/saavik/saavik_straight_happy_open_4.pgm  32x30  gpu 0.033 ms  verify OK
+[1555/1872] data/faces/saavik/saavik_straight_happy_sunglasses.pgm 128x120 gpu 0.028 ms  verify OK
+[1556/1872] data/faces/saavik/saavik_straight_happy_sunglasses_2.pgm  64x60  gpu 0.026 ms  verify OK
+[1557/1872] data/faces/saavik/saavik_straight_happy_sunglasses_4.pgm  32x30  gpu 0.021 ms  verify OK
+[1558/1872] data/faces/saavik/saavik_straight_neutral_open.pgm 128x120 gpu 0.036 ms  verify OK
+[1559/1872] data/faces/saavik/saavik_straight_neutral_open_2.pgm  64x60  gpu 0.024 ms  verify OK
+[1560/1872] data/faces/saavik/saavik_straight_neutral_open_4.pgm  32x30  gpu 0.034 ms  verify OK
+[1561/1872] data/faces/saavik/saavik_straight_neutral_sunglasses.pgm 128x120 gpu 0.028 ms  verify OK
+[1562/1872] data/faces/saavik/saavik_straight_neutral_sunglasses_2.pgm  64x60  gpu 0.025 ms  verify OK
+[1563/1872] data/faces/saavik/saavik_straight_neutral_sunglasses_4.pgm  32x30  gpu 0.022 ms  verify OK
+[1564/1872] data/faces/saavik/saavik_straight_sad_open.pgm 128x120 gpu 0.043 ms  verify OK
+[1565/1872] data/faces/saavik/saavik_straight_sad_open_2.pgm  64x60  gpu 0.021 ms  verify OK
+[1566/1872] data/faces/saavik/saavik_straight_sad_open_4.pgm  32x30  gpu 0.033 ms  verify OK
+[1567/1872] data/faces/saavik/saavik_straight_sad_sunglasses.pgm 128x120 gpu 0.027 ms  verify OK
+[1568/1872] data/faces/saavik/saavik_straight_sad_sunglasses_2.pgm  64x60  gpu 0.027 ms  verify OK
+[1569/1872] data/faces/saavik/saavik_straight_sad_sunglasses_4.pgm  32x30  gpu 0.021 ms  verify OK
+[1570/1872] data/faces/saavik/saavik_up_angry_open.pgm    128x120 gpu 0.038 ms  verify OK
+[1571/1872] data/faces/saavik/saavik_up_angry_open_2.pgm   64x60  gpu 0.029 ms  verify OK
+[1572/1872] data/faces/saavik/saavik_up_angry_open_4.pgm   32x30  gpu 0.036 ms  verify OK
+[1573/1872] data/faces/saavik/saavik_up_angry_sunglasses.pgm 128x120 gpu 0.028 ms  verify OK
+[1574/1872] data/faces/saavik/saavik_up_angry_sunglasses_2.pgm  64x60  gpu 0.024 ms  verify OK
+[1575/1872] data/faces/saavik/saavik_up_angry_sunglasses_4.pgm  32x30  gpu 0.024 ms  verify OK
+[1576/1872] data/faces/saavik/saavik_up_happy_open.pgm    128x120 gpu 0.045 ms  verify OK
+[1577/1872] data/faces/saavik/saavik_up_happy_open_2.pgm   64x60  gpu 0.021 ms  verify OK
+[1578/1872] data/faces/saavik/saavik_up_happy_open_4.pgm   32x30  gpu 0.032 ms  verify OK
+[1579/1872] data/faces/saavik/saavik_up_happy_sunglasses.pgm 128x120 gpu 0.039 ms  verify OK
+[1580/1872] data/faces/saavik/saavik_up_happy_sunglasses_2.pgm  64x60  gpu 0.026 ms  verify OK
+[1581/1872] data/faces/saavik/saavik_up_happy_sunglasses_4.pgm  32x30  gpu 0.020 ms  verify OK
+[1582/1872] data/faces/saavik/saavik_up_neutral_open.pgm  128x120 gpu 0.037 ms  verify OK
+[1583/1872] data/faces/saavik/saavik_up_neutral_open_2.pgm  64x60  gpu 0.028 ms  verify OK
+[1584/1872] data/faces/saavik/saavik_up_neutral_open_4.pgm  32x30  gpu 0.034 ms  verify OK
+[1585/1872] data/faces/saavik/saavik_up_neutral_sunglasses.pgm 128x120 gpu 0.029 ms  verify OK
+[1586/1872] data/faces/saavik/saavik_up_neutral_sunglasses_2.pgm  64x60  gpu 0.024 ms  verify OK
+[1587/1872] data/faces/saavik/saavik_up_neutral_sunglasses_4.pgm  32x30  gpu 0.026 ms  verify OK
+[1588/1872] data/faces/saavik/saavik_up_sad_open.pgm      128x120 gpu 0.027 ms  verify OK
+[1589/1872] data/faces/saavik/saavik_up_sad_open_2.pgm     64x60  gpu 0.022 ms  verify OK
+[1590/1872] data/faces/saavik/saavik_up_sad_open_4.pgm     32x30  gpu 0.033 ms  verify OK
+[1591/1872] data/faces/saavik/saavik_up_sad_sunglasses.pgm 128x120 gpu 0.040 ms  verify OK
+[1592/1872] data/faces/saavik/saavik_up_sad_sunglasses_2.pgm  64x60  gpu 0.035 ms  verify OK
+[1593/1872] data/faces/saavik/saavik_up_sad_sunglasses_4.pgm  32x30  gpu 0.020 ms  verify OK
+[1594/1872] data/faces/steffi/steffi_left_angry_open.pgm  128x120 gpu 0.037 ms  verify OK
+[1595/1872] data/faces/steffi/steffi_left_angry_open_2.pgm  64x60  gpu 0.037 ms  verify OK
+[1596/1872] data/faces/steffi/steffi_left_angry_open_4.pgm  32x30  gpu 0.032 ms  verify OK
+[1597/1872] data/faces/steffi/steffi_left_angry_sunglasses.pgm 128x120 gpu 0.028 ms  verify OK
+[1598/1872] data/faces/steffi/steffi_left_angry_sunglasses_2.pgm  64x60  gpu 0.025 ms  verify OK
+[1599/1872] data/faces/steffi/steffi_left_angry_sunglasses_4.pgm  32x30  gpu 0.022 ms  verify OK
+[1600/1872] data/faces/steffi/steffi_left_happy_open.pgm  128x120 gpu 0.035 ms  verify OK
+[1601/1872] data/faces/steffi/steffi_left_happy_open_2.pgm  64x60  gpu 0.022 ms  verify OK
+[1602/1872] data/faces/steffi/steffi_left_happy_open_4.pgm  32x30  gpu 0.032 ms  verify OK
+[1603/1872] data/faces/steffi/steffi_left_happy_sunglasses.pgm 128x120 gpu 0.039 ms  verify OK
+[1604/1872] data/faces/steffi/steffi_left_happy_sunglasses_2.pgm  64x60  gpu 0.036 ms  verify OK
+[1605/1872] data/faces/steffi/steffi_left_happy_sunglasses_4.pgm  32x30  gpu 0.021 ms  verify OK
+[1606/1872] data/faces/steffi/steffi_left_neutral_open.pgm 128x120 gpu 0.035 ms  verify OK
+[1607/1872] data/faces/steffi/steffi_left_neutral_open_2.pgm  64x60  gpu 0.035 ms  verify OK
+[1608/1872] data/faces/steffi/steffi_left_neutral_open_4.pgm  32x30  gpu 0.040 ms  verify OK
+[1609/1872] data/faces/steffi/steffi_left_neutral_sunglasses.pgm 128x120 gpu 0.028 ms  verify OK
+[1610/1872] data/faces/steffi/steffi_left_neutral_sunglasses_2.pgm  64x60  gpu 0.024 ms  verify OK
+[1611/1872] data/faces/steffi/steffi_left_neutral_sunglasses_4.pgm  32x30  gpu 0.032 ms  verify OK
+[1612/1872] data/faces/steffi/steffi_left_sad_open.pgm    128x120 gpu 0.029 ms  verify OK
+[1613/1872] data/faces/steffi/steffi_left_sad_open_2.pgm   64x60  gpu 0.022 ms  verify OK
+[1614/1872] data/faces/steffi/steffi_left_sad_open_4.pgm   32x30  gpu 0.031 ms  verify OK
+[1615/1872] data/faces/steffi/steffi_left_sad_sunglasses.pgm 128x120 gpu 0.028 ms  verify OK
+[1616/1872] data/faces/steffi/steffi_left_sad_sunglasses_2.pgm  64x60  gpu 0.029 ms  verify OK
+[1617/1872] data/faces/steffi/steffi_left_sad_sunglasses_4.pgm  32x30  gpu 0.021 ms  verify OK
+[1618/1872] data/faces/steffi/steffi_right_angry_open.pgm 128x120 gpu 0.037 ms  verify OK
+[1619/1872] data/faces/steffi/steffi_right_angry_open_2.pgm  64x60  gpu 0.025 ms  verify OK
+[1620/1872] data/faces/steffi/steffi_right_angry_open_4.pgm  32x30  gpu 0.028 ms  verify OK
+[1621/1872] data/faces/steffi/steffi_right_angry_sunglasses.pgm 128x120 gpu 0.029 ms  verify OK
+[1622/1872] data/faces/steffi/steffi_right_angry_sunglasses_2.pgm  64x60  gpu 0.024 ms  verify OK
+[1623/1872] data/faces/steffi/steffi_right_angry_sunglasses_4.pgm  32x30  gpu 0.022 ms  verify OK
+[1624/1872] data/faces/steffi/steffi_right_happy_open.pgm 128x120 gpu 0.035 ms  verify OK
+[1625/1872] data/faces/steffi/steffi_right_happy_open_2.pgm  64x60  gpu 0.022 ms  verify OK
+[1626/1872] data/faces/steffi/steffi_right_happy_open_4.pgm  32x30  gpu 0.029 ms  verify OK
+[1627/1872] data/faces/steffi/steffi_right_happy_sunglasses.pgm 128x120 gpu 0.037 ms  verify OK
+[1628/1872] data/faces/steffi/steffi_right_happy_sunglasses_2.pgm  64x60  gpu 0.025 ms  verify OK
+[1629/1872] data/faces/steffi/steffi_right_happy_sunglasses_4.pgm  32x30  gpu 0.021 ms  verify OK
+[1630/1872] data/faces/steffi/steffi_right_neutral_open.pgm 128x120 gpu 0.033 ms  verify OK
+[1631/1872] data/faces/steffi/steffi_right_neutral_open_2.pgm  64x60  gpu 0.022 ms  verify OK
+[1632/1872] data/faces/steffi/steffi_right_neutral_open_4.pgm  32x30  gpu 0.037 ms  verify OK
+[1633/1872] data/faces/steffi/steffi_right_neutral_sunglasses.pgm 128x120 gpu 0.029 ms  verify OK
+[1634/1872] data/faces/steffi/steffi_right_neutral_sunglasses_2.pgm  64x60  gpu 0.025 ms  verify OK
+[1635/1872] data/faces/steffi/steffi_right_neutral_sunglasses_4.pgm  32x30  gpu 0.036 ms  verify OK
+[1636/1872] data/faces/steffi/steffi_right_sad_open.pgm   128x120 gpu 0.045 ms  verify OK
+[1637/1872] data/faces/steffi/steffi_right_sad_open_2.pgm  64x60  gpu 0.021 ms  verify OK
+[1638/1872] data/faces/steffi/steffi_right_sad_open_4.pgm  32x30  gpu 0.032 ms  verify OK
+[1639/1872] data/faces/steffi/steffi_right_sad_sunglasses.pgm 128x120 gpu 0.038 ms  verify OK
+[1640/1872] data/faces/steffi/steffi_right_sad_sunglasses_2.pgm  64x60  gpu 0.029 ms  verify OK
+[1641/1872] data/faces/steffi/steffi_right_sad_sunglasses_4.pgm  32x30  gpu 0.021 ms  verify OK
+[1642/1872] data/faces/steffi/steffi_straight_angry_open.pgm 128x120 gpu 0.036 ms  verify OK
+[1643/1872] data/faces/steffi/steffi_straight_angry_open_2.pgm  64x60  gpu 0.034 ms  verify OK
+[1644/1872] data/faces/steffi/steffi_straight_angry_open_4.pgm  32x30  gpu 0.043 ms  verify OK
+[1645/1872] data/faces/steffi/steffi_straight_angry_sunglasses.pgm 128x120 gpu 0.028 ms  verify OK
+[1646/1872] data/faces/steffi/steffi_straight_angry_sunglasses_2.pgm  64x60  gpu 0.024 ms  verify OK
+[1647/1872] data/faces/steffi/steffi_straight_angry_sunglasses_4.pgm  32x30  gpu 0.036 ms  verify OK
+[1648/1872] data/faces/steffi/steffi_straight_happy_open.pgm 128x120 gpu 0.030 ms  verify OK
+[1649/1872] data/faces/steffi/steffi_straight_happy_open_2.pgm  64x60  gpu 0.021 ms  verify OK
+[1650/1872] data/faces/steffi/steffi_straight_happy_open_4.pgm  32x30  gpu 0.034 ms  verify OK
+[1651/1872] data/faces/steffi/steffi_straight_happy_sunglasses.pgm 128x120 gpu 0.027 ms  verify OK
+[1652/1872] data/faces/steffi/steffi_straight_happy_sunglasses_2.pgm  64x60  gpu 0.036 ms  verify OK
+[1653/1872] data/faces/steffi/steffi_straight_happy_sunglasses_4.pgm  32x30  gpu 0.020 ms  verify OK
+[1654/1872] data/faces/steffi/steffi_straight_neutral_open.pgm 128x120 gpu 0.038 ms  verify OK
+[1655/1872] data/faces/steffi/steffi_straight_neutral_open_2.pgm  64x60  gpu 0.028 ms  verify OK
+[1656/1872] data/faces/steffi/steffi_straight_neutral_open_4.pgm  32x30  gpu 0.032 ms  verify OK
+[1657/1872] data/faces/steffi/steffi_straight_neutral_sunglasses.pgm 128x120 gpu 0.028 ms  verify OK
+[1658/1872] data/faces/steffi/steffi_straight_neutral_sunglasses_2.pgm  64x60  gpu 0.031 ms  verify OK
+[1659/1872] data/faces/steffi/steffi_straight_neutral_sunglasses_4.pgm  32x30  gpu 0.036 ms  verify OK
+[1660/1872] data/faces/steffi/steffi_straight_sad_open.pgm 128x120 gpu 0.030 ms  verify OK
+[1661/1872] data/faces/steffi/steffi_straight_sad_open_2.pgm  64x60  gpu 0.022 ms  verify OK
+[1662/1872] data/faces/steffi/steffi_straight_sad_open_4.pgm  32x30  gpu 0.034 ms  verify OK
+[1663/1872] data/faces/steffi/steffi_straight_sad_sunglasses.pgm 128x120 gpu 0.029 ms  verify OK
+[1664/1872] data/faces/steffi/steffi_straight_sad_sunglasses_2.pgm  64x60  gpu 0.026 ms  verify OK
+[1665/1872] data/faces/steffi/steffi_straight_sad_sunglasses_4.pgm  32x30  gpu 0.022 ms  verify OK
+[1666/1872] data/faces/steffi/steffi_up_angry_open.pgm    128x120 gpu 0.036 ms  verify OK
+[1667/1872] data/faces/steffi/steffi_up_angry_open_2.pgm   64x60  gpu 0.024 ms  verify OK
+[1668/1872] data/faces/steffi/steffi_up_angry_open_4.pgm   32x30  gpu 0.026 ms  verify OK
+[1669/1872] data/faces/steffi/steffi_up_angry_sunglasses.pgm 128x120 gpu 0.028 ms  verify OK
+[1670/1872] data/faces/steffi/steffi_up_angry_sunglasses_2.pgm  64x60  gpu 0.024 ms  verify OK
+[1671/1872] data/faces/steffi/steffi_up_angry_sunglasses_4.pgm  32x30  gpu 0.026 ms  verify OK
+[1672/1872] data/faces/steffi/steffi_up_happy_open.pgm    128x120 gpu 0.028 ms  verify OK
+[1673/1872] data/faces/steffi/steffi_up_happy_open_2.pgm   64x60  gpu 0.021 ms  verify OK
+[1674/1872] data/faces/steffi/steffi_up_happy_open_4.pgm   32x30  gpu 0.032 ms  verify OK
+[1675/1872] data/faces/steffi/steffi_up_happy_sunglasses.pgm 128x120 gpu 0.028 ms  verify OK
+[1676/1872] data/faces/steffi/steffi_up_happy_sunglasses_2.pgm  64x60  gpu 0.026 ms  verify OK
+[1677/1872] data/faces/steffi/steffi_up_happy_sunglasses_4.pgm  32x30  gpu 0.021 ms  verify OK
+[1678/1872] data/faces/steffi/steffi_up_neutral_open.pgm  128x120 gpu 0.035 ms  verify OK
+[1679/1872] data/faces/steffi/steffi_up_neutral_open_2.pgm  64x60  gpu 0.024 ms  verify OK
+[1680/1872] data/faces/steffi/steffi_up_neutral_open_4.pgm  32x30  gpu 0.029 ms  verify OK
+[1681/1872] data/faces/steffi/steffi_up_neutral_sunglasses.pgm 128x120 gpu 0.028 ms  verify OK
+[1682/1872] data/faces/steffi/steffi_up_neutral_sunglasses_2.pgm  64x60  gpu 0.031 ms  verify OK
+[1683/1872] data/faces/steffi/steffi_up_neutral_sunglasses_4.pgm  32x30  gpu 0.037 ms  verify OK
+[1684/1872] data/faces/steffi/steffi_up_sad_open.pgm      128x120 gpu 0.029 ms  verify OK
+[1685/1872] data/faces/steffi/steffi_up_sad_open_2.pgm     64x60  gpu 0.022 ms  verify OK
+[1686/1872] data/faces/steffi/steffi_up_sad_open_4.pgm     32x30  gpu 0.028 ms  verify OK
+[1687/1872] data/faces/steffi/steffi_up_sad_sunglasses.pgm 128x120 gpu 0.037 ms  verify OK
+[1688/1872] data/faces/steffi/steffi_up_sad_sunglasses_2.pgm  64x60  gpu 0.043 ms  verify OK
+[1689/1872] data/faces/steffi/steffi_up_sad_sunglasses_4.pgm  32x30  gpu 0.021 ms  verify OK
+[1690/1872] data/faces/sz24/sz24_left_angry_open.pgm      128x120 gpu 0.037 ms  verify OK
+[1691/1872] data/faces/sz24/sz24_left_angry_open_2.pgm     64x60  gpu 0.028 ms  verify OK
+[1692/1872] data/faces/sz24/sz24_left_angry_open_4.pgm     32x30  gpu 0.030 ms  verify OK
+[1693/1872] data/faces/sz24/sz24_left_angry_sunglasses.pgm 128x120 gpu 0.028 ms  verify OK
+[1694/1872] data/faces/sz24/sz24_left_angry_sunglasses_2.pgm  64x60  gpu 0.025 ms  verify OK
+[1695/1872] data/faces/sz24/sz24_left_angry_sunglasses_4.pgm  32x30  gpu 0.025 ms  verify OK
+[1696/1872] data/faces/sz24/sz24_left_happy_open.pgm      128x120 gpu 0.028 ms  verify OK
+[1697/1872] data/faces/sz24/sz24_left_happy_open_2.pgm     64x60  gpu 0.021 ms  verify OK
+[1698/1872] data/faces/sz24/sz24_left_happy_open_4.pgm     32x30  gpu 0.032 ms  verify OK
+[1699/1872] data/faces/sz24/sz24_left_happy_sunglasses.pgm 128x120 gpu 0.039 ms  verify OK
+[1700/1872] data/faces/sz24/sz24_left_happy_sunglasses_2.pgm  64x60  gpu 0.027 ms  verify OK
+[1701/1872] data/faces/sz24/sz24_left_happy_sunglasses_4.pgm  32x30  gpu 0.020 ms  verify OK
+[1702/1872] data/faces/sz24/sz24_left_neutral_open.pgm    128x120 gpu 0.034 ms  verify OK
+[1703/1872] data/faces/sz24/sz24_left_neutral_open_2.pgm   64x60  gpu 0.034 ms  verify OK
+[1704/1872] data/faces/sz24/sz24_left_neutral_open_4.pgm   32x30  gpu 0.040 ms  verify OK
+[1705/1872] data/faces/sz24/sz24_left_sad_open.pgm        128x120 gpu 0.028 ms  verify OK
+[1706/1872] data/faces/sz24/sz24_left_sad_open_2.pgm       64x60  gpu 0.032 ms  verify OK
+[1707/1872] data/faces/sz24/sz24_left_sad_open_4.pgm       32x30  gpu 0.036 ms  verify OK
+[1708/1872] data/faces/sz24/sz24_left_sad_sunglasses.pgm  128x120 gpu 0.030 ms  verify OK
+[1709/1872] data/faces/sz24/sz24_left_sad_sunglasses_2.pgm  64x60  gpu 0.022 ms  verify OK
+[1710/1872] data/faces/sz24/sz24_left_sad_sunglasses_4.pgm  32x30  gpu 0.032 ms  verify OK
+[1711/1872] data/faces/sz24/sz24_right_angry_open.pgm     128x120 gpu 0.028 ms  verify OK
+[1712/1872] data/faces/sz24/sz24_right_angry_open_2.pgm    64x60  gpu 0.027 ms  verify OK
+[1713/1872] data/faces/sz24/sz24_right_angry_open_4.pgm    32x30  gpu 0.021 ms  verify OK
+[1714/1872] data/faces/sz24/sz24_right_angry_sunglasses.pgm 128x120 gpu 0.037 ms  verify OK
+[1715/1872] data/faces/sz24/sz24_right_angry_sunglasses_2.pgm  64x60  gpu 0.026 ms  verify OK
+[1716/1872] data/faces/sz24/sz24_right_angry_sunglasses_4.pgm  32x30  gpu 0.027 ms  verify OK
+[1717/1872] data/faces/sz24/sz24_right_happy_open.pgm     128x120 gpu 0.028 ms  verify OK
+[1718/1872] data/faces/sz24/sz24_right_happy_open_2.pgm    64x60  gpu 0.024 ms  verify OK
+[1719/1872] data/faces/sz24/sz24_right_happy_open_4.pgm    32x30  gpu 0.031 ms  verify OK
+[1720/1872] data/faces/sz24/sz24_right_happy_sunglasses.pgm 128x120 gpu 0.031 ms  verify OK
+[1721/1872] data/faces/sz24/sz24_right_happy_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[1722/1872] data/faces/sz24/sz24_right_happy_sunglasses_4.pgm  32x30  gpu 0.032 ms  verify OK
+[1723/1872] data/faces/sz24/sz24_right_neutral_open.pgm   128x120 gpu 0.027 ms  verify OK
+[1724/1872] data/faces/sz24/sz24_right_neutral_open_2.pgm  64x60  gpu 0.025 ms  verify OK
+[1725/1872] data/faces/sz24/sz24_right_neutral_open_4.pgm  32x30  gpu 0.021 ms  verify OK
+[1726/1872] data/faces/sz24/sz24_right_neutral_sunglasses.pgm 128x120 gpu 0.035 ms  verify OK
+[1727/1872] data/faces/sz24/sz24_right_neutral_sunglasses_2.pgm  64x60  gpu 0.035 ms  verify OK
+[1728/1872] data/faces/sz24/sz24_right_neutral_sunglasses_4.pgm  32x30  gpu 0.033 ms  verify OK
+[1729/1872] data/faces/sz24/sz24_right_sad_open.pgm       128x120 gpu 0.027 ms  verify OK
+[1730/1872] data/faces/sz24/sz24_right_sad_open_2.pgm      64x60  gpu 0.025 ms  verify OK
+[1731/1872] data/faces/sz24/sz24_right_sad_open_4.pgm      32x30  gpu 0.022 ms  verify OK
+[1732/1872] data/faces/sz24/sz24_right_sad_sunglasses.pgm 128x120 gpu 0.033 ms  verify OK
+[1733/1872] data/faces/sz24/sz24_right_sad_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[1734/1872] data/faces/sz24/sz24_right_sad_sunglasses_4.pgm  32x30  gpu 0.031 ms  verify OK
+[1735/1872] data/faces/sz24/sz24_straight_angry_open.pgm  128x120 gpu 0.037 ms  verify OK
+[1736/1872] data/faces/sz24/sz24_straight_angry_open_2.pgm  64x60  gpu 0.026 ms  verify OK
+[1737/1872] data/faces/sz24/sz24_straight_angry_open_4.pgm  32x30  gpu 0.021 ms  verify OK
+[1738/1872] data/faces/sz24/sz24_straight_angry_sunglasses.pgm 128x120 gpu 0.039 ms  verify OK
+[1739/1872] data/faces/sz24/sz24_straight_angry_sunglasses_2.pgm  64x60  gpu 0.025 ms  verify OK
+[1740/1872] data/faces/sz24/sz24_straight_angry_sunglasses_4.pgm  32x30  gpu 0.026 ms  verify OK
+[1741/1872] data/faces/sz24/sz24_straight_happy_open.pgm  128x120 gpu 0.029 ms  verify OK
+[1742/1872] data/faces/sz24/sz24_straight_happy_open_2.pgm  64x60  gpu 0.024 ms  verify OK
+[1743/1872] data/faces/sz24/sz24_straight_happy_open_4.pgm  32x30  gpu 0.022 ms  verify OK
+[1744/1872] data/faces/sz24/sz24_straight_happy_sunglasses.pgm 128x120 gpu 0.041 ms  verify OK
+[1745/1872] data/faces/sz24/sz24_straight_happy_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[1746/1872] data/faces/sz24/sz24_straight_happy_sunglasses_4.pgm  32x30  gpu 0.034 ms  verify OK
+[1747/1872] data/faces/sz24/sz24_straight_neutral_open.pgm 128x120 gpu 0.025 ms  verify OK
+[1748/1872] data/faces/sz24/sz24_straight_neutral_open_2.pgm  64x60  gpu 0.030 ms  verify OK
+[1749/1872] data/faces/sz24/sz24_straight_neutral_open_4.pgm  32x30  gpu 0.022 ms  verify OK
+[1750/1872] data/faces/sz24/sz24_straight_neutral_sunglasses.pgm 128x120 gpu 0.035 ms  verify OK
+[1751/1872] data/faces/sz24/sz24_straight_neutral_sunglasses_2.pgm  64x60  gpu 0.027 ms  verify OK
+[1752/1872] data/faces/sz24/sz24_straight_neutral_sunglasses_4.pgm  32x30  gpu 0.032 ms  verify OK
+[1753/1872] data/faces/sz24/sz24_straight_sad_open.pgm    128x120 gpu 0.028 ms  verify OK
+[1754/1872] data/faces/sz24/sz24_straight_sad_open_2.pgm   64x60  gpu 0.024 ms  verify OK
+[1755/1872] data/faces/sz24/sz24_straight_sad_open_4.pgm   32x30  gpu 0.026 ms  verify OK
+[1756/1872] data/faces/sz24/sz24_straight_sad_sunglasses.pgm 128x120 gpu 0.028 ms  verify OK
+[1757/1872] data/faces/sz24/sz24_straight_sad_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[1758/1872] data/faces/sz24/sz24_straight_sad_sunglasses_4.pgm  32x30  gpu 0.032 ms  verify OK
+[1759/1872] data/faces/sz24/sz24_up_angry_open.pgm        128x120 gpu 0.028 ms  verify OK
+[1760/1872] data/faces/sz24/sz24_up_angry_open_2.pgm       64x60  gpu 0.026 ms  verify OK
+[1761/1872] data/faces/sz24/sz24_up_angry_open_4.pgm       32x30  gpu 0.022 ms  verify OK
+[1762/1872] data/faces/sz24/sz24_up_angry_sunglasses.pgm  128x120 gpu 0.034 ms  verify OK
+[1763/1872] data/faces/sz24/sz24_up_angry_sunglasses_2.pgm  64x60  gpu 0.024 ms  verify OK
+[1764/1872] data/faces/sz24/sz24_up_angry_sunglasses_4.pgm  32x30  gpu 0.034 ms  verify OK
+[1765/1872] data/faces/sz24/sz24_up_happy_open.pgm        128x120 gpu 0.028 ms  verify OK
+[1766/1872] data/faces/sz24/sz24_up_happy_open_2.pgm       64x60  gpu 0.034 ms  verify OK
+[1767/1872] data/faces/sz24/sz24_up_happy_open_4.pgm       32x30  gpu 0.036 ms  verify OK
+[1768/1872] data/faces/sz24/sz24_up_happy_sunglasses.pgm  128x120 gpu 0.031 ms  verify OK
+[1769/1872] data/faces/sz24/sz24_up_happy_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[1770/1872] data/faces/sz24/sz24_up_happy_sunglasses_4.pgm  32x30  gpu 0.028 ms  verify OK
+[1771/1872] data/faces/sz24/sz24_up_neutral_open.pgm      128x120 gpu 0.027 ms  verify OK
+[1772/1872] data/faces/sz24/sz24_up_neutral_open_2.pgm     64x60  gpu 0.036 ms  verify OK
+[1773/1872] data/faces/sz24/sz24_up_neutral_open_4.pgm     32x30  gpu 0.021 ms  verify OK
+[1774/1872] data/faces/sz24/sz24_up_neutral_sunglasses.pgm 128x120 gpu 0.035 ms  verify OK
+[1775/1872] data/faces/sz24/sz24_up_neutral_sunglasses_2.pgm  64x60  gpu 0.035 ms  verify OK
+[1776/1872] data/faces/sz24/sz24_up_neutral_sunglasses_4.pgm  32x30  gpu 0.040 ms  verify OK
+[1777/1872] data/faces/sz24/sz24_up_sad_open.pgm          128x120 gpu 0.028 ms  verify OK
+[1778/1872] data/faces/sz24/sz24_up_sad_open_2.pgm         64x60  gpu 0.024 ms  verify OK
+[1779/1872] data/faces/sz24/sz24_up_sad_open_4.pgm         32x30  gpu 0.036 ms  verify OK
+[1780/1872] data/faces/sz24/sz24_up_sad_sunglasses.pgm    128x120 gpu 0.046 ms  verify OK
+[1781/1872] data/faces/sz24/sz24_up_sad_sunglasses_2.pgm   64x60  gpu 0.023 ms  verify OK
+[1782/1872] data/faces/sz24/sz24_up_sad_sunglasses_4.pgm   32x30  gpu 0.033 ms  verify OK
+[1783/1872] data/faces/tammo/tammo_left_angry_open.pgm    128x120 gpu 0.027 ms  verify OK
+[1784/1872] data/faces/tammo/tammo_left_angry_open_2.pgm   64x60  gpu 0.030 ms  verify OK
+[1785/1872] data/faces/tammo/tammo_left_angry_open_4.pgm   32x30  gpu 0.022 ms  verify OK
+[1786/1872] data/faces/tammo/tammo_left_angry_sunglasses.pgm 128x120 gpu 0.034 ms  verify OK
+[1787/1872] data/faces/tammo/tammo_left_angry_sunglasses_2.pgm  64x60  gpu 0.034 ms  verify OK
+[1788/1872] data/faces/tammo/tammo_left_angry_sunglasses_4.pgm  32x30  gpu 0.040 ms  verify OK
+[1789/1872] data/faces/tammo/tammo_left_happy_open.pgm    128x120 gpu 0.028 ms  verify OK
+[1790/1872] data/faces/tammo/tammo_left_happy_open_2.pgm   64x60  gpu 0.024 ms  verify OK
+[1791/1872] data/faces/tammo/tammo_left_happy_open_4.pgm   32x30  gpu 0.036 ms  verify OK
+[1792/1872] data/faces/tammo/tammo_left_happy_sunglasses.pgm 128x120 gpu 0.029 ms  verify OK
+[1793/1872] data/faces/tammo/tammo_left_happy_sunglasses_2.pgm  64x60  gpu 0.024 ms  verify OK
+[1794/1872] data/faces/tammo/tammo_left_happy_sunglasses_4.pgm  32x30  gpu 0.031 ms  verify OK
+[1795/1872] data/faces/tammo/tammo_left_neutral_open.pgm  128x120 gpu 0.028 ms  verify OK
+[1796/1872] data/faces/tammo/tammo_left_neutral_open_2.pgm  64x60  gpu 0.026 ms  verify OK
+[1797/1872] data/faces/tammo/tammo_left_neutral_open_4.pgm  32x30  gpu 0.020 ms  verify OK
+[1798/1872] data/faces/tammo/tammo_left_neutral_sunglasses.pgm 128x120 gpu 0.036 ms  verify OK
+[1799/1872] data/faces/tammo/tammo_left_neutral_sunglasses_2.pgm  64x60  gpu 0.036 ms  verify OK
+[1800/1872] data/faces/tammo/tammo_left_neutral_sunglasses_4.pgm  32x30  gpu 0.033 ms  verify OK
+[1801/1872] data/faces/tammo/tammo_left_sad_open.pgm      128x120 gpu 0.028 ms  verify OK
+[1802/1872] data/faces/tammo/tammo_left_sad_open_2.pgm     64x60  gpu 0.024 ms  verify OK
+[1803/1872] data/faces/tammo/tammo_left_sad_open_4.pgm     32x30  gpu 0.033 ms  verify OK
+[1804/1872] data/faces/tammo/tammo_left_sad_sunglasses.pgm 128x120 gpu 0.037 ms  verify OK
+[1805/1872] data/faces/tammo/tammo_left_sad_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[1806/1872] data/faces/tammo/tammo_left_sad_sunglasses_4.pgm  32x30  gpu 0.034 ms  verify OK
+[1807/1872] data/faces/tammo/tammo_right_angry_open.pgm   128x120 gpu 0.029 ms  verify OK
+[1808/1872] data/faces/tammo/tammo_right_angry_open_2.pgm  64x60  gpu 0.029 ms  verify OK
+[1809/1872] data/faces/tammo/tammo_right_angry_open_4.pgm  32x30  gpu 0.020 ms  verify OK
+[1810/1872] data/faces/tammo/tammo_right_angry_sunglasses.pgm 128x120 gpu 0.038 ms  verify OK
+[1811/1872] data/faces/tammo/tammo_right_angry_sunglasses_2.pgm  64x60  gpu 0.028 ms  verify OK
+[1812/1872] data/faces/tammo/tammo_right_angry_sunglasses_4.pgm  32x30  gpu 0.029 ms  verify OK
+[1813/1872] data/faces/tammo/tammo_right_happy_sunglasses.pgm 128x120 gpu 0.028 ms  verify OK
+[1814/1872] data/faces/tammo/tammo_right_happy_sunglasses_2.pgm  64x60  gpu 0.024 ms  verify OK
+[1815/1872] data/faces/tammo/tammo_right_happy_sunglasses_4.pgm  32x30  gpu 0.034 ms  verify OK
+[1816/1872] data/faces/tammo/tammo_right_neutral_open.pgm 128x120 gpu 0.044 ms  verify OK
+[1817/1872] data/faces/tammo/tammo_right_neutral_open_2.pgm  64x60  gpu 0.021 ms  verify OK
+[1818/1872] data/faces/tammo/tammo_right_neutral_open_4.pgm  32x30  gpu 0.032 ms  verify OK
+[1819/1872] data/faces/tammo/tammo_right_neutral_sunglasses.pgm 128x120 gpu 0.027 ms  verify OK
+[1820/1872] data/faces/tammo/tammo_right_neutral_sunglasses_2.pgm  64x60  gpu 0.026 ms  verify OK
+[1821/1872] data/faces/tammo/tammo_right_neutral_sunglasses_4.pgm  32x30  gpu 0.021 ms  verify OK
+[1822/1872] data/faces/tammo/tammo_right_sad_sunglasses.pgm 128x120 gpu 0.035 ms  verify OK
+[1823/1872] data/faces/tammo/tammo_right_sad_sunglasses_2.pgm  64x60  gpu 0.024 ms  verify OK
+[1824/1872] data/faces/tammo/tammo_right_sad_sunglasses_4.pgm  32x30  gpu 0.029 ms  verify OK
+[1825/1872] data/faces/tammo/tammo_straight_angry_open.pgm 128x120 gpu 0.029 ms  verify OK
+[1826/1872] data/faces/tammo/tammo_straight_angry_open_2.pgm  64x60  gpu 0.034 ms  verify OK
+[1827/1872] data/faces/tammo/tammo_straight_angry_open_4.pgm  32x30  gpu 0.036 ms  verify OK
+[1828/1872] data/faces/tammo/tammo_straight_angry_sunglasses.pgm 128x120 gpu 0.030 ms  verify OK
+[1829/1872] data/faces/tammo/tammo_straight_angry_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[1830/1872] data/faces/tammo/tammo_straight_angry_sunglasses_4.pgm  32x30  gpu 0.033 ms  verify OK
+[1831/1872] data/faces/tammo/tammo_straight_happy_open.pgm 128x120 gpu 0.039 ms  verify OK
+[1832/1872] data/faces/tammo/tammo_straight_happy_open_2.pgm  64x60  gpu 0.029 ms  verify OK
+[1833/1872] data/faces/tammo/tammo_straight_happy_open_4.pgm  32x30  gpu 0.021 ms  verify OK
+[1834/1872] data/faces/tammo/tammo_straight_happy_sunglasses.pgm 128x120 gpu 0.037 ms  verify OK
+[1835/1872] data/faces/tammo/tammo_straight_happy_sunglasses_2.pgm  64x60  gpu 0.025 ms  verify OK
+[1836/1872] data/faces/tammo/tammo_straight_happy_sunglasses_4.pgm  32x30  gpu 0.032 ms  verify OK
+[1837/1872] data/faces/tammo/tammo_straight_neutral_open.pgm 128x120 gpu 0.028 ms  verify OK
+[1838/1872] data/faces/tammo/tammo_straight_neutral_open_2.pgm  64x60  gpu 0.024 ms  verify OK
+[1839/1872] data/faces/tammo/tammo_straight_neutral_open_4.pgm  32x30  gpu 0.021 ms  verify OK
+[1840/1872] data/faces/tammo/tammo_straight_neutral_sunglasses.pgm 128x120 gpu 0.040 ms  verify OK
+[1841/1872] data/faces/tammo/tammo_straight_neutral_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[1842/1872] data/faces/tammo/tammo_straight_neutral_sunglasses_4.pgm  32x30  gpu 0.033 ms  verify OK
+[1843/1872] data/faces/tammo/tammo_straight_sad_open.pgm  128x120 gpu 0.039 ms  verify OK
+[1844/1872] data/faces/tammo/tammo_straight_sad_open_2.pgm  64x60  gpu 0.027 ms  verify OK
+[1845/1872] data/faces/tammo/tammo_straight_sad_open_4.pgm  32x30  gpu 0.021 ms  verify OK
+[1846/1872] data/faces/tammo/tammo_straight_sad_sunglasses.pgm 128x120 gpu 0.038 ms  verify OK
+[1847/1872] data/faces/tammo/tammo_straight_sad_sunglasses_2.pgm  64x60  gpu 0.034 ms  verify OK
+[1848/1872] data/faces/tammo/tammo_straight_sad_sunglasses_4.pgm  32x30  gpu 0.028 ms  verify OK
+[1849/1872] data/faces/tammo/tammo_up_angry_open.pgm      128x120 gpu 0.028 ms  verify OK
+[1850/1872] data/faces/tammo/tammo_up_angry_open_2.pgm     64x60  gpu 0.024 ms  verify OK
+[1851/1872] data/faces/tammo/tammo_up_angry_open_4.pgm     32x30  gpu 0.022 ms  verify OK
+[1852/1872] data/faces/tammo/tammo_up_angry_sunglasses.pgm 128x120 gpu 0.040 ms  verify OK
+[1853/1872] data/faces/tammo/tammo_up_angry_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[1854/1872] data/faces/tammo/tammo_up_angry_sunglasses_4.pgm  32x30  gpu 0.032 ms  verify OK
+[1855/1872] data/faces/tammo/tammo_up_happy_open.pgm      128x120 gpu 0.027 ms  verify OK
+[1856/1872] data/faces/tammo/tammo_up_happy_open_2.pgm     64x60  gpu 0.026 ms  verify OK
+[1857/1872] data/faces/tammo/tammo_up_happy_open_4.pgm     32x30  gpu 0.023 ms  verify OK
+[1858/1872] data/faces/tammo/tammo_up_happy_sunglasses.pgm 128x120 gpu 0.036 ms  verify OK
+[1859/1872] data/faces/tammo/tammo_up_happy_sunglasses_2.pgm  64x60  gpu 0.036 ms  verify OK
+[1860/1872] data/faces/tammo/tammo_up_happy_sunglasses_4.pgm  32x30  gpu 0.035 ms  verify OK
+[1861/1872] data/faces/tammo/tammo_up_neutral_open.pgm    128x120 gpu 0.025 ms  verify OK
+[1862/1872] data/faces/tammo/tammo_up_neutral_open_2.pgm   64x60  gpu 0.030 ms  verify OK
+[1863/1872] data/faces/tammo/tammo_up_neutral_open_4.pgm   32x30  gpu 0.022 ms  verify OK
+[1864/1872] data/faces/tammo/tammo_up_neutral_sunglasses.pgm 128x120 gpu 0.039 ms  verify OK
+[1865/1872] data/faces/tammo/tammo_up_neutral_sunglasses_2.pgm  64x60  gpu 0.021 ms  verify OK
+[1866/1872] data/faces/tammo/tammo_up_neutral_sunglasses_4.pgm  32x30  gpu 0.033 ms  verify OK
+[1867/1872] data/faces/tammo/tammo_up_sad_open.pgm        128x120 gpu 0.028 ms  verify OK
+[1868/1872] data/faces/tammo/tammo_up_sad_open_2.pgm       64x60  gpu 0.026 ms  verify OK
+[1869/1872] data/faces/tammo/tammo_up_sad_open_4.pgm       32x30  gpu 0.021 ms  verify OK
+[1870/1872] data/faces/tammo/tammo_up_sad_sunglasses.pgm  128x120 gpu 0.038 ms  verify OK
+[1871/1872] data/faces/tammo/tammo_up_sad_sunglasses_2.pgm  64x60  gpu 0.034 ms  verify OK
+[1872/1872] data/faces/tammo/tammo_up_sad_sunglasses_4.pgm  32x30  gpu 0.037 ms  verify OK
+
+=== Summary ===
+Images processed in this run : 1872
+Total pixels                 : 12579840
+GPU wall time (all streams)  : 59.103 ms
+Sum of per-image GPU times   : 55.265 ms
+Stream overlap factor        : 0.94x
+CPU reference time           : 389.292 ms
+GPU throughput               : 31673.7 images/s, 212.8 MP/s
+Verification vs CPU          : PASSED (0 mismatching images)
+Wrote output/timings.csv, output/montage.png and 6 sample sets in output/samples
